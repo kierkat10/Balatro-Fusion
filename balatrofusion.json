@@ -1,15 +1,13 @@
 {
   "id": "balatrofusion",
   "name": "Balatro Fusion",
-  "author": [
-    "SnowPickle"
-  ],
+  "author": [ "SnowPickle" ],
   "description": "A mod about using fusion to fuse jokers together",
-  "prefix": "balatrofusion",
+  "prefix": "bfs",
   "main_file": "main.lua",
   "version": "1.0.0",
   "priority": 0,
-  "badge_colour": "666665",
+  "badge_colour": "e15e8c",
   "badge_text_colour": "FFFFFF",
   "dependencies": [
     "Steamodded (>=1.0.0~BETA-0827c)"

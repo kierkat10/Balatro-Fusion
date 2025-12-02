@@ -1,0 +1,74 @@
+SMODS.BalatroFusion.Fusion:new_generic({
+    id = "joker_fusion",
+    key = "schro_cat",
+    name = "Schrodinger's Cat",
+    input = {
+        "j_lucky_cat",
+        "j_superposition",
+    },
+    output = "j_bfs_schro_cat"
+})
+
+SMODS.Joker{
+    key = "schro_cat",
+    name = "Schrodinger's Cat",
+    config = {
+        extra = {
+            xmult_mod = 0.2,
+            max = 20,
+            xmult = 1
+        }
+    },
+    pos = { x = 8, y = 0 },
+    cost = 10,
+    rarity = "bfs_fused",
+    blueprint_compat = true,
+    atlas = "joker",
+    loc_vars = function(self, info_queue, card)
+        return {
+            vars = {
+                card.ability.extra.xmult_mod,
+                card.ability.extra.max,
+                card.ability.extra.xmult
+            }
+        }
+    end,
+    calculate = function(self, card, context)
+        if pseudorandom("j_bfs_schro_cat") < 0.5 then
+            card.ability.extra.xmult = math.max(0, card.ability.extra.xmult - card.ability.extra.xmult_mod)
+        else
+            card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_mod
+        end
+        if card.ability.extra.xmult > card.ability.extra.max then
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    play_sound("tarot1")
+                    card.T.r = -0.2
+                    card:juice_up(0.3, 0.4)
+                    card.states.drag.is = true
+                    card.children.center.pinch.x = true
+                    G.E_MANAGER:add_event(Event({
+                        trigger = "after",
+                        delay = 0.3,
+                        blockable = false,
+                        func = function()
+                            G.jokers:remove_card(card)
+                            card:remove()
+                            card = nil
+                            return true
+                        end
+                    }))
+                    return true
+                end
+            }))
+        end
+        if context.joker_main then
+            return {
+                xmult = card.ability.extra.xmult
+            }
+        end
+    end,
+	bfs_credits = {
+		code = { "Glitchkat10" }
+	},
+}
