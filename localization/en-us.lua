@@ -74,6 +74,13 @@ return {
                     "{C:attention}non-face{} cards {C:attention}#1#{} time#<s>1#"
                 }
             },
+            j_bfs_riff_raff_pro = {
+                name = "Riff-Raff Pro",
+                text = {
+                    "When {C:attention}Blind{} is selected,",
+                    "create {C:attention}#1#{} {C:uncommon}Uncommon{} {C:attention}Joker#<s>1#{}"
+                }
+            },
             j_bfs_skybound = {
                 name = "Skybound",
                 text = {
