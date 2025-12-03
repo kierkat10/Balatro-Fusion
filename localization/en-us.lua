@@ -85,6 +85,14 @@ return {
                     "{C:inactive}(Currently {X:red,C:white}X#3#{C:inactive} Mult)"
                 }
             },
+            j_bfs_shoot_the_king = {
+                name = "Shoot the King",
+                text = {
+                    "{C:attention}Face cards{}",
+                    "held in hand give ",
+                    "{C:mult}+#1#{} Mult and {C:white,X:mult}X#2#{} Mult"
+                }
+            },
             j_bfs_sparkling_wine = {
                 name = "Sparkling Wine",
                 text = {
