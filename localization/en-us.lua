@@ -76,7 +76,15 @@ return {
                     "create a random {C:attention}Tag",
                     "when selected"
                 }
-            }
+            },
+            j_bfs_worthless_rock = {
+                name = "Worthless Ancient Rock",
+                text = {
+                    "Played cards have a",
+                    "{C:green}#1# in #2#{} chance to give",
+                    "{C:white,X:chips}X#3#{} Chips when scored"
+                }
+            },
         },
         Spectral = {
             c_bfs_fusion_reactor = {

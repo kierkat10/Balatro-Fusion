@@ -19,9 +19,8 @@ SMODS.Joker{
         }
     },
     pos = { x = 0, y = 0 },
-    cost = 8,
+    cost = 13,
     rarity = "bfs_fused",
-    blueprint_compat = true,
     atlas = "placeholder",
     loc_vars = function(self, info_queue, card)
         local nine_tally = 0
