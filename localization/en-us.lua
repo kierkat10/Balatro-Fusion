@@ -74,6 +74,13 @@ return {
                     "{C:attention}non-face{} cards {C:attention}#1#{} time#<s>1#"
                 }
             },
+            j_bfs_riff_raff_plus = {
+                name = "Riff-Raff Plus",
+                text = {
+                    "{C:common}Common{} Jokers",
+                    "each earn {C:money}$#1#"
+                }
+            },
             j_bfs_riff_raff_pro = {
                 name = "Riff-Raff Pro",
                 text = {

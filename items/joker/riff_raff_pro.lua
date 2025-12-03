@@ -14,7 +14,7 @@ SMODS.Joker {
     name = "Riff-Raff Pro",
     config = { extra = { create = 1 } },
     pos = { x = 0, y = 0 },
-    cost = 13,
+    cost = 12,
     rarity = "bfs_fused",
     blueprint_compat = true,
     atlas = "placeholder",
