@@ -18,11 +18,11 @@ SMODS.Joker {
             money_mod = 1
         }
     },
-    pos = { x = 0, y = 0 },
+    pos = { x = 1, y = 1 },
     cost = 13,
     rarity = "bfs_fused",
     blueprint_compat = true,
-    atlas = "placeholder",
+    atlas = "joker",
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
@@ -45,6 +45,7 @@ SMODS.Joker {
     end,
     bfs_credits = {
         idea = { "ButterStutter" },
+        art = { "ButterStutter" },
 		code = { "Glitchkat10" }
 	}
 }
