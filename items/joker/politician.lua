@@ -14,11 +14,11 @@ SMODS.Joker {
     key = "politician",
     name = "Politician",
     config = { extra = { repetitions = 3 } },
-    pos = { x = 0, y = 0 },
+    pos = { x = 0, y = 1 },
     cost = 10,
     rarity = "bfs_fused",
     blueprint_compat = true,
-    atlas = "placeholder",
+    atlas = "joker",
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.repetitions } }
     end,
@@ -32,6 +32,8 @@ SMODS.Joker {
         end
     end,
 	bfs_credits = {
+        idea = { "SnowPickle" },
+        art = { "Nice Cream" },
 		code = { "Glitchkat10" }
 	}
 }

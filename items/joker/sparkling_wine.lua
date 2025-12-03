@@ -46,6 +46,8 @@ SMODS.Joker {
         end
     end,
 	bfs_credits = {
+        idea = { "Nice Cream" },
+        art = { "Nice Cream" },
 		code = { "Glitchkat10" }
 	}
 }

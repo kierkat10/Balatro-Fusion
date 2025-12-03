@@ -41,6 +41,7 @@ SMODS.Joker {
         end
     end,
 	bfs_credits = {
+        idea = { "RandomGuy" },
 		code = { "Glitchkat10" }
 	}
 }

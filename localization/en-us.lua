@@ -77,6 +77,14 @@ return {
                     "when selected"
                 }
             },
+            j_bfs_teal_joker = {
+                name = "Teal Joker",
+                text = {
+                    "This Joker gains {C:mult}+#1#{} Mult for each remaining {C:attention}card{} in",
+                    "{C:attention}deck{} [context]",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+                }
+            },
             j_bfs_worthless_rock = {
                 name = "Worthless Ancient Rock",
                 text = {
