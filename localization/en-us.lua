@@ -17,6 +17,15 @@ return {
                     "{C:white,X:mult}X#1#{} Mult when scored"
                 }
             },
+            j_bfs_compressed = {
+                name = "Compressed Joker",
+                text = {
+                    "This Joker gains {C:mult}+#1#{} Mult",
+                    "when a {C:mult}+Mult{} effect from",
+                    "another {C:attention}Joker{} scores",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+                }
+            },
             j_bfs_equal_evan = {
                 name = "Equal Evan",
                 text = {
