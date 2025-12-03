@@ -21,7 +21,7 @@ return {
                 name = "Equal Evan",
                 text = {
                     "Played {C:attention}non-face{} cards",
-                    "give {C:chips}+#1#{} Chips and",
+                    "give {C:chips}+#1#{} Chip#<s>1# and",
                     "{C:mult}+#2#{} Mult when scored"
                 }
             },
@@ -55,8 +55,9 @@ return {
             j_bfs_impossible_beef = {
                 name = "Impossible Beef",
                 text = {
-                    "{C:white,X:chips}X#1#{} Chip#<s>1# for every {C:money}${} you have",
-                    "{C:inactive}(Currently {C:white,X:blue}X#2#{}{C:inactive} Chip#<s>2#)"
+                    "{C:white,X:chips}X#1#{} Chip#<s>1# for",
+                    "each {C:money}$#2#{} you have",
+                    "{C:inactive}(Currently {C:white,X:blue}X#3#{C:inactive} Chip#<s>2#)"
                 }
             },
             j_bfs_perkeo_king = {
@@ -129,6 +130,42 @@ return {
                     "The next {C:attention}#1# Blinds",
                     "create a random {C:attention}Tag",
                     "when selected"
+                }
+            },
+            j_bfs_split_gluttony = {
+                name = "Split Gluttony",
+                text = {
+                    "Played cards with {C:club}Club",
+                    "suit give {C:white,X:mult}X#1#{} Mult when",
+                    "scored if played hand",
+                    "contains {C:attention}#2#{} or fewer cards"
+                }
+            },
+            j_bfs_split_greed = {
+                name = "Split Greed",
+                text = {
+                    "Played cards with {C:diamond}Diamond",
+                    "suit give {C:white,X:mult}X#1#{} Mult when",
+                    "scored if played hand",
+                    "contains {C:attention}#2#{} or fewer cards"
+                }
+            },
+            j_bfs_split_lust = {
+                name = "Split Lust",
+                text = {
+                    "Played cards with {C:heart}Heart",
+                    "suit give {C:white,X:mult}X#1#{} Mult when",
+                    "scored if played hand",
+                    "contains {C:attention}#2#{} or fewer cards"
+                }
+            },
+            j_bfs_split_wrath = {
+                name = "Split Wrath",
+                text = {
+                    "Played cards with {C:spade}Spade",
+                    "suit give {C:white,X:mult}X#1#{} Mult when",
+                    "scored if played hand",
+                    "contains {C:attention}#2#{} or fewer cards"
                 }
             },
             j_bfs_teal_joker = {
