@@ -9,6 +9,14 @@ return {
                     "{C:inactive}(Currently {C:white,X:mult}X#2#{C:inactive} Mult)"
                 }
             },
+            j_bfs_chiseled_gems = {
+                name = "Chiseled Gems",
+                text = {
+                    "Played cards with",
+                    "{C:spade}Spade{} or {C:club}Club{} suit give",
+                    "{C:white,X:mult}X#1#{} Mult when scored"
+                }
+            },
             j_bfs_equal_evan = {
                 name = "Equal Evan",
                 text = {
