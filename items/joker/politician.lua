@@ -13,7 +13,7 @@ SMODS.BalatroFusion.Fusion:new_generic({
 SMODS.Joker {
     key = "politician",
     name = "Politician",
-    config = { extra = { repetitions = 3 } },
+    config = { extra = { repetitions = 2 } },
     pos = { x = 0, y = 1 },
     cost = 10,
     rarity = "bfs_fused",
@@ -24,7 +24,7 @@ SMODS.Joker {
     end,
     calculate = function(self, card, context)
         if context.repetition and context.cardarea == G.play then
-            if not context.other_card:is_face() then
+            if context.other_card:get_id() == 2 or context.other_card:get_id() == 3 or context.other_card:get_id() == 4 or context.other_card:get_id() == 5 then
                 return {
                     repetitions = card.ability.extra.repetitions
                 }
