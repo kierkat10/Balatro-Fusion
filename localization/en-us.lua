@@ -88,6 +88,14 @@ return {
                     "create {C:attention}#1#{} {C:uncommon}Uncommon{} {C:attention}Joker#<s>1#{}"
                 }
             },
+            j_bfs_riff_ring = {
+                name = "Riff-Ring",
+                text = {
+                    "{C:common}Common{} {C:attention}Jokers{} each",
+                    "give {C:white,X:mult}X#1#{} Mult on",
+                    "{C:attention}final hand{} of round"
+                }
+            },
             j_bfs_skybound = {
                 name = "Skybound",
                 text = {

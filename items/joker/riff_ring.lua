@@ -1,30 +1,30 @@
 SMODS.BalatroFusion.Fusion:new_generic({
     id = "joker_fusion",
-    key = "riff_raff_plus",
-    name = "Riff-Raff Plus",
+    key = "riff_ring",
+    name = "Riff-Ring",
     input = {
-        "j_golden_ticket",
+        "j_acrobat",
         "j_riff_raff",
     },
-    output = "j_bfs_riff_raff_plus"
+    output = "j_bfs_riff_ring"
 })
 
 SMODS.Joker {
-    key = "riff_raff_plus",
-    name = "Riff-Raff Plus",
-    config = { extra = { dollars = 4 } },
+    key = "riff_ring",
+    name = "Riff-Ring",
+    config = { extra = { xmult = 2 } },
     pos = { x = 0, y = 0 },
     cost = 12,
     rarity = "bfs_fused",
     blueprint_compat = true,
     atlas = "placeholder",
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.dollars } }
+        return { vars = { card.ability.extra.xmult } }
     end,
     calculate = function(self, card, context)
-        if context.other_joker and context.other_joker:is_rarity("Common") then
+        if context.other_joker and context.other_joker:is_rarity("Common") and G.GAME.current_round.hands_left == 0 then
             return {
-                dollars = card.ability.extra.dollars
+                xmult = card.ability.extra.xmult
             }
         end
     end,
