@@ -34,6 +34,14 @@ return {
                     "can be made with {C:attention}3{} cards"
                 }
             },
+            j_bfs_golden_card = {
+                name = "Golden Card",
+                text = {
+                    "Earn {C:money}$#1#{} at end of round",
+                    "Payout increases by {C:money}$#2#{} when",
+                    "any {C:attention}Booster Pack{} is skipped"
+                }
+            },
             j_bfs_golden_record = {
                 name = "Golden Record",
                 text = {
