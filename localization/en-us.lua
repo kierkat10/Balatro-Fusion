@@ -85,6 +85,14 @@ return {
                     "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
+            j_bfs_worthful_rock = {
+                name = "Worthful Ancient Rock",
+                text = {
+                    "Played cards have a",
+                    "{C:green}#1# in #2#{} chance to earn",
+                    "{C:money}$#3#{} when scored"
+                }
+            },
             j_bfs_worthless_rock = {
                 name = "Worthless Ancient Rock",
                 text = {
