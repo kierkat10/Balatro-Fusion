@@ -80,8 +80,6 @@ function FusionClass:can_fuse(fusion, input)
         end
     end
     local function check()
-        print("required value:", fusion.required_value)
-        print("current value:", current_value)
         if fusion.check_op == "==" then
             return current_value == fusion.required_value
         end
@@ -99,11 +97,6 @@ function FusionClass:can_fuse(fusion, input)
         end
         return false
     end
-    local result = check()
-    print("check result:", result)
-    if result == true then
-        print("yes result is true?")
-    end
     return check()
 end
 
@@ -116,8 +109,6 @@ function FusionClass:handle_destroying(fusion, input)
     local cards_to_destroy = {}
     local current_value = 0
     local function check()
-        print("required value:", fusion.required_value)
-        print("current value:", current_value)
         if fusion.check_op == "==" then
             return current_value == fusion.required_value
         end
@@ -148,7 +139,6 @@ function FusionClass:handle_destroying(fusion, input)
     end
 
     for i, v in ipairs(cards_to_destroy) do
-        print("card to destroy:", inspect(v))
         v:start_dissolve()
     end
 end
