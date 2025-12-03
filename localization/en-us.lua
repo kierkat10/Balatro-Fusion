@@ -50,6 +50,16 @@ return {
                     "{C:attention}non-face{} cards {C:attention}#1#{} time#<s>1#"
                 }
             },
+            j_bfs_skybound = {
+                name = "Skybound",
+                text = {
+                    "Earn {C:money}$#1#{} for each {C:attention}9{} in",
+                    "your {C:attention}full deck{} each round",
+                    "Increase amount gained by {C:money}$#2#{}",
+                    "when {C:attention}Boss Blind{} is defeated",
+                    "{C:inactive}(Currently {C:money}$#3#{C:inactive})"
+                }
+            },
             j_bfs_schro_cat = {
                 name = "Schrodinger's Cat",
                 text = {
