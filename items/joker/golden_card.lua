@@ -44,7 +44,7 @@ SMODS.Joker {
         return card.ability.extra.money
     end,
     bfs_credits = {
-        idea = { "Glitchkat10" },
+        idea = { "ButterStutter" },
 		code = { "Glitchkat10" }
 	}
 }
