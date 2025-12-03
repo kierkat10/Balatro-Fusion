@@ -1,6 +1,14 @@
 return {
     descriptions = {
         Joker = {
+            j_bfs_approved_technology = {
+                name = "Approved Technology",
+                text = {
+                    "Gives {C:white,X:mult}X#1#{} Mult per card with",
+                    "a {C:attention}Seal{} in your {C:attention}full deck{}",
+                    "{C:inactive}(Currently {C:white,X:mult}X#2#{C:inactive} Mult)"
+                }
+            },
             j_bfs_equal_evan = {
                 name = "Equal Evan",
                 text = {
