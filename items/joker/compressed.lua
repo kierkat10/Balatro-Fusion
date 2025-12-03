@@ -37,7 +37,8 @@ SMODS.Joker {
                 card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_mod
                 return {
                     message = localize("k_upgrade_ex"),
-                    colour = G.C.RED
+                    colour = G.C.RED,
+                    message_card = card
                 }
             end
         end
