@@ -206,7 +206,7 @@ return {
                 text = {
                     "{C:red}+13{} Mult if",
                     "played hand contains a",
-                    "{C:attention}Pair{} of {C:attention}Odd{} ranked cards",
+                    "{C:attention}Pair{} of {C:attention}Odd{} ranked cards"
                 }
             },
             j_bfs_jolly_steven = {
@@ -214,7 +214,7 @@ return {
                 text = {
                     "{C:red}+14{} Mult if",
                     "played hand contains a",
-                    "{C:attention}Pair{} of {C:attention}Even{} ranked cards",
+                    "{C:attention}Pair{} of {C:attention}Even{} ranked cards"
                 }
             },
             j_bfs_zany_todd = {
@@ -222,7 +222,7 @@ return {
                 text = {
                     "{C:red}+19{} Mult if",
                     "played hand contains a",
-                    "{C:attention}Three of a Kind{} of {C:attention}Odd{} ranked cards",
+                    "{C:attention}Three of a Kind{} of {C:attention}Odd{} ranked cards"
                 }
             },
             j_bfs_zany_steven = {
@@ -230,7 +230,7 @@ return {
                 text = {
                     "{C:red}+20{} Mult if",
                     "played hand contains a",
-                    "{C:attention}Three of a Kind{} of {C:attention}Even{} ranked cards",
+                    "{C:attention}Three of a Kind{} of {C:attention}Even{} ranked cards"
                 }
             },
             j_bfs_mad_todd = {
@@ -238,7 +238,7 @@ return {
                 text = {
                     "{C:red}+21{} Mult if",
                     "played hand contains a",
-                    "{C:attention}Two Pair{} of {C:attention}Odd{} ranked cards",
+                    "{C:attention}Two Pair{} of {C:attention}Odd{} ranked cards"
                 }
             },
             j_bfs_mad_steven = {
@@ -246,7 +246,7 @@ return {
                 text = {
                     "{C:red}+22{} Mult if",
                     "played hand contains a",
-                    "{C:attention}Two Pair{} of {C:attention}Even{} ranked cards",
+                    "{C:attention}Two Pair{} of {C:attention}Even{} ranked cards"
                 }
             },
             j_bfs_crazy_todd = {
@@ -255,7 +255,7 @@ return {
                     "{C:red}+25{} Mult if",
                     "played hand contains a",
                     "{C:attention}Straight{} with a majority",
-                    "of {C:attention}Odd{} ranked cards",
+                    "of {C:attention}Odd{} ranked cards"
                 }
             },
             j_bfs_crazy_steven = {
@@ -264,7 +264,7 @@ return {
                     "{C:red}+26{} Mult if",
                     "played hand contains a",
                     "{C:attention}Straight{} with a majority",
-                    "of {C:attention}Even{} ranked cards",
+                    "of {C:attention}Even{} ranked cards"
                 }
             },
             j_bfs_droll_todd = {
@@ -273,7 +273,7 @@ return {
                     "{C:red}+23{} Mult if",
                     "played hand contains a",
                     "{C:attention}Flush{} with a majority",
-                    "of {C:attention}Odd{} ranked cards",
+                    "of {C:attention}Odd{} ranked cards"
                 }
             },
             j_bfs_droll_steven = {
@@ -282,9 +282,26 @@ return {
                     "{C:red}+24{} Mult if",
                     "played hand contains a",
                     "{C:attention}Flush{} with a majority",
-                    "of {C:attention}Even{} ranked cards",
+                    "of {C:attention}Even{} ranked cards"
                 }
             },
+            j_bfs_mathematician = {
+                name = "Mathematician",
+                text = {
+                    "Played cards with Fibonacci ranks score",
+                    "{C:blue}+21{} chips and {C:red}+13{} mult",
+                    "Retrigger played {C:attention}Aces{}"
+                }
+            },
+            j_bfs_sunrise = {
+                name = "Sunrise",
+                text = {
+                    "Retrigger each card in hand",
+                    "for every 2 cards {C:attention}sold{}, resets",
+                    "when {C:attention}Boss Blind{} is defeated",
+                    "{C:inactive}[currently at #1#/2 cards solds,{} {C:attention}#2#{} {C:inactive}retriggers]{}"
+                }
+            }
         },
         Spectral = {
             c_bfs_fusion_reactor = {
