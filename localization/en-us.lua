@@ -249,6 +249,42 @@ return {
                     "{C:attention}Two Pair{} of {C:attention}Even{} ranked cards",
                 }
             },
+            j_bfs_crazy_todd = {
+                name = "Crazy Todd",
+                text = {
+                    "{C:red}+25{} Mult if",
+                    "played hand contains a",
+                    "{C:attention}Straight{} with a majority",
+                    "of {C:attention}Odd{} ranked cards",
+                }
+            },
+            j_bfs_crazy_steven = {
+                name = "Crazy Steven",
+                text = {
+                    "{C:red}+26{} Mult if",
+                    "played hand contains a",
+                    "{C:attention}Straight{} with a majority",
+                    "of {C:attention}Even{} ranked cards",
+                }
+            },
+            j_bfs_droll_todd = {
+                name = "Droll Todd",
+                text = {
+                    "{C:red}+23{} Mult if",
+                    "played hand contains a",
+                    "{C:attention}Flush{} with a majority",
+                    "of {C:attention}Odd{} ranked cards",
+                }
+            },
+            j_bfs_droll_steven = {
+                name = "Droll Steven",
+                text = {
+                    "{C:red}+24{} Mult if",
+                    "played hand contains a",
+                    "{C:attention}Flush{} with a majority",
+                    "of {C:attention}Even{} ranked cards",
+                }
+            },
         },
         Spectral = {
             c_bfs_fusion_reactor = {
