@@ -201,6 +201,38 @@ return {
                     "{C:white,X:chips}X#3#{} Chips when scored"
                 }
             },
+            j_bfs_jolly_todd = {
+                name = "Jolly Todd",
+                text = {
+                    "{C:red}+13{} Mult if",
+                    "played hand contains a",
+                    "{C:attention}Pair{} of {C:attention}Odd{} ranked cards",
+                }
+            },
+            j_bfs_jolly_steven = {
+                name = "Jolly Steven",
+                text = {
+                    "{C:red}+14{} Mult if",
+                    "played hand contains a",
+                    "{C:attention}Pair{} of {C:attention}Even{} ranked cards",
+                }
+            },
+            j_bfs_zany_todd = {
+                name = "Zany Todd",
+                text = {
+                    "{C:red}+19{} Mult if",
+                    "played hand contains a",
+                    "{C:attention}Three of a Kind{} of {C:attention}Odd{} ranked cards",
+                }
+            },
+            j_bfs_zany_steven = {
+                name = "Zany Steven",
+                text = {
+                    "{C:red}+20{} Mult if",
+                    "played hand contains a",
+                    "{C:attention}Three of a Kind{} of {C:attention}Even{} ranked cards",
+                }
+            },
         },
         Spectral = {
             c_bfs_fusion_reactor = {
