@@ -236,7 +236,7 @@ return {
             j_bfs_mad_todd = {
                 name = "Mad Todd",
                 text = {
-                    "{C:red}+19{} Mult if",
+                    "{C:red}+21{} Mult if",
                     "played hand contains a",
                     "{C:attention}Two Pair{} of {C:attention}Odd{} ranked cards",
                 }
@@ -244,7 +244,7 @@ return {
             j_bfs_mad_steven = {
                 name = "Mad Steven",
                 text = {
-                    "{C:red}+20{} Mult if",
+                    "{C:red}+22{} Mult if",
                     "played hand contains a",
                     "{C:attention}Two Pair{} of {C:attention}Even{} ranked cards",
                 }
