@@ -330,6 +330,14 @@ return {
                     "Give {X:red, C:white}X1.5{} Mult when scored"
                 }
             },
+            j_bfs_wandering_trader = {
+                name = "Wandering Trader",
+                text = {
+                    "Earn {C:money}#1#${} if poker hand contains a {C:attention}#2#",
+                    "Also fill open consumable slots with {C:tarot}Tarot Cards",
+                    "{C:inactive}poker hand changes at end of round",
+                }
+            },
         },
         Spectral = {
             c_bfs_fusion_reactor = {
