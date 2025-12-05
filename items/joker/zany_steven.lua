@@ -4,7 +4,7 @@ SMODS.BalatroFusion.Fusion:new_generic({
     name = "Zany Steven",
     input = {
         "j_even_steven",
-        "j_zany",
+        "j_zany"
     },
     output = "j_bfs_zany_steven"
 })
@@ -12,14 +12,17 @@ SMODS.BalatroFusion.Fusion:new_generic({
 SMODS.Joker {
     key = "zany_steven",
     name = "Zany Steven",
-    config = {},
+    config = { extra = { mult = 20 } },
     pos = { x = 7, y = 1 },
     cost = 8,
     rarity = "bfs_fused",
     blueprint_compat = true,
     atlas = "joker",
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.mult } }
+    end,
     calculate = function(self, card, context)
-        if context.cardarea == G.jokers and context.joker_main then
+        if context.joker_main then
             local toak_ranks = {}
             for i = 2, 13 do 
                 local count = 0
@@ -34,14 +37,14 @@ SMODS.Joker {
             end
             local succeeds = false
             for _, v in pairs(toak_ranks) do 
-                if v == 3 or v == 5 or v == 7 or v == 9  or v == 14 then
+                if v == 3 or v == 5 or v == 7 or v == 9 or v == 14 then
                     succeeds = true
                     break
                 end
             end
             if succeeds then 
                 return {
-                    mult = 20
+                    mult = card.ability.extra.mult
                 }
             end
         end

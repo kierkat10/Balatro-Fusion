@@ -19,7 +19,7 @@ SMODS.Joker {
     blueprint_compat = true,
     atlas = "joker",
     calculate = function(self, card, context)
-        if context.cardarea == G.jokers and context.joker_main then
+        if context.joker_main then
             local toak_ranks = {}
             for i = 2, 13 do 
                 local count = 0
@@ -34,14 +34,14 @@ SMODS.Joker {
             end
             local succeeds = false
             for _, v in pairs(toak_ranks) do 
-                if v == 3 or v == 5 or v == 7 or v == 9  or v == 14 then
+                if v == 3 or v == 5 or v == 7 or v == 9 or v == 14 then
                     succeeds = true
                     break
                 end
             end
             if succeeds then 
                 return {
-                    mult = 19
+                    mult = card.ability.extra.mult
                 }
             end
         end

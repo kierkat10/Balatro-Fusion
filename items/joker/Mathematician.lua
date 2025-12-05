@@ -22,7 +22,7 @@ SMODS.Joker {
             if context.other_card:get_id() == 14 then
                 return {
                     repetitions = 1,
-                    message = localize('k_again_ex'),
+                    message = localize("k_again_ex"),
                     extra = {
                         chips = 21,
                         mult = 13,

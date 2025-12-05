@@ -1,7 +1,7 @@
 SMODS.BalatroFusion.Fusion:new_generic({
     id = "joker_fusion",
     key = "schro_cat",
-    name = "Schrodinger's Cat",
+    name = "Schrodinger\'s Cat",
     input = {
         "j_lucky_cat",
         "j_superposition",
@@ -11,7 +11,7 @@ SMODS.BalatroFusion.Fusion:new_generic({
 
 SMODS.Joker{
     key = "schro_cat",
-    name = "Schrodinger's Cat",
+    name = "Schrodinger\'s Cat",
     config = {
         extra = {
             xmult_mod = 0.2,

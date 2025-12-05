@@ -13,7 +13,7 @@ SMODS.BalatroFusion.Fusion:new_generic({
 SMODS.Joker {
     key = "impossible_beef",
     name = "Impossible Beef",
-    config = { extra = { x_chips = 0.1, dollars = 1 } },
+    config = { extra = { xchips = 0.1, dollars = 1 } },
     pos = { x = 3, y = 0 },
     soul_pos = { x = 4, y = 0 },
     cost = 10,
@@ -23,16 +23,16 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
-                card.ability.extra.x_chips,
+                card.ability.extra.xchips,
                 card.ability.extra.dollars,
-                math.max(1, (G.GAME.dollars / card.ability.extra.dollars) * card.ability.extra.x_chips + 1)
+                math.max(1, (G.GAME.dollars / card.ability.extra.dollars) * card.ability.extra.xchips + 1)
             }
         }
     end,
     calculate = function(self, card, context)
         if context.joker_main then
             return {
-                x_chips = math.max(1, (G.GAME.dollars / card.ability.extra.dollars) * card.ability.extra.x_chips + 1)
+                xchips = math.max(1, (G.GAME.dollars / card.ability.extra.dollars) * card.ability.extra.xchips + 1)
             }
         end
     end,

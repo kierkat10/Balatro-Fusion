@@ -9,6 +9,22 @@ return {
                     "{C:inactive}(Currently {C:white,X:mult}X#2#{C:inactive} Mult)"
                 }
             },
+            j_bfs_charity = {
+                name = "Charity Joker",
+                text = {
+                    "Played cards with",
+                    "{C:diamond}Diamond{} suit give",
+                    "{X:mult,C:white}X1.5{} Mult when scored"
+                }
+            },
+            j_bfs_chastity = {
+                name = "Chastity Joker",
+                text = {
+                    "Played cards with",
+                    "{C:heart}Heart{} suit give",
+                    "{X:mult,C:white}X1.5{} Mult when scored"
+                }
+            },
             j_bfs_chiseled_gems = {
                 name = "Chiseled Gems",
                 text = {
@@ -24,6 +40,42 @@ return {
                     "when a {C:mult}+Mult{} effect from",
                     "another {C:attention}Joker{} scores",
                     "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+                }
+            },
+            j_bfs_crazy_steven = {
+                name = "Crazy Steven",
+                text = {
+                    "{C:mult}+#1#{} Mult if",
+                    "played hand contains a",
+                    "{C:attention}Straight{} with a majority",
+                    "of {C:attention}even{} ranked cards"
+                }
+            },
+            j_bfs_crazy_todd = {
+                name = "Crazy Todd",
+                text = {
+                    "{C:mult}+#1#{} Mult if",
+                    "played hand contains a",
+                    "{C:attention}Straight{} with a majority",
+                    "of {C:attention}odd{} ranked cards"
+                }
+            },
+            j_bfs_droll_steven = {
+                name = "Droll Steven",
+                text = {
+                    "{C:mult}+#1#{} Mult if",
+                    "played hand contains a",
+                    "{C:attention}Flush{} with a majority",
+                    "of {C:attention}even{} ranked cards"
+                }
+            },
+            j_bfs_droll_todd = {
+                name = "Droll Todd",
+                text = {
+                    "{C:mult}+#1#{} Mult if",
+                    "played hand contains a",
+                    "{C:attention}Flush{} with a majority",
+                    "of {C:attention}odd{} ranked cards"
                 }
             },
             j_bfs_equal_evan = {
@@ -69,6 +121,56 @@ return {
                     "{C:inactive}(Currently {C:white,X:blue}X#3#{C:inactive} Chip#<s>2#)"
                 }
             },
+            j_bfs_jolly_steven = {
+                name = "Jolly Steven",
+                text = {
+                    "{C:mult}+#1#{} Mult if",
+                    "played hand contains a",
+                    "{C:attention}Pair{} of",
+                    "{C:attention}even{} ranked cards"
+                }
+            },
+            j_bfs_jolly_todd = {
+                name = "Jolly Todd",
+                text = {
+                    "{C:mult}+#1#{} Mult if",
+                    "played hand contains a",
+                    "{C:attention}Pair{} of",
+                    "{C:attention}odd{} ranked cards"
+                }
+            },
+            j_bfs_mad_steven = {
+                name = "Mad Steven",
+                text = {
+                    "{C:mult}+#1#{} Mult if",
+                    "played hand contains a",
+                    "{C:attention}Two Pair{} of {C:attention}Even{} ranked cards"
+                }
+            },
+            j_bfs_mad_todd = {
+                name = "Mad Todd",
+                text = {
+                    "{C:mult}+#1#{} Mult if",
+                    "played hand contains a",
+                    "{C:attention}Two Pair{} of {C:attention}Odd{} ranked cards"
+                }
+            },
+            j_bfs_mathematician = {
+                name = "Mathematician",
+                text = {
+                    "Played cards with Fibonacci ranks score",
+                    "{C:blue}+#1#{} Chips and {C:mult}+#2#{} Mult",
+                    "Retrigger played {C:attention}Aces{}"
+                }
+            },
+            j_bfs_patient = {
+                name = "Patient Joker",
+                text = {
+                    "Played cards with",
+                    "{C:diamond}Spade{} suit give",
+                    "{C:white,X:chips}X#1#{} Chips when scored"
+                }
+            },
             j_bfs_perkeo_king = {
                 name = "Perkeo - Kings of Kings",
                 text = {
@@ -95,7 +197,7 @@ return {
                 name = "Riff-Raff Pro",
                 text = {
                     "When {C:attention}Blind{} is selected,",
-                    "create {C:attention}#1#{} {C:uncommon}Uncommon{} {C:attention}Joker#<s>1#{}"
+                    "create {C:attention}#1#{} {C:uncommon}Uncommon{} {C:attention}Joker#<s>1#{"
                 }
             },
             j_bfs_riff_ring = {
@@ -106,6 +208,23 @@ return {
                     "{C:attention}final hand{} of round"
                 }
             },
+            j_bfs_schro_cat = {
+                name = "Schrodinger\'s Cat",
+                text = {
+                    "This Joker randomly either loses or gains",
+                    "{C:white,X:mult}X#1#{} Mult on every {C:attention}game action",
+                    "Destroyed if {C:white,X:mult}XMult{} is ever greater than {C:white,X:mult}X#2#",
+                    "{C:inactive}(Currently {C:white,X:mult}X#3#{C:inactive} Mult)"
+                }
+            },
+            j_bfs_shoot_the_king = {
+                name = "Shoot the King",
+                text = {
+                    "{C:attention}Face cards{}",
+                    "held in hand give",
+                    "{C:mult}+#1#{} Mult and {C:white,X:mult}X#2#{} Mult"
+                }
+            },
             j_bfs_skybound = {
                 name = "Skybound",
                 text = {
@@ -114,23 +233,6 @@ return {
                     "Increase amount gained by {C:money}$#2#{}",
                     "when {C:attention}Boss Blind{} is defeated",
                     "{C:inactive}(Currently {C:money}$#3#{C:inactive})"
-                }
-            },
-            j_bfs_schro_cat = {
-                name = "Schrodinger's Cat",
-                text = {
-                    "This Joker randomly either loses or gains",
-                    "{C:white,X:mult}X#1#{} Mult on every {C:attention}game action",
-                    "Destroyed if {C:white,X:mult}XMult{} is ever greater than {C:white,X:mult}X#2#",
-                    "{C:inactive}(Currently {X:red,C:white}X#3#{C:inactive} Mult)"
-                }
-            },
-            j_bfs_shoot_the_king = {
-                name = "Shoot the King",
-                text = {
-                    "{C:attention}Face cards{}",
-                    "held in hand give ",
-                    "{C:mult}+#1#{} Mult and {C:white,X:mult}X#2#{} Mult"
                 }
             },
             j_bfs_sparkling_wine = {
@@ -177,12 +279,38 @@ return {
                     "contains {C:attention}#2#{} or fewer cards"
                 }
             },
+            j_bfs_sunrise = {
+                name = "Sunrise",
+                text = {
+                    "Retrigger each card in hand",
+                    "per #1# cards {C:attention}sold{}, resets",
+                    "when {C:attention}Boss Blind{} is defeated",
+                    "{C:inactive}(Currently #2#/#3# cards sold and {C:attention}#4#{}{C:inactive} retriggers)"
+                }
+            },
             j_bfs_teal_joker = {
                 name = "Teal Joker",
                 text = {
                     "This Joker gains {C:mult}+#1#{} Mult for each remaining {C:attention}card{} in",
                     "{C:attention}deck{} [context]",
                     "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+                }
+            },
+            j_bfs_temperance = {
+                name = "Temperance Joker",
+                text = {
+                    "Played cards with",
+                    "{C:clubs}Club{} suit give",
+                    "{C:white,X:chips}X#1#{} Chips when scored"
+                }
+            },
+            j_bfs_wandering_trader = {
+                name = "Wandering Trader",
+                text = {
+                    "Earn {C:money}$#1#{} and fill open",
+                    "consumable slots with {C:tarot}Tarot{} cards",
+                    "if {C:attention}poker hand{} contains a {C:attention}#2#{},",
+                    "{s:0.8}poker hand changes at end of round"
                 }
             },
             j_bfs_worthful_rock = {
@@ -201,141 +329,22 @@ return {
                     "{C:white,X:chips}X#3#{} Chips when scored"
                 }
             },
-            j_bfs_jolly_todd = {
-                name = "Jolly Todd",
+            j_bfs_zany_steven = {
+                name = "Zany Steven",
                 text = {
-                    "{C:red}+13{} Mult if",
+                    "{C:mult}+#1#{} Mult if",
                     "played hand contains a",
-                    "{C:attention}Pair{} of {C:attention}Odd{} ranked cards"
-                }
-            },
-            j_bfs_jolly_steven = {
-                name = "Jolly Steven",
-                text = {
-                    "{C:red}+14{} Mult if",
-                    "played hand contains a",
-                    "{C:attention}Pair{} of {C:attention}Even{} ranked cards"
+                    "{C:attention}Three of a Kind",
+                    "of {C:attention}even{} ranked cards"
                 }
             },
             j_bfs_zany_todd = {
                 name = "Zany Todd",
                 text = {
-                    "{C:red}+19{} Mult if",
+                    "{C:mult}+#1#{} Mult if",
                     "played hand contains a",
-                    "{C:attention}Three of a Kind{} of {C:attention}Odd{} ranked cards"
-                }
-            },
-            j_bfs_zany_steven = {
-                name = "Zany Steven",
-                text = {
-                    "{C:red}+20{} Mult if",
-                    "played hand contains a",
-                    "{C:attention}Three of a Kind{} of {C:attention}Even{} ranked cards"
-                }
-            },
-            j_bfs_mad_todd = {
-                name = "Mad Todd",
-                text = {
-                    "{C:red}+21{} Mult if",
-                    "played hand contains a",
-                    "{C:attention}Two Pair{} of {C:attention}Odd{} ranked cards"
-                }
-            },
-            j_bfs_mad_steven = {
-                name = "Mad Steven",
-                text = {
-                    "{C:red}+22{} Mult if",
-                    "played hand contains a",
-                    "{C:attention}Two Pair{} of {C:attention}Even{} ranked cards"
-                }
-            },
-            j_bfs_crazy_todd = {
-                name = "Crazy Todd",
-                text = {
-                    "{C:red}+25{} Mult if",
-                    "played hand contains a",
-                    "{C:attention}Straight{} with a majority",
-                    "of {C:attention}Odd{} ranked cards"
-                }
-            },
-            j_bfs_crazy_steven = {
-                name = "Crazy Steven",
-                text = {
-                    "{C:red}+26{} Mult if",
-                    "played hand contains a",
-                    "{C:attention}Straight{} with a majority",
-                    "of {C:attention}Even{} ranked cards"
-                }
-            },
-            j_bfs_droll_todd = {
-                name = "Droll Todd",
-                text = {
-                    "{C:red}+23{} Mult if",
-                    "played hand contains a",
-                    "{C:attention}Flush{} with a majority",
-                    "of {C:attention}Odd{} ranked cards"
-                }
-            },
-            j_bfs_droll_steven = {
-                name = "Droll Steven",
-                text = {
-                    "{C:red}+24{} Mult if",
-                    "played hand contains a",
-                    "{C:attention}Flush{} with a majority",
-                    "of {C:attention}Even{} ranked cards"
-                }
-            },
-            j_bfs_mathematician = {
-                name = "Mathematician",
-                text = {
-                    "Played cards with Fibonacci ranks score",
-                    "{C:blue}+21{} chips and {C:red}+13{} mult",
-                    "Retrigger played {C:attention}Aces{}"
-                }
-            },
-            j_bfs_sunrise = {
-                name = "Sunrise",
-                text = {
-                    "Retrigger each card in hand",
-                    "for every 2 cards {C:attention}sold{}, resets",
-                    "when {C:attention}Boss Blind{} is defeated",
-                    "{C:inactive}[currently at #1#/2 cards solds,{} {C:attention}#2#{} {C:inactive}retriggers]{}"
-                }
-            },
-            j_bfs_patient = {
-                name = "Patient Joker",
-                text = {
-                    "Played cards with the {C:spades}Spade{} Suit",
-                    "Give {X:blue, C:white}X1.5{} Chips when scored"
-                }
-            },
-            j_bfs_temperance = {
-                name = "Temperance Joker",
-                text = {
-                    "Played cards with the {C:clubs}Club{} Suit",
-                    "Give {X:blue, C:white}X1.5{} Chips when scored"
-                }
-            },
-            j_bfs_charity = {
-                name = "Charity Joker",
-                text = {
-                    "Played cards with the {C:diamonds}Diamond{} Suit",
-                    "Give {X:red, C:white}X1.5{} Mult when scored"
-                }
-            },
-            j_bfs_chastity = {
-                name = "Chastity Joker",
-                text = {
-                    "Played cards with the {C:hearts}Heart{} Suit",
-                    "Give {X:red, C:white}X1.5{} Mult when scored"
-                }
-            },
-            j_bfs_wandering_trader = {
-                name = "Wandering Trader",
-                text = {
-                    "Earn {C:money}#1#${} if poker hand contains a {C:attention}#2#",
-                    "Also fill open consumable slots with {C:tarot}Tarot Cards",
-                    "{C:inactive}poker hand changes at end of round",
+                    "{C:attention}Three of a Kind",
+                    "of {C:attention}odd{} ranked cards"
                 }
             },
         },

@@ -36,12 +36,12 @@ SMODS.Joker {
             for k, v in pairs(G.GAME.hands) do
                 if SMODS.is_poker_hand_visible(k) and k ~= self.ability.to_do_poker_hand then _poker_hands[#_poker_hands+1] = k end
             end
-            card.ability.to_do_poker_hand = pseudorandom_element(_poker_hands, pseudoseed('bfs_wandering_trader'))
+            card.ability.to_do_poker_hand = pseudorandom_element(_poker_hands, pseudoseed("bfs_wandering_trader"))
         end
         if context.scoring_name == card.ability.to_do_poker_hand then
             local card_limit = #G.consumeables.config.card_limit
             for i = 1,card_limit-#G.consumeables.cards do
-                local card = create_card('Tarot',G.consumeables, nil, nil, nil, nil, nil, 'bfs_wandering_trader')
+                local card = create_card("Tarot",G.consumeables, nil, nil, nil, nil, nil, "bfs_wandering_trader")
                 G.consumeables:emplace(card)
                 card:add_to_deck()
             end

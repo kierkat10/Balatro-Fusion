@@ -32,7 +32,7 @@ SMODS.Joker{
             if raised_card == context.other_card then
                 if context.other_card.debuff then
                     return {
-                        message = localize('k_debuffed'),
+                        message = localize("k_debuffed"),
                         colour = G.C.RED
                     }
                 else

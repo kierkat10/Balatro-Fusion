@@ -12,14 +12,17 @@ SMODS.BalatroFusion.Fusion:new_generic({
 SMODS.Joker {
     key = "crazy_todd",
     name = "Crazy Todd",
-    config = {},
+    config = { extra = { mult = 25 } },
     pos = { x = 0, y = 2 },
     cost = 10,
     rarity = "bfs_fused",
     blueprint_compat = true,
     atlas = "joker",
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.mult } }
+    end,
     calculate = function(self, card, context)
-        if context.cardarea == G.jokers and context.joker_main and next(context.poker_hands["Straight"]) then
+        if context.joker_main and next(context.poker_hands["Straight"]) then
             local odd_count = 0
             local not_odd_count = 0
             for _, v in ipairs(context.scoring_hand) do 
@@ -31,7 +34,7 @@ SMODS.Joker {
             end
             if odd_count > not_odd_count then 
                 return {
-                    mult = 25
+                    mult = card.ability.extra.mult
                 }
             end
         end

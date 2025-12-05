@@ -15,7 +15,7 @@ SMODS.Joker {
     config = {
         extra = {
             odds = 2,
-            x_chips = 1.75
+            xchips = 1.75
         }
     },
     pos = { x = 0, y = 0 },
@@ -29,14 +29,14 @@ SMODS.Joker {
             vars = {
                 numerator,
                 denominator,
-                card.ability.extra.x_chips
+                card.ability.extra.xchips
             }
         }
     end,
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play and SMODS.pseudorandom_probability(card, "j_bfs_worthless_rock", 1, card.ability.extra.odds) then
             return {
-                x_chips = card.ability.extra.x_chips
+                xchips = card.ability.extra.xchips
             }
         end
     end,

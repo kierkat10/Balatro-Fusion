@@ -12,23 +12,25 @@ SMODS.BalatroFusion.Fusion:new_generic({
 SMODS.Joker {
     key = "temperance",
     name = "Temperance Joker",
+    config = { extra = { xchips = 1.5 } },
     pos = { x = 0, y = 0 },
-    cost = 12,
+    cost = 10,
     rarity = "bfs_fused",
     blueprint_compat = true,
     atlas = "placeholder",
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.xchips } }
+    end,
     calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.play then
-            if context.other_card:is_suit("Clubs") then
-                return {
-                    xchips = 1.5
-                }
-            end
+        if context.individual and context.cardarea == G.play and context.other_card:is_suit("Clubs") then
+            return {
+                xchips = card.ability.extra.xchips
+            }
         end
     end,
 	bfs_credits = {
         idea = { "The Wheel" },
-		code = { "ButterStutter" },
-        art = { "The Wheel" }
+        art = { "The Wheel" },
+		code = { "ButterStutter" }
 	}
 }
