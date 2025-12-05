@@ -301,7 +301,35 @@ return {
                     "when {C:attention}Boss Blind{} is defeated",
                     "{C:inactive}[currently at #1#/2 cards solds,{} {C:attention}#2#{} {C:inactive}retriggers]{}"
                 }
-            }
+            },
+            j_bfs_patient = {
+                name = "Patient Joker",
+                text = {
+                    "Played cards with the {C:spades}Spade{} Suit",
+                    "Give {X:blue, C:white}X1.5{} Chips when scored"
+                }
+            },
+            j_bfs_temperance = {
+                name = "Temperance Joker",
+                text = {
+                    "Played cards with the {C:clubs}Club{} Suit",
+                    "Give {X:blue, C:white}X1.5{} Chips when scored"
+                }
+            },
+            j_bfs_charity = {
+                name = "Charity Joker",
+                text = {
+                    "Played cards with the {C:diamonds}Diamond{} Suit",
+                    "Give {X:red, C:white}X1.5{} Mult when scored"
+                }
+            },
+            j_bfs_chastity = {
+                name = "Chastity Joker",
+                text = {
+                    "Played cards with the {C:hearts}Heart{} Suit",
+                    "Give {X:red, C:white}X1.5{} Mult when scored"
+                }
+            },
         },
         Spectral = {
             c_bfs_fusion_reactor = {
