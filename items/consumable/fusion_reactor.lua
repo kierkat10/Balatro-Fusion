@@ -7,10 +7,19 @@ SMODS.Consumable {
     atlas = "consumable",
     use = function(self, card, area, copier)
         local input = G.jokers.highlighted
-        local result = SMODS.BalatroFusion.Fusion:get(G.jokers.highlighted)
-        SMODS.BalatroFusion.Fusion:fuse(result,input)
+        if #input > 0 then
+            local result = SMODS.BalatroFusion.Fusion:get(input)
+            if result then
+                SMODS.BalatroFusion.Fusion:fuse(result, input)
+            end
+        end
     end,
     can_use = function(self, card)
-        return #G.jokers.highlighted == 2 and SMODS.BalatroFusion.Fusion:get(G.jokers.highlighted) ~= nil
+        local highlighted = G.jokers.highlighted or {}
+        if #highlighted < 2 then
+            return false
+        end
+        local result = SMODS.BalatroFusion.Fusion:get(highlighted)
+        return result ~= nil
     end
 }
