@@ -1,7 +1,7 @@
 SMODS.BalatroFusion.Fusion:new_generic({
     id = "joker_fusion",
     key = "riff_raff_plus",
-    name = "Riff-Raff Plus",
+    name = "Riff-Raff Pro Plus",
     input = {
         "j_golden_ticket",
         "j_riff_raff",

@@ -186,6 +186,23 @@ return {
                     "{C:attention}non-face{} cards {C:attention}#1#{} time"
                 }
             },
+            j_bfs_pop_pop = {
+                name = "Pop-Pop-Pop-Pop",
+                text = {
+                    "{C:red}+#1#{} Mult, #4# by",
+                    "{C:red}#5##2#{} Mult when a hand is played",
+                    "Mult loss is reduced by {C:attention}-#3#{} per",
+                    "{C:common}Common{} Joker owned"
+                }
+            },
+            j_bfs_public_parking = {
+                name = "Public Parking",
+                text = {
+                    "{C:common}Common{} Jokers have a",
+                    "{C:green}#1# in #2#{} chance",
+                    "to earn {C:money}$#3#{}"
+                }
+            },
             j_bfs_riff_raff_plus = {
                 name = "Riff-Raff Pro Plus",
                 text = {
