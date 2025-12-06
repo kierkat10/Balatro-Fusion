@@ -40,13 +40,13 @@ SMODS.Joker {
         end
         if context.scoring_name == card.ability.to_do_poker_hand then
             local card_limit = #G.consumeables.config.card_limit
-            for i = 1,card_limit-#G.consumeables.cards do
-                local card = create_card("Tarot",G.consumeables, nil, nil, nil, nil, nil, "bfs_wandering_trader")
-                G.consumeables:emplace(card)
-                card:add_to_deck()
+            for i = 1, card_limit - #G.consumeables.cards do
+                local created_card = create_card("Tarot",G.consumeables, nil, nil, nil, nil, nil, "bfs_wandering_trader")
+                G.consumeables:emplace(created_card)
+                created_card:add_to_deck()
             end
             return {
-                dollars=card.ability.extra.dollars
+                dollars = card.ability.extra.dollars
             }
         end
     end,
