@@ -11,6 +11,6 @@ SMODS.Rarity {
     badge_colour = fused_gradient,
     pools = { ["Joker"] = true },
     get_weight = function(self, weight, object_type)
-		return 
+		return 0
 	end
 }

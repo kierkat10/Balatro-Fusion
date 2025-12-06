@@ -285,7 +285,7 @@ return {
                     "Retrigger each card in hand",
                     "per #1# cards {C:attention}sold{}, resets",
                     "when {C:attention}Boss Blind{} is defeated",
-                    "{C:inactive}(Currently #2#/#3# cards sold and {C:attention}#4#{}{C:inactive} retriggers)"
+                    "{C:inactive}(Currently #2#/#3# cards sold and {C:attention}#4#{C:inactive} retriggers)"
                 }
             },
             j_bfs_teal_joker = {
@@ -299,9 +299,17 @@ return {
             j_bfs_temperance = {
                 name = "Temperance Joker",
                 text = {
-                    "Played cards with",
+                    "Played cards with the",
                     "{C:clubs}Club{} suit give",
                     "{C:white,X:chips}X#1#{} Chips when scored"
+                }
+            },
+            j_bfs_the_foolfoolfool = {
+                name = "The FoolFoolFoolFoolFool",
+                text = {
+                    "Creates 1 random {C:tarot}Tarot{} Card per",
+                    "{C:common}Common{} Joker owned when",
+                    "Blind is selected"
                 }
             },
             j_bfs_wandering_trader = {

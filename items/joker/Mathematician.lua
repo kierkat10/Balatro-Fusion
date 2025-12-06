@@ -32,7 +32,7 @@ SMODS.Joker {
         } }
     end,
     calculate = function(self, card, context)
-        if context.repetition then
+        if context.repetition and context.cardarea == G.play then
             if context.other_card:get_id() == 14 then
                 return {
                     repetitions = card.ability.extra.repetitions,
@@ -49,7 +49,7 @@ SMODS.Joker {
                     mult = card.ability.extra.mult,
                 }
             end
-        elseif context.individual then
+        elseif context.individual and context.cardarea == G.play then
             if context.other_card:get_id() == 14 or context.other_card:get_id() == 2 or context.other_card:get_id() == 3 or context.other_card:get_id() == 5 or context.other_card:get_id() == 8 then
                 return {
                     chips = card.ability.extra.chips,
