@@ -259,50 +259,15 @@ function FusionClass:get(input)
         end
     end
 
-    if not next(potential_fusions) then
-        for _, fusion in ipairs(available_fusions) do
-            potential_fusions[fusion] = true
+    for fusion, _ in pairs(potential_fusions) do
+        if self:can_fuse(fusion, input) then
+            return fusion
         end
     end
 
-    for fusion, _ in pairs(potential_fusions) do
+    for _, fusion in ipairs(available_fusions) do
         if self:can_fuse(fusion, input) then
-            local remaining_inputs = {}
-            for k, v in pairs(input_counts) do
-                remaining_inputs[k] = v
-            end
-
-            local score = 0
-            local all_requirements_met = true
-
-            for _, input_req in ipairs(fusion.input) do
-                local target = input_req.target
-                local required = input_req.required or 1
-
-                if remaining_inputs[target] and remaining_inputs[target] >= required then
-                    score = score + (remaining_inputs[target] == required and 10 or 5)
-                    remaining_inputs[target] = remaining_inputs[target] - required
-                else
-                    all_requirements_met = false
-                    break
-                end
-            end
-
-            if all_requirements_met then
-                local has_remaining = false
-                for _, count in pairs(remaining_inputs) do
-                    if count > 0 then
-                        has_remaining = true;
-                        break
-                    end
-                end
-                if not has_remaining then
-                    score = score + 100
-                end
-                if score > best_score then
-                    best_score, best_fusion = score, fusion
-                end
-            end
+            return fusion
         end
     end
 
