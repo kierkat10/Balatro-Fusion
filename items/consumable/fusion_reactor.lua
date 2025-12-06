@@ -1,7 +1,7 @@
 SMODS.Consumable {
     key = "fusion_reactor",
     name = "Fusion Reactor",
-    set = "Spectral",
+    set = "Tarot",
     pos = { x = 0, y = 0 },
     cost = 4,
     atlas = "consumable",
