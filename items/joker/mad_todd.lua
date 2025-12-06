@@ -14,7 +14,7 @@ SMODS.Joker {
     name = "Mad Todd",
     config = { extra = { mult = 21 } },
     pos = { x = 8, y = 1 },
-    cost = 9,
+    cost = 8,
     rarity = "bfs_fused",
     blueprint_compat = true,
     atlas = "joker",

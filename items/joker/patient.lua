@@ -14,7 +14,7 @@ SMODS.Joker {
     name = "Patient Joker",
     config = { extra = { xchips = 1.5 } },
     pos = { x = 0, y = 0 },
-    cost = 12,
+    cost = 10,
     rarity = "bfs_fused",
     blueprint_compat = true,
     atlas = "placeholder",
@@ -32,7 +32,7 @@ SMODS.Joker {
     end,
 	bfs_credits = {
         idea = { "The Wheel" },
-		code = { "ButterStutter" },
-        art = { "The Wheel" }
+        art = { "The Wheel" },
+		code = { "ButterStutter" }
 	}
 }

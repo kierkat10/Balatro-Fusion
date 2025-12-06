@@ -35,7 +35,7 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play and context.other_card:is_suit("Diamonds") and #context.full_hand <= card.ability.extra.size then
             return {
-                xmult = card.ability.extra.xmult,
+                xmult = card.ability.extra.xmult
             }
         end
     end,

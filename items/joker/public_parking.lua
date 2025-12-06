@@ -12,10 +12,12 @@ SMODS.BalatroFusion.Fusion:new_generic({
 SMODS.Joker {
     key = "public_parking",
     name = "Public Parking",
-    config = { extra = { 
-        odds = 2,
-        dollars = 2 
-    } },
+    config = {
+        extra = { 
+            odds = 2,
+            dollars = 2 
+        } 
+    },
     pos = { x = 2, y = 8 },
     cost = 12,
     rarity = "bfs_fused",
@@ -39,8 +41,8 @@ SMODS.Joker {
         end
     end,
     bfs_credits = {
-        art = { "StellarBlue" },
         idea = { "ButterStutter" },
+        art = { "StellarBlue" },
 		code = { "ButterStutter" }
 	}
 }

@@ -14,7 +14,7 @@ return {
                 text = {
                     "Played cards with",
                     "{C:diamond}Diamond{} suit give",
-                    "{X:mult,C:white}X1.5{} Mult when scored"
+                    "{X:mult,C:white}X#1#{} Mult when scored"
                 }
             },
             j_bfs_chastity = {
@@ -22,7 +22,7 @@ return {
                 text = {
                     "Played cards with",
                     "{C:heart}Heart{} suit give",
-                    "{X:mult,C:white}X1.5{} Mult when scored"
+                    "{X:mult,C:white}X#1#{} Mult when scored"
                 }
             },
             j_bfs_chiseled_gems = {
@@ -302,9 +302,9 @@ return {
                 name = "Sunrise",
                 text = {
                     "Retrigger each played card",
-                    "per #1# cards {C:attention}sold{}, resets",
+                    "per {C:attention}#1#{} cards {C:attention}sold{}, resets",
                     "when {C:attention}Boss Blind{} is defeated",
-                    "{C:inactive}(Currently #2#/#3# cards sold and {C:attention}#4#{C:inactive} retriggers)"
+                    "{C:inactive}(Currently {C:attention}#2#{C:inactive}/{C:attention}#3#{C:inactive} cards sold and {C:attention}#4#{C:inactive} retriggers)"
                 }
             },
             j_bfs_teal_joker = {
@@ -315,10 +315,10 @@ return {
                     "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
-            j_bfs_temperance = {
-                name = "Temperance Joker",
+            j_bfs_tempered = {
+                name = "Tempered Joker",
                 text = {
-                    "Played cards with the",
+                    "Played cards with",
                     "{C:clubs}Club{} suit give",
                     "{C:white,X:chips}X#1#{} Chip#<s>1# when scored"
                 }
@@ -326,9 +326,9 @@ return {
             j_bfs_the_fool = {
                 name = "The Fool-Fool",
                 text = {
-                    "Creates 1 random {C:tarot}Tarot{} Card per",
+                    "Creates {C:attention}#1#{} {C:tarot}Tarot{} card per",
                     "{C:common}Common{} Joker owned when",
-                    "Blind is selected"
+                    "{C:attention}Blind{} is selected"
                 }
             },
             j_bfs_wandering_trader = {
@@ -353,7 +353,7 @@ return {
                 text = {
                     "Played cards have a",
                     "{C:green}#1# in #2#{} chance to give",
-                    "{C:white,X:chips}X#3#{} Chip#<s>1# when scored"
+                    "{C:white,X:chips}X#3#{} Chip#<s>2# when scored"
                 }
             },
             j_bfs_zany_steven = {

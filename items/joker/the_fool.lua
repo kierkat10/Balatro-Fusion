@@ -12,17 +12,22 @@ SMODS.BalatroFusion.Fusion:new_generic({
 SMODS.Joker {
     key = "the_fool",
     name = "The Fool-Fool",
+    config = { extra = { create = 1 } },
     pos = { x = 2, y = 14 },
-    cost = 14,
+    cost = 12,
     rarity = "bfs_fused",
     blueprint_compat = true,
     atlas = "riff-raff",
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.create } }
+    end,
     calculate = function(self, card, context)
         if context.setting_blind then
-            local count = 0
             for _, v in pairs(G.jokers.cards) do
                 if v.config.center.rarity == 1 and #G.consumeables.cards < G.consumeables.config.card_limit then
-                    SMODS.add_card({ set = 'Tarot' }) -- If someone wants to add animation/shader bits here that would be helpful
+                    for i = 1, card.ability.extra.create do
+                        SMODS.add_card({ set = 'Tarot' })
+                    end
                 end
             end
         end
@@ -30,6 +35,6 @@ SMODS.Joker {
 	bfs_credits = {
         art = { "StellarBlue" },
         idea = { "StellarBlue" },
-		code = { "ButterStutter" }
+		code = { "ButterStutter", "Glitchkat10" }
 	}
 }

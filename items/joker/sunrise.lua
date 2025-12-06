@@ -51,7 +51,7 @@ SMODS.Joker {
                 card.ability.extra.current = 0
                 card.ability.extra.repetitions = card.ability.extra.repetitions + 1
                 return { 
-                    message = card.ability.extra.repetitions .. " retriggers!" 
+                    message = card.ability.extra.repetitions .. " Retriggers!" 
                 }
             else
                 return { 
