@@ -237,13 +237,13 @@ function FusionClass:get(input)
             end
         end
     end
-    
+
     for fusion, _ in pairs(potential_fusions) do
         if self:can_fuse(fusion, input) then
             return fusion
         end
     end
-    
+
     for _, fusion in ipairs(available_fusions) do
         if self:can_fuse(fusion, input) then
             return fusion

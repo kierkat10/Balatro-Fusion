@@ -375,7 +375,7 @@ return {
                 }
             },
         },
-        Spectral = {
+        Tarot = {
             c_bfs_fusion_reactor = {
                 name = "Fusion Reactor",
                 text = {
