@@ -6,10 +6,10 @@ lenient_bignum = lenient_bignum or function(a)
     return a
 end
 function is_number(x)
-    if type(x) == "number" then
+    if type(x) == 'number' then
         return true
     end
-    if type(x) == "table" and ((x.e and x.m) or (x.array and x.sign)) then
+    if type(x) == 'table' and ((x.e and x.m) or (x.array and x.sign)) then
         return true
     end
     return false

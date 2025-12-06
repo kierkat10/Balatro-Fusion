@@ -81,7 +81,7 @@ return {
             j_bfs_equal_evan = {
                 name = "Equal Evan",
                 text = {
-                    "Played {C:attention}non-face{} cards",
+                    "Played non-{C:attention}face cards",
                     "give {C:chips}+#1#{} Chip#<s>1# and",
                     "{C:mult}+#2#{} Mult when scored"
                 }
@@ -116,9 +116,9 @@ return {
             j_bfs_impossible_beef = {
                 name = "Impossible Beef",
                 text = {
-                    "{C:white,X:chips}X#1#{} Chips for",
+                    "{C:white,X:chips}X#1#{} Chip#<s>1# for",
                     "every {C:money}$#2#{} you have",
-                    "{C:inactive}(Currently {C:white,X:blue}X#3#{C:inactive} Chips)"
+                    "{C:inactive}(Currently {C:white,X:blue}X#3#{C:inactive} Chip#<s>1#)"
                 }
             },
             j_bfs_jolly_steven = {
@@ -161,7 +161,7 @@ return {
                 name = "Mathematician",
                 text = {
                     "Each played {C:attention}Ace{}, {C:attention}2{}, {C:attention}3{}, {C:attention}5{}, or {C:attention}8{} gives",
-                    "{C:blue}+#1#{} Chips and {C:mult}+#2#{} Mult when scored",
+                    "{C:blue}+#1#{} Chip#<s>1# and {C:mult}+#2#{} Mult when scored",
                     "Retrigger each played {C:attention}Ace{}"
                 }
             },
@@ -170,7 +170,7 @@ return {
                 text = {
                     "Played cards with",
                     "{C:spade}Spade{} suit give",
-                    "{C:white,X:chips}X#1#{} Chips when scored"
+                    "{C:white,X:chips}X#1#{} Chip#<s>1# when scored"
                 }
             },
             j_bfs_perkeo_king = {
@@ -320,7 +320,7 @@ return {
                 text = {
                     "Played cards with the",
                     "{C:clubs}Club{} suit give",
-                    "{C:white,X:chips}X#1#{} Chips when scored"
+                    "{C:white,X:chips}X#1#{} Chip#<s>1# when scored"
                 }
             },
             j_bfs_the_fool = {
@@ -353,7 +353,7 @@ return {
                 text = {
                     "Played cards have a",
                     "{C:green}#1# in #2#{} chance to give",
-                    "{C:white,X:chips}X#3#{} Chips when scored"
+                    "{C:white,X:chips}X#3#{} Chip#<s>1# when scored"
                 }
             },
             j_bfs_zany_steven = {
