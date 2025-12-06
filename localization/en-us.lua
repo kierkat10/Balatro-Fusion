@@ -125,49 +125,51 @@ return {
                 name = "Jolly Steven",
                 text = {
                     "{C:mult}+#1#{} Mult if",
-                    "played hand contains a",
-                    "{C:attention}Pair{} of",
-                    "{C:attention}even{} ranked cards"
+                    "played hand contains",
+                    "a {C:attention}Pair{} of {C:attention}even",
+                    "ranked cards"
                 }
             },
             j_bfs_jolly_todd = {
                 name = "Jolly Todd",
                 text = {
                     "{C:mult}+#1#{} Mult if",
-                    "played hand contains a",
-                    "{C:attention}Pair{} of",
-                    "{C:attention}odd{} ranked cards"
+                    "played hand contains",
+                    "a {C:attention}Pair{} of {C:attention}odd",
+                    "ranked cards"
                 }
             },
             j_bfs_mad_steven = {
                 name = "Mad Steven",
                 text = {
                     "{C:mult}+#1#{} Mult if",
-                    "played hand contains a",
-                    "{C:attention}Two Pair{} of {C:attention}Even{} ranked cards"
+                    "played hand contains",
+                    "a {C:attention}Two Pair{} of",
+                    "{C:attention}even{} ranked cards"
                 }
             },
             j_bfs_mad_todd = {
                 name = "Mad Todd",
                 text = {
                     "{C:mult}+#1#{} Mult if",
-                    "played hand contains a",
-                    "{C:attention}Two Pair{} of {C:attention}Odd{} ranked cards"
+                    "played hand contains",
+                    "a {C:attention}Two Pair{} of",
+                    "{C:attention}odd{} ranked cards"
                 }
             },
             j_bfs_mathematician = {
                 name = "Mathematician",
                 text = {
-                    "Played cards with Fibonacci ranks score",
-                    "{C:blue}+#1#{} Chips and {C:mult}+#2#{} Mult",
-                    "Retrigger played {C:attention}Aces{}"
+                    "Each played {C:attention}Ace{}, {C:attention}2{}, {C:attention}3{}, {C:attention}5{}, or {C:attention}8{} gives",
+                    "{C:blue}+#1#{} Chips and {C:mult}+#2#{} Mult when scored",
+                    "Retrigger each played {C:attention}Ace{}"
                 }
             },
             j_bfs_patient = {
                 name = "Patient Joker",
                 text = {
                     "Played cards with",
-                    "{C:diamond}Spade{} suit give",
+                    "{C:spade}Spade{} suit give",
                     "{C:white,X:chips}X#1#{} Chips when scored"
                 }
             },
@@ -198,8 +200,8 @@ return {
             j_bfs_public_parking = {
                 name = "Public Parking",
                 text = {
-                    "{C:common}Common{} Jokers have a",
-                    "{C:green}#1# in #2#{} chance",
+                    "{C:common}Common{} Jokers each",
+                    "have a {C:green}#1# in #2#{} chance",
                     "to earn {C:money}$#3#{}"
                 }
             },
@@ -299,10 +301,10 @@ return {
             j_bfs_sunrise = {
                 name = "Sunrise",
                 text = {
-                    "Retrigger each card in hand",
+                    "Retrigger each played card",
                     "per #1# cards {C:attention}sold{}, resets",
                     "when {C:attention}Boss Blind{} is defeated",
-                    "{C:inactive}(Currently #2#/#1# cards sold and {C:attention}#3#{C:inactive} retriggers)"
+                    "{C:inactive}(Currently #2#/#3# cards sold and {C:attention}#4#{C:inactive} retriggers)"
                 }
             },
             j_bfs_teal_joker = {
@@ -321,8 +323,8 @@ return {
                     "{C:white,X:chips}X#1#{} Chips when scored"
                 }
             },
-            j_bfs_the_foolfoolfool = {
-                name = "The FoolFoolFoolFoolFool",
+            j_bfs_the_fool = {
+                name = "The Fool-Fool",
                 text = {
                     "Creates 1 random {C:tarot}Tarot{} Card per",
                     "{C:common}Common{} Joker owned when",

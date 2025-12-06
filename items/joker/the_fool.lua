@@ -1,17 +1,17 @@
 SMODS.BalatroFusion.Fusion:new_generic({
     id = "joker_fusion",
-    key = "the_foolfoolfool",
-    name = "The FoolFoolFoolFoolfool",
+    key = "the_fool",
+    name = "The Fool-Fool",
     input = {
         "j_cartomancer",
-        "j_riff_raff",
+        "j_riff_raff"
     },
-    output = "j_bfs_the_foolfoolfool"
+    output = "j_bfs_the_fool"
 })
 
 SMODS.Joker {
-    key = "the_foolfoolfool",
-    name = "The FoolFoolFoolFoolfool",
+    key = "the_fool",
+    name = "The Fool-Fool",
     pos = { x = 2, y = 14 },
     cost = 14,
     rarity = "bfs_fused",

@@ -15,7 +15,8 @@ SMODS.Joker {
     config = {
         extra = {
             cards_to_sell = 2,
-            sold_cards = 0,
+            current = 0,
+            requirement = 2,
             repetitions = 0,
         }
     },
@@ -28,7 +29,8 @@ SMODS.Joker {
         return {
             vars = {
                 card.ability.extra.cards_to_sell,
-                card.ability.extra.sold_cards,
+                card.ability.extra.current,
+                card.ability.extra.requirement,
                 card.ability.extra.repetitions,
             }
         }
@@ -44,18 +46,24 @@ SMODS.Joker {
             end
         end
         if context.selling_card then
-            card.ability.extra.sold_cards = card.ability.extra.sold_cards + 1
-            if card.ability.extra.sold_cards == 2 then
-                card.ability.extra.sold_cards = 0
+            card.ability.extra.current = card.ability.extra.current + 1
+            if card.ability.extra.current == card.ability.extra.requirement then
+                card.ability.extra.current = 0
                 card.ability.extra.repetitions = card.ability.extra.repetitions + 1
-                card_eval_status_text(card, "extra", nil, nil, nil, { message = card.ability.extra.repetitions .. " retriggers!" })
+                return { 
+                    message = card.ability.extra.repetitions .. " retriggers!" 
+                }
             else
-                card_eval_status_text(card, "extra", nil, nil, nil, { message = "1/2" })
+                return { 
+                    message = card.ability.extra.current .. "/" .. card.ability.extra.requirement
+                }
             end
         end
-        if context.end_of_round and context.game_over and G.GAME.blind.boss then
+        if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint and context.beat_boss and card.ability.extra.repetitions > 0 then
             card.ability.extra.repetitions = 0
-            card_eval_status_text(card, "extra", nil, nil, nil, { message = "Reset" })
+            return {
+                message = localize("k_reset")
+            }
         end
     end,
 	bfs_credits = {

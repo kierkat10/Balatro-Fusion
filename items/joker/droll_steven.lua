@@ -3,8 +3,8 @@ SMODS.BalatroFusion.Fusion:new_generic({
     key = "droll_steven",
     name = "Droll Steven",
     input = {
-        "j_even_steven",
         "j_droll",
+        "j_even_steven"
     },
     output = "j_bfs_droll_steven"
 })
