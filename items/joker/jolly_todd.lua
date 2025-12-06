@@ -18,6 +18,9 @@ SMODS.Joker {
     rarity = "bfs_fused",
     blueprint_compat = true,
     atlas = "joker",
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.mult } }
+    end,
     calculate = function(self, card, context)
         if context.joker_main then
             local pair_ranks = {}
