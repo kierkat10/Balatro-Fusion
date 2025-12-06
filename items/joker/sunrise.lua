@@ -14,6 +14,7 @@ SMODS.Joker {
     name = "Sunrise",
     config = {
         extra = {
+            cards_to_sell = 2,
             sold_cards = 0,
             repetitions = 0,
         }
@@ -26,8 +27,9 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
+                card.ability.extra.cards_to_sell,
                 card.ability.extra.sold_cards,
-                card.ability.extra.repetitions
+                card.ability.extra.repetitions,
             }
         }
     end,

@@ -11,24 +11,25 @@ SMODS.BalatroFusion.Fusion:new_generic({
 
 SMODS.Joker {
     key = "riff_raff_plus",
-    name = "Riff-Raff Plus",
+    name = "Riff-Raff Pro Plus",
     config = { extra = { dollars = 4 } },
-    pos = { x = 0, y = 0 },
+    pos = { x = 6, y = 10 },
     cost = 12,
     rarity = "bfs_fused",
     blueprint_compat = true,
-    atlas = "placeholder",
+    atlas = "riff-raff",
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.dollars } }
     end,
     calculate = function(self, card, context)
-        if context.other_joker and context.other_joker:is_rarity("Common") then
+        if context.other_joker and context.other_joker:is_rarity("Common") and context.other_joker.edition then
             return {
                 dollars = card.ability.extra.dollars
             }
         end
     end,
     bfs_credits = {
+        art = { "StellarBlue" },
         idea = { "StellarBlue" },
 		code = { "Glitchkat10" }
 	}

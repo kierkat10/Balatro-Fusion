@@ -116,9 +116,9 @@ return {
             j_bfs_impossible_beef = {
                 name = "Impossible Beef",
                 text = {
-                    "{C:white,X:chips}X#1#{} Chip#<s>1# for",
-                    "each {C:money}$#2#{} you have",
-                    "{C:inactive}(Currently {C:white,X:blue}X#3#{C:inactive} Chip#<s>2#)"
+                    "{C:white,X:chips}X#1#{} Chips for",
+                    "every {C:money}$#2#{} you have",
+                    "{C:inactive}(Currently {C:white,X:blue}X#3#{C:inactive} Chips)"
                 }
             },
             j_bfs_jolly_steven = {
@@ -183,21 +183,21 @@ return {
                 name = "Politician",
                 text = {
                     "Retrigger all played",
-                    "{C:attention}non-face{} cards {C:attention}#1#{} time#<s>1#"
+                    "{C:attention}non-face{} cards {C:attention}#1#{} time"
                 }
             },
             j_bfs_riff_raff_plus = {
-                name = "Riff-Raff Plus",
+                name = "Riff-Raff Pro Plus",
                 text = {
-                    "{C:common}Common{} Jokers",
-                    "each earn {C:money}$#1#"
+                    "{C:common}Common{} Jokers with an",
+                    "{C:enhanced}Edition{} each earn {C:money}$#1#"
                 }
             },
             j_bfs_riff_raff_pro = {
                 name = "Riff-Raff Pro",
                 text = {
                     "When {C:attention}Blind{} is selected,",
-                    "create {C:attention}#1#{} {C:uncommon}Uncommon{} {C:attention}Joker#<s>1#{"
+                    "create {C:attention}#1# {C:uncommon}Uncommon {C:attention}Joker{}"
                 }
             },
             j_bfs_riff_ring = {
@@ -285,7 +285,7 @@ return {
                     "Retrigger each card in hand",
                     "per #1# cards {C:attention}sold{}, resets",
                     "when {C:attention}Boss Blind{} is defeated",
-                    "{C:inactive}(Currently #2#/#3# cards sold and {C:attention}#4#{C:inactive} retriggers)"
+                    "{C:inactive}(Currently #2#/#1# cards sold and {C:attention}#3#{C:inactive} retriggers)"
                 }
             },
             j_bfs_teal_joker = {

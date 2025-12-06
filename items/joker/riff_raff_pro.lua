@@ -13,11 +13,11 @@ SMODS.Joker {
     key = "riff_raff_pro",
     name = "Riff-Raff Pro",
     config = { extra = { create = 1 } },
-    pos = { x = 0, y = 0 },
+    pos = { x = 0, y = 9 },
     cost = 12,
     rarity = "bfs_fused",
     blueprint_compat = true,
-    atlas = "placeholder",
+    atlas = "riff-raff",
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.create } }
     end,
@@ -45,6 +45,7 @@ SMODS.Joker {
         end
     end,
     bfs_credits = {
+        art = { "StellarBlue" },
         idea = { "StellarBlue" },
 		code = { "Glitchkat10" }
 	}

@@ -13,11 +13,11 @@ SMODS.Joker {
     key = "riff_ring",
     name = "Riff-Ring",
     config = { extra = { xmult = 2 } },
-    pos = { x = 0, y = 0 },
+    pos = { x = 8, y = 10 },
     cost = 12,
     rarity = "bfs_fused",
     blueprint_compat = true,
-    atlas = "placeholder",
+    atlas = "riff-raff",
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.xmult } }
     end,
@@ -29,6 +29,7 @@ SMODS.Joker {
         end
     end,
     bfs_credits = {
+        art = { "StellarBlue" },
         idea = { "StellarBlue" },
 		code = { "Glitchkat10" }
 	}
