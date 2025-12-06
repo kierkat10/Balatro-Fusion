@@ -11,7 +11,6 @@ function Game:start_run(args)
             end
         end,
         blocking = false
-
     }))
     return r
 end
