@@ -26,7 +26,6 @@ SMODS.Joker {
     atlas = "joker",
     loc_vars = function(self, info_queue, card)
         return { vars = {
-            card.ability.extra.repetitions,
             card.ability.extra.chips,
             card.ability.extra.mult
         } }
