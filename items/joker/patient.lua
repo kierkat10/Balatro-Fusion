@@ -13,7 +13,7 @@ SMODS.Joker {
     key = "patient",
     name = "Patient Joker",
     config = { extra = { xchips = 1.5 } },
-    pos = { x = 0, y = 0 },
+    pos = { x = 9, y = 2 },
     cost = 10,
     rarity = "bfs_fused",
     blueprint_compat = true,

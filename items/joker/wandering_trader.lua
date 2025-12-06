@@ -17,11 +17,11 @@ SMODS.Joker {
             dollars=4,
         },
     },
-    pos = { x = 0, y = 0 },
+    pos = { x = 1, y = 7 },
     cost = 14,
     rarity = "bfs_fused",
     blueprint_compat = true,
-    atlas = "placeholder",
+    atlas = "riff-raff",
     loc_vars = function(self, info_queue, card)
         return {
             vars={

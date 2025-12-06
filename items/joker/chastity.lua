@@ -13,7 +13,7 @@ SMODS.Joker {
     key = "chastity",
     name = "Chastity Joker",
     config = { extra = { xmult = 1.5 } },
-    pos = { x = 0, y = 0 },
+    pos = { x = 8, y = 2 },
     cost = 10,
     rarity = "bfs_fused",
     blueprint_compat = true,
