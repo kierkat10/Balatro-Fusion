@@ -6,7 +6,7 @@ SMODS.BalatroFusion.Fusion:new_generic({
         "j_cloud_9",
         "j_rocket"
     },
-    output = "j_bfs_equal_evan"
+    output = "j_bfs_skybound"
 })
 
 SMODS.Joker{
