@@ -1,17 +1,17 @@
 SMODS.BalatroFusion.Fusion:new_generic({
     id = "joker_fusion",
-    key = "temperance",
-    name = "Temperance Joker",
+    key = "tempered",
+    name = "Tempered Joker",
     input = {
-        "j_gluttonous",
-        "j_gluttonous",
+        "j_gluttenous_joker",
+        "j_gluttenous_joker",
     },
-    output = "j_bfs_temperance"
+    output = "j_bfs_tempered"
 })
 
 SMODS.Joker {
-    key = "temperance",
-    name = "Temperance Joker",
+    key = "tempered",
+    name = "Tempered Joker",
     config = { extra = { xchips = 1.5 } },
     pos = { x = 0, y = 0 },
     cost = 10,

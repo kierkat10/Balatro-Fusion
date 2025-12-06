@@ -3,7 +3,7 @@ SMODS.BalatroFusion.Fusion:new_generic({
     key = "riff_raff_pro",
     name = "Riff-Raff Pro",
     input = {
-        "j_greedy",
+        "j_greedy_joker",
         "j_half",
     },
     output = "j_bfs_split_greed"

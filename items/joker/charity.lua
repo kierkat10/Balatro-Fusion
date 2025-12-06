@@ -1,31 +1,31 @@
 SMODS.BalatroFusion.Fusion:new_generic({
     id = "joker_fusion",
-    key = "patient",
-    name = "Patient Joker",
+    key = "charity",
+    name = "Charity Joker",
     input = {
-        "j_wrathful",
-        "j_wrathful",
+        "j_greedy_joker",
+        "j_greedy_joker",
     },
-    output = "j_bfs_patient"
+    output = "j_bfs_charity"
 })
 
 SMODS.Joker {
-    key = "patient",
-    name = "Patient Joker",
-    config = { extra = { xchips = 1.5 } },
+    key = "charity",
+    name = "Charity Joker",
+    config = { extra = { xmult = 1.5 } },
     pos = { x = 0, y = 0 },
-    cost = 12,
+    cost = 10,
     rarity = "bfs_fused",
     blueprint_compat = true,
     atlas = "placeholder",
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.xchips } }
+        return { vars = { card.ability.extra.xmult } }
     end,
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play then
-            if context.other_card:is_suit("Spades") then
+            if context.other_card:is_suit("Diamonds") then
                 return {
-                    xchips = card.ability.extra.xchips
+                    xmult = 1.5
                 }
             end
         end

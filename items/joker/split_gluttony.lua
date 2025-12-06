@@ -4,7 +4,7 @@ SMODS.BalatroFusion.Fusion:new_generic({
     name = "Split Gluttony",
     input = {
         "j_half",
-        "j_gluttenous",
+        "j_gluttenous_joker",
     },
     output = "j_bfs_split_gluttony"
 })

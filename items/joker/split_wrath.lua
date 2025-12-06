@@ -4,7 +4,7 @@ SMODS.BalatroFusion.Fusion:new_generic({
     name = "Split Wrath",
     input = {
         "j_half",
-        "j_wrathful",
+        "j_wrathful_joker",
     },
     output = "j_bfs_split_wrath"
 })

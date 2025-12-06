@@ -1,10 +1,10 @@
 SMODS.BalatroFusion.Fusion:new_generic({
     id = "joker_fusion",
-    key = "patient",
+    key = "chastity",
     name = "Chastity Joker",
     input = {
-        "j_lusty",
-        "j_lusty",
+        "j_lusty_joker",
+        "j_lusty_joker",
     },
     output = "j_bfs_chastity"
 })
