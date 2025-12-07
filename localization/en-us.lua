@@ -9,6 +9,23 @@ return {
                     "{C:inactive}(Currently {C:white,X:mult}X#2#{C:inactive} Mult)"
                 }
             },
+            j_bfs_bonfire = {
+                name = "Bonfire",
+                text = {
+                    "This Joker gains",
+                    "{C:white,X:mult}X#1#{} Mult per card {C:attention}sold",
+                    "{C:inactive}(Currently {C:white,X:mult}X#2#{C:inactive} Mult)"
+                }
+            },
+            j_bfs_card_pack = {
+                name = "Card Pack",
+                text = {
+                    "{C:rare}Rare{} Jokers each",
+                    "give {C:white,X:mult}X#1#{} Mult,",
+                    "{C:green}#2# in #3#{} chance to earn",
+                    "{C:money}$#4#{} at end of round",
+                }
+            },
             j_bfs_charity = {
                 name = "Charity Joker",
                 text = {
@@ -321,6 +338,18 @@ return {
                     "Played cards with",
                     "{C:clubs}Club{} suit give",
                     "{C:white,X:chips}X#1#{} Chip#<s>1# when scored"
+                }
+            },
+            j_bfs_temple = {
+                name = "Temple",
+                text = {
+                    "Played cards with {V:1}#1#{} suit",
+                    "give {C:white,X:mult}X#2#{} Mult when scored",
+                    "This Joker gains {C:chips}+#3#{} Chips",
+                    "when a played card with",
+                    "{V:1}#1#{} suit is scored",
+                    "{s:0.8}Suit changes every round",
+                    "{C:inactive}(Currently {C:chips}+#4#{C:inactive} Chips)"
                 }
             },
             j_bfs_the_fool = {

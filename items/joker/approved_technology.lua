@@ -12,11 +12,7 @@ SMODS.BalatroFusion.Fusion:new_generic({
 SMODS.Joker {
     key = "approved_technology",
     name = "Approved Technology",
-    config = {
-        extra = {
-            xmult = 0.5
-        }
-    },
+    config = { extra = { xmult = 0.5 } },
     pos = { x = 0, y = 0 },
     cost = 13,
     rarity = "bfs_fused",
