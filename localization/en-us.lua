@@ -315,13 +315,31 @@ return {
                     "contains {C:attention}#2#{} or fewer cards"
                 }
             },
+            j_bfs_steel_card = {
+                name = "Steel Card",
+                text = {
+                    "This Joker gains {C:white,X:red}X#2#{} Mult",
+                    "when any {C:attention}Standard Pack{} with a ",
+                    "{C:enhanced}Steel{} Card in it is Skipped",
+                    "{C:inactive}(Currently {C:white,X:red}X#1#{C:inactive} Mult)"
+                }
+            },
+            j_bfs_stone_card = {
+                name = "Stone Card",
+                text = {
+                    "This Joker gains {C:blue}+#2#{} Chips",
+                    "when any {C:attention}Standard Pack{} with a ",
+                    "{C:enhanced}Stone{} Card in it is Skipped",
+                    "{C:inactive}(Currently {C:blue}+#1#{C:inactive} Chips)"
+                }
+            },
             j_bfs_sunrise = {
                 name = "Sunrise",
                 text = {
                     "Retrigger each played card",
                     "per {C:attention}#1#{} cards {C:attention}sold{}, resets",
                     "when {C:attention}Boss Blind{} is defeated",
-                    "{C:inactive}(Currently {C:attention}#2#{C:inactive}/{C:attention}#3#{C:inactive} cards sold and {C:attention}#4#{C:inactive} retriggers)"
+                    "{C:inactive}(Currently {C:attention}#2#{C:inactive}/{C:attention}#3#{C:inactive} cards sold and {C:attention}#4#{C:inactive} retrigger#<s>4#)"
                 }
             },
             j_bfs_teal_joker = {
