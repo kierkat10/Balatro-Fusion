@@ -26,9 +26,7 @@ SMODS.Joker{
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
-                card.ability.extra.xmult_mod,
-                card.ability.extra.max,
-                card.ability.extra.xmult
+                card.ability.extra.dollars,
             }
         }
     end,
