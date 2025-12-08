@@ -411,6 +411,13 @@ return {
                     "{C:bfs_fused,E:1}Fuse{} two or",
                     "more Jokers"
                 }
+            },
+            c_bfs_house_devil = {
+                name = "House of the Devil",
+                text = {
+                    "{C:bfs_fused,E:1}Unfuse{} {C:attention}#1#{} selected Joker",
+                    "{C:inactive}(Must have room)"
+                }
             }
         }
     },

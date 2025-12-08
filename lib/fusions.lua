@@ -30,6 +30,14 @@ local available_fusions = {}
 local stored_fusions = {}
 local fusion_index = {}
 
+local function table_keys(t)
+    local keys = {}
+    for k, _ in pairs(t) do
+        table.insert(keys, tostring(k))
+    end
+    return table.concat(keys, ", ")
+end
+
 function FusionClass:rebuild_index()
     fusion_index = {}
     for _, fusion in ipairs(available_fusions) do
@@ -272,6 +280,76 @@ function FusionClass:get(input)
     end
 
     return best_fusion
+end
+
+function FusionClass:unfuse_joker(fused_joker)
+    if not fused_joker or not fused_joker.config or not fused_joker.config.center then
+        return false
+    end
+
+    local key = fused_joker.config.center.key
+    local fusion_def
+
+    for _, fusion in ipairs(available_fusions) do
+        if fusion.output and #fusion.output > 0 and fusion.output[1].args and fusion.output[1].args.key == key then
+            fusion_def = fusion
+            break
+        end
+    end
+
+    if not fusion_def or not fusion_def.input then
+        return false
+    end
+
+    local joker_keys = {}
+    for _, input in ipairs(fusion_def.input) do
+        if input.target then
+            table.insert(joker_keys, input.target)
+        end
+    end
+
+    local num_components = #joker_keys
+    if num_components < 2 then
+        return false
+    end
+
+    local joker_slots = G.jokers and G.jokers.config and G.jokers.config.card_limit or 5
+    local current_jokers = #G.jokers.cards
+    local available_slots = joker_slots - current_jokers
+
+    local created_jokers = {}
+
+    if available_slots <= 0 then
+        local joker = SMODS.create_card({
+            key = joker_keys[1],
+            set = "Joker"
+        })
+        if joker then
+            joker:add_to_deck()
+            G.jokers:emplace(joker)
+            table.insert(created_jokers, joker)
+        end
+    else
+        local max_to_create = math.min(num_components, available_slots + 1)
+        for i = 1, max_to_create do
+            local joker = SMODS.create_card({
+                key = joker_keys[i],
+                set = "Joker"
+            })
+            if joker then
+                joker:add_to_deck()
+                G.jokers:emplace(joker)
+                table.insert(created_jokers, joker)
+            end
+        end
+    end
+
+    if #created_jokers > 0 then
+        fused_joker:start_dissolve()
+        return true, created_jokers
+    else
+        return false
+    end
 end
 
 SMODS.BalatroFusion.Fusion = FusionClass
