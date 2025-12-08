@@ -42,6 +42,7 @@ SMODS.Joker{
         then
             if pseudorandom("j_bfs_schro_cat") < 0.5 then
                 card.ability.extra.xmult = math.max(0, card.ability.extra.xmult - card.ability.extra.xmult_mod)
+				if card.ability.extra.xmult <0.01 then card.ability.extra.xmult = 0.01 end
             else
                 card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_mod
             end
