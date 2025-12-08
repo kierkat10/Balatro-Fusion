@@ -34,33 +34,40 @@ SMODS.Joker{
         }
     end,
     calculate = function(self, card, context)
-        if pseudorandom("j_bfs_schro_cat") < 0.5 then
-            card.ability.extra.xmult = math.max(0, card.ability.extra.xmult - card.ability.extra.xmult_mod)
-        else
-            card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_mod
-        end
-        if card.ability.extra.xmult > card.ability.extra.max then
-            G.E_MANAGER:add_event(Event({
-                func = function()
-                    play_sound("tarot1")
-                    card.T.r = -0.2
-                    card:juice_up(0.3, 0.4)
-                    card.states.drag.is = true
-                    card.children.center.pinch.x = true
-                    G.E_MANAGER:add_event(Event({
-                        trigger = "after",
-                        delay = 0.3,
-                        blockable = false,
-                        func = function()
-                            G.jokers:remove_card(card)
-                            card:remove()
-                            card = nil
-                            return true
-                        end
-                    }))
-                    return true
-                end
-            }))
+        if (context.end_of_round or context.reroll_shop or context.buying_card or
+            context.selling_card or context.ending_shop or context.starting_shop or
+            context.ending_booster or context.open_booster or
+            context.skip_blind or context.before or context.pre_discard or context.setting_blind or
+            context.using_consumeable) 
+        then
+            if pseudorandom("j_bfs_schro_cat") < 0.5 then
+                card.ability.extra.xmult = math.max(0, card.ability.extra.xmult - card.ability.extra.xmult_mod)
+            else
+                card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_mod
+            end
+            if card.ability.extra.xmult > card.ability.extra.max then
+                G.E_MANAGER:add_event(Event({
+                    func = function()
+                        play_sound("tarot1")
+                        card.T.r = -0.2
+                        card:juice_up(0.3, 0.4)
+                        card.states.drag.is = true
+                        card.children.center.pinch.x = true
+                        G.E_MANAGER:add_event(Event({
+                            trigger = "after",
+                            delay = 0.3,
+                            blockable = false,
+                            func = function()
+                                G.jokers:remove_card(card)
+                                card:remove()
+                                card = nil
+                                return true
+                            end
+                        }))
+                        return true
+                    end
+                }))
+            end
         end
         if context.joker_main then
             return {
