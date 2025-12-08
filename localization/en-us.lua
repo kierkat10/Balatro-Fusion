@@ -421,6 +421,12 @@ return {
                     "of {C:attention}odd{} ranked cards"
                 }
             },
+            j_bfs_grat_brat = {
+                name = "Grat Brat",
+                text = {
+                    "Earn {C:money}2$ {} at end of round for every discard","if no discards were used","doubles {C:money}money and negates not using discards","If you have 2 or more {C:common} Common jokers"
+                }
+            },
         },
         Tarot = {
             c_bfs_fusion_reactor = {
