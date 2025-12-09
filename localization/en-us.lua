@@ -318,10 +318,10 @@ return {
             j_bfs_steel_card = {
                 name = "Steel Card",
                 text = {
-                    "This Joker gains {C:white,X:red}X#2#{} Mult",
+                    "This Joker gains {C:white,X:mult}X#2#{} Mult",
                     "when any {C:attention}Standard Pack{} with a ",
-                    "{C:enhanced}Steel{} Card in it is Skipped",
-                    "{C:inactive}(Currently {C:white,X:red}X#1#{C:inactive} Mult)"
+                    "{C:attention}Steel Card{} is skipped",
+                    "{C:inactive}(Currently {C:white,X:mult}X#1#{C:inactive} Mult)"
                 }
             },
             j_bfs_stone_card = {
@@ -329,7 +329,7 @@ return {
                 text = {
                     "This Joker gains {C:blue}+#2#{} Chips",
                     "when any {C:attention}Standard Pack{} with a ",
-                    "{C:enhanced}Stone{} Card in it is Skipped",
+                    "{C:attention}Stone Card{} is skipped",
                     "{C:inactive}(Currently {C:blue}+#1#{C:inactive} Chips)"
                 }
             },
@@ -424,7 +424,11 @@ return {
             j_bfs_grat_brat = {
                 name = "Grat Brat",
                 text = {
-                    "Earn {C:money}2$ {} at end of round for every discard","if no discards were used","doubles {C:money}money and negates not using discards","If you have 2 or more {C:common} Common jokers"
+                    "Earn {C:money}$#1#{} per {C:attention}discard{} if no",
+                    "discards are used by end of round",
+                    "Doubles earnings and does not",
+                    "require condition if you have",
+                    "{C:attention}#1#{} or more {C:common}Common {C:attention}Jokers"
                 }
             },
         },
