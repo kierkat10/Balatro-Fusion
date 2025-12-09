@@ -34,7 +34,7 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.skipping_booster and context.booster and context.booster.kind and context.booster.kind == "Standard" then
             if (function() 
-                for _, other_card in pairs (G.pack_cards.cards) do 
+                for _, other_card in pairs(G.pack_cards.cards) do
                     if SMODS.has_enhancement(other_card, "m_stone") then
                         return true
                     end

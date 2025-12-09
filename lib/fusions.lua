@@ -167,6 +167,10 @@ function FusionClass:can_fuse(fusion, input)
             local key = card.config.center.key
             input_keys[key] = (input_keys[key] or 0) + 1
             input_count = input_count + 1
+        elseif type(card) == "string" then
+            local key = card
+            input_keys[key] = (input_keys[key] or 0) + 1
+            input_count = input_count + 1
         end
     end
 
@@ -252,6 +256,9 @@ function FusionClass:get(input)
     for _, card in ipairs(input) do
         if card and card.config and card.config.center then
             local key = card.config.center.key
+            input_counts[key] = (input_counts[key] or 0) + 1
+        elseif type(card) == "string" then
+            local key = card
             input_counts[key] = (input_counts[key] or 0) + 1
         end
     end

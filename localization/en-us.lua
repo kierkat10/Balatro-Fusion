@@ -447,11 +447,22 @@ return {
                     "{C:inactive}(Must have room)"
                 }
             }
+        },
+        Other = {
+            p_bfs_fusion_pack = {
+                name = "Fusion Pack",
+                text = {
+                    "Choose #1# of #2# {C:enhanced}Fused{} Jokers",
+                    "{s:0.8,C:inactive}all Jokers share a base Joker",
+                    "{s:0.8,C:inactive}and another Joker of matching rarity"
+                }
+            }
         }
     },
     misc = {
         dictionary = {
-            k_bfs_fused = "Fused"
+            k_bfs_fused = "Fused",
+			k_bfs_fusion_pack = "Fusion Pack",
         }
     }
 }
