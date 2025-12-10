@@ -3,7 +3,7 @@ SMODS.BalatroFusion.Fusion:new_generic({
     key = "wandering_trader",
     name = "Wandering Trader",
     input = {
-        "j_riff_raff",
+        "j_todo_list",
         "j_vagabond",
     },
     output = "j_bfs_wandering_trader",
@@ -17,11 +17,11 @@ SMODS.Joker {
             dollars=4,
         },
     },
-    pos = { x = 1, y = 7 },
+    pos = { x = 0, y = 0 },
     cost = 14,
     rarity = "bfs_fused",
     blueprint_compat = true,
-    atlas = "riff-raff",
+    atlas = "placeholder",
     loc_vars = function(self, info_queue, card)
         return {
             vars={
