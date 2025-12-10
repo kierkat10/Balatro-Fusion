@@ -18,7 +18,7 @@ SMODS.Joker {
             size = 3
         }
     },
-    pos = { x = 0, y = 10 },
+    pos = { x = 0, y = 11 },
     pixel_size = { h = 95 / 1.7 },
     cost = 10,
     rarity = "bfs_fused",

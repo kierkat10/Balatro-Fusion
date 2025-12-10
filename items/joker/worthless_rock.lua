@@ -18,7 +18,7 @@ SMODS.Joker {
             xchips = 1.75
         }
     },
-    pos = { x = 8, y = 9 },
+    pos = { x = 8, y = 10 },
     cost = 14,
     rarity = "bfs_fused",
     blueprint_compat = true,

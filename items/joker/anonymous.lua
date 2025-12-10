@@ -19,7 +19,7 @@ SMODS.Joker {
             gold_retriggers=2,
         }
     },
-    pos = nil,
+    pos = { x = 0, y = 0 },
     cost = 13,
     rarity = "bfs_fused",
     blueprint_compat = true,

@@ -13,7 +13,7 @@ SMODS.Joker {
     key = "golden_idol",
     name = "Golden Idol",
     config = { extra = { dollars = 4 } },
-    pos = { x = 7, y = 9 },
+    pos = { x = 7, y = 10 },
     cost = 13,
     rarity = "bfs_fused",
     blueprint_compat = true,

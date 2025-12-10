@@ -18,7 +18,7 @@ SMODS.Joker {
             mult = 0
         }
     },
-    pos = { x = 9, y = 9 },
+    pos = { x = 9, y = 10 },
     cost = 4,
     rarity = "bfs_fused",
     blueprint_compat = true,

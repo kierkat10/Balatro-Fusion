@@ -13,7 +13,7 @@ SMODS.Joker {
     key = "stone_idol",
     name = "Stone Idol",
     config = { extra = { xchips = 2 } },
-    pos = { x = 6, y = 9 },
+    pos = { x = 6, y = 10 },
     cost = 13,
     rarity = "bfs_fused",
     blueprint_compat = true,

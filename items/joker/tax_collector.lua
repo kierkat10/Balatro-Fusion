@@ -13,7 +13,7 @@ SMODS.Joker {
     key = "tax_collector",
     name = "Tax Collector",
     config = { extra = { dollars = -3 } },
-    pos = { x = 5, y = 9 },
+    pos = { x = 5, y = 10 },
     cost = 12,
     rarity = "bfs_fused",
     blueprint_compat = false,
