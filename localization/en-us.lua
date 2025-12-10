@@ -446,7 +446,7 @@ return {
                     "When {C:attention}Small Blind{} or {C:attention}Big Blind is{} selected",
                     "gain {X:mult,C:white}X#1#{} {X:mult,C:white}Mult",
                     "{C:inactive}Currently:[{X:mult,C:white}X#2#{C:inactive} Mult]",
-                    "{C:attention}Destroy{} a random Joker and {C:attention}duplicate{} a random Joker",
+                    "{C:attention}Destroy{} a random Joker and {C:attention}Duplicate{} a random Joker",
                 },
             },
 			j_bfs_molotov_cocktail = {
