@@ -23,8 +23,7 @@ SMODS.Joker {
     cost = 12,
     rarity = "bfs_fused",
     blueprint_compat = true,
-    atlas = "joker",
-    pos={x=1,y=4,}
+    atlas = "placeholder",
     loc_vars = function(self, info_queue, card)
         return {
             vars={
