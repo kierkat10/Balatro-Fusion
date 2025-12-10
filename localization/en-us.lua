@@ -120,6 +120,15 @@ return {
                     "any {C:attention}Booster Pack{} is skipped"
                 }
             },
+            j_bfs_golden_idol = {
+                name = "Golden Idol",
+                text = {
+                    "Each {C:attention}#2#{} of",
+                    "{V:1}#1#{} gives",
+                    "{C:money}$4{} when scored",
+                    "{s:0.8}Card changes every round",
+                }
+            },
             j_bfs_golden_record = {
                 name = "Golden Record",
                 text = {
@@ -333,6 +342,13 @@ return {
                     "{C:inactive}(Currently {C:blue}+#1#{C:inactive} Chips)"
                 }
             },
+            j_bfs_stone_idol = {
+                name = "Stone Idol",
+                text = {
+                    "{C:enhanced}Stone{} cards give",
+                    "{X:blue,C:white}X#1#{} Chips when scored"
+                }
+            },
             j_bfs_sunrise = {
                 name = "Sunrise",
                 text = {
@@ -340,6 +356,16 @@ return {
                     "per {C:attention}#1#{} cards {C:attention}sold{}, resets",
                     "when {C:attention}Boss Blind{} is defeated",
                     "{C:inactive}(Currently {C:attention}#2#{C:inactive}/{C:attention}#3#{C:inactive} cards sold and {C:attention}#4#{C:inactive} retrigger#<s>4#)"
+                }
+            },
+            j_bfs_tax_collector = {
+                name = "Tax Collector",
+                text = {
+                    "{C:attention}+1{} hand size",
+                    "{C:red}+1{} discard size",
+                    "{C:blue}+1{} play size",
+                    "lose {C:money}$3{} at the",
+                    "end of each round"
                 }
             },
             j_bfs_teal_joker = {
@@ -429,6 +455,31 @@ return {
                     "Doubles earnings and does not",
                     "require condition if you have",
                     "{C:attention}#1#{} or more {C:common}Common {C:attention}Jokers"
+                }
+            },
+			j_bfs_anonymous = {
+			name = "Anonymous",
+			text = {
+				"Played {C:attention}2s 3s 4s and{} {C:attention}5s{} are retriggered #1# times",
+				"and become {C:gold}Gold{} cards",
+				"{C:gold}Gold {C:attention}2s 3s 4s and 5s{} are retriggered #2# times instead",
+			}
+				
+			},
+			j_bfs_egg_of_the_earth = {
+                name="Egg Of The Earth",
+                text={
+                    "When {C:attention}Small Blind{} or {C:attention}Big Blind is{} selected,gain {X:mult,C:white}X#1#{} {X:mult,C:white}Mult",
+                    "{C:inactive}Currently:[{X:mult,C:white}X#2#{C:inactive} Mult]",
+                    "{C:attention}Destroy{} a random Joker and {C:attention}Duplicate{} a random Joker",
+                },
+            },
+			j_bfs_molotov_cocktail = {
+                name="Molotov's Cocktail",
+                text={
+                    "Sell this card to upgrade",
+                    "your most played {C:chips}hand",
+                    "once per each card sold this run.",
                 }
             },
         },

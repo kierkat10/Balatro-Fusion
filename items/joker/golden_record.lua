@@ -4,7 +4,7 @@ SMODS.BalatroFusion.Fusion:new_generic({
     name = "Golden Record",
     input = {
         "j_obelisk",
-        "j_space_joker"
+        "j_space"
     },
     output = "j_bfs_golden_record"
 })

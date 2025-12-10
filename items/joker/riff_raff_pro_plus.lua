@@ -3,7 +3,7 @@ SMODS.BalatroFusion.Fusion:new_generic({
     key = "riff_raff_plus",
     name = "Riff-Raff Pro Plus",
     input = {
-        "j_golden_ticket",
+        "j_ticket",
         "j_riff_raff",
     },
     output = "j_bfs_riff_raff_plus"

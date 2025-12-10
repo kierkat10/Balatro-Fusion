@@ -34,12 +34,12 @@ SMODS.Joker {
         if context.end_of_round and not context.blueprint then
             local _poker_hands = {}
             for k, v in pairs(G.GAME.hands) do
-                if SMODS.is_poker_hand_visible(k) and k ~= self.ability.to_do_poker_hand then _poker_hands[#_poker_hands+1] = k end
+                if SMODS.is_poker_hand_visible(k) and k ~= card.ability.to_do_poker_hand then _poker_hands[#_poker_hands+1] = k end
             end
             card.ability.to_do_poker_hand = pseudorandom_element(_poker_hands, pseudoseed("bfs_wandering_trader"))
         end
-        if context.scoring_name == card.ability.to_do_poker_hand then
-            local card_limit = #G.consumeables.config.card_limit
+        if context.joker_main and context.scoring_name == card.ability.to_do_poker_hand then
+            local card_limit = G.consumeables.config.card_limit
             for i = 1, card_limit - #G.consumeables.cards do
                 local created_card = create_card("Tarot",G.consumeables, nil, nil, nil, nil, nil, "bfs_wandering_trader")
                 G.consumeables:emplace(created_card)

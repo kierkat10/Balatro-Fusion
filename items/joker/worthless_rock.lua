@@ -18,11 +18,11 @@ SMODS.Joker {
             xchips = 1.75
         }
     },
-    pos = { x = 0, y = 0 },
+    pos = { x = 8, y = 9 },
     cost = 14,
     rarity = "bfs_fused",
     blueprint_compat = true,
-    atlas = "placeholder",
+    atlas = "joker",
     loc_vars = function(self, info_queue, card)
         local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, "j_bfs_worthless_rock")
         return {

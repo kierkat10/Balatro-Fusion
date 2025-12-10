@@ -3,8 +3,8 @@ SMODS.BalatroFusion.Fusion:new_generic({
     key = "card_pack",
     name = "Card Pack",
     input = {
-        "j_baseball_card",
-        "j_baseball_card",
+        "j_baseball",
+        "j_baseball",
     },
     output = "j_bfs_card_pack"
 })
