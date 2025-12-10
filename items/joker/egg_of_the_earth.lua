@@ -24,7 +24,7 @@ SMODS.Joker {
     rarity = "bfs_fused",
     blueprint_compat = true,
     atlas = "joker",
-    pos={x=1,y=4,}
+    pos={x=1,y=4,},
     loc_vars = function(self, info_queue, card)
         return {
             vars={
