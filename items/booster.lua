@@ -54,7 +54,14 @@ SMODS.Booster {
                 local possible_joker_fusions = {}
                 for _, joker in pairs(rarity_pool_2) do
                     local result = SMODS.BalatroFusion.Fusion:get({joker_key_input, joker.key})
-                    if result then
+                    if result and (function()
+                        for _, v in ipairs(key_list) do
+                            if v == "j_bfs_"..result.key then
+                                return false
+                            end
+                        end
+                        return true
+                    end)() then
                         possible_joker_fusions[#possible_joker_fusions+1] = "j_bfs_"..result.key
                     end
                 end
@@ -62,9 +69,8 @@ SMODS.Booster {
                 if #possible_joker_fusions == 0 then
                     key_list[#key_list+1] = joker_key_input -- When not enough Fusions are coded, returns base Joker input
                 else
-                    local index = math.random(#possible_joker_fusions)
-                    key_list[#key_list+1] = possible_joker_fusions[index]
-                    table.remove(possible_joker_fusions, index)
+                    local joker_key = pseudorandom_element(possible_joker_fusions)
+                    key_list[#key_list+1] = joker_key
                 end
             end
             card.ability.fusion_list = key_list
@@ -134,7 +140,14 @@ SMODS.Booster {
                 local possible_joker_fusions = {}
                 for _, joker in pairs(rarity_pool_2) do
                     local result = SMODS.BalatroFusion.Fusion:get({joker_key_input, joker.key})
-                    if result then
+                    if result and (function()
+                        for _, v in ipairs(key_list) do
+                            if v == "j_bfs_"..result.key then
+                                return false
+                            end
+                        end
+                        return true
+                    end)() then
                         possible_joker_fusions[#possible_joker_fusions+1] = "j_bfs_"..result.key
                     end
                 end
@@ -214,7 +227,14 @@ SMODS.Booster {
                 local possible_joker_fusions = {}
                 for _, joker in pairs(rarity_pool_2) do
                     local result = SMODS.BalatroFusion.Fusion:get({joker_key_input, joker.key})
-                    if result then
+                    if result and (function()
+                        for _, v in ipairs(key_list) do
+                            if v == "j_bfs_"..result.key then
+                                return false
+                            end
+                        end
+                        return true
+                    end)() then
                         possible_joker_fusions[#possible_joker_fusions+1] = "j_bfs_"..result.key
                     end
                 end
@@ -294,7 +314,14 @@ SMODS.Booster {
                 local possible_joker_fusions = {}
                 for _, joker in pairs(rarity_pool_2) do
                     local result = SMODS.BalatroFusion.Fusion:get({joker_key_input, joker.key})
-                    if result then
+                    if result and (function()
+                        for _, v in ipairs(key_list) do
+                            if v == "j_bfs_"..result.key then
+                                return false
+                            end
+                        end
+                        return true
+                    end)() then
                         possible_joker_fusions[#possible_joker_fusions+1] = "j_bfs_"..result.key
                     end
                 end

@@ -448,6 +448,15 @@ return {
                 }
             }
         },
+        Tag = {
+            tag_bfs_synthetic = {
+                name = "Synthetic Tag",
+                text = {
+                    "Gives a free",
+                    "{C:enhanced}Fusion Pack"
+                }
+            }
+        },
         Other = {
             p_bfs_fusion_pack_1 = {
                 name = "Fusion Pack",
