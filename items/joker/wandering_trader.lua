@@ -34,7 +34,7 @@ SMODS.Joker {
         if context.end_of_round and not context.blueprint then
             local _poker_hands = {}
             for k, v in pairs(G.GAME.hands) do
-                if SMODS.is_poker_hand_visible(k) and k ~= self.ability.to_do_poker_hand then _poker_hands[#_poker_hands+1] = k end
+                if SMODS.is_poker_hand_visible(k) and k ~= card.ability.to_do_poker_hand then _poker_hands[#_poker_hands+1] = k end
             end
             card.ability.to_do_poker_hand = pseudorandom_element(_poker_hands, pseudoseed("bfs_wandering_trader"))
         end
