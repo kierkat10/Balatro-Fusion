@@ -25,6 +25,7 @@ SMODS.Joker {
     blueprint_compat = true,
     atlas = "joker",
     pos={x=1,y=4,},
+    soul_pos={x=0,y=4,},
     loc_vars = function(self, info_queue, card)
         return {
             vars={
