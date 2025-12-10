@@ -449,13 +449,38 @@ return {
             }
         },
         Other = {
-            p_bfs_fusion_pack = {
+            p_bfs_fusion_pack_1 = {
                 name = "Fusion Pack",
                 text = {
-                    "Choose #1# of #2# {C:enhanced}Fused{} Jokers",
-                    "{s:0.8,C:inactive}all Fusions share a base Joker",
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{} {C:enhanced}Fused{} Joker cards",
+                    "{s:0.85,C:inactive}All Fusions share a base Joker",
                 }
-            }
+            },
+            p_bfs_fusion_pack_2 = {
+                name = "Fusion Pack",
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{} {C:enhanced}Fused{} Joker cards",
+                    "{s:0.85,C:inactive}All Fusions share a base Joker",
+                }
+            },
+            p_bfs_jumbo_fusion_pack_1 = {
+                name = "Jumbo Fusion Pack",
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{} {C:enhanced}Fused{} Joker cards",
+                    "{s:0.85,C:inactive}All Fusions share a base Joker",
+                }
+            },
+            p_bfs_mega_fusion_pack_1 = {
+                name = "Mega Fusion Pack",
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{} {C:enhanced}Fused{} Joker cards",
+                    "{s:0.85,C:inactive}All Fusions share a base Joker",
+                }
+            },
         }
     },
     misc = {
