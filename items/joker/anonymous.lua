@@ -26,8 +26,10 @@ SMODS.Joker {
     atlas = nil,
     loc_vars = function(self, info_queue, card)
         return {
+            vars={
             card.ability.extra.retriggers,
             card.ability.extra.gold_retriggers,
+            },
         }
     end,
     calculate = function(self,card,context)
@@ -51,6 +53,12 @@ SMODS.Joker {
         end
         end
         if context.repetition and context.cardarea == G.play then
+           local ranks = {
+            [2]=true,
+            [3]=true,
+            [4]=true,
+            [5]=true,
+           }
            if ranks[context.other_card:get_id()] then
            local retriggers = card.ability.extra.retriggers
            if SMODS.has_enhancement(context.other_card,"m_gold") then retriggers=card.ability.extra.gold_retriggers end
