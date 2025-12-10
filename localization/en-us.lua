@@ -431,6 +431,15 @@ return {
                     "{C:attention}#1#{} or more {C:common}Common {C:attention}Jokers"
                 }
             },
+			j_bfs_anonymous = {
+			name = "Anonymous",
+			text = {
+				"{C:attention}Played 2s 3s 4s and 5s are retriggered #1# times",
+				"and {C:attention}become {C:money}Gold{} cards",
+				"{C:money}Gold {C:attention}2s 3s 4s and 5s are retriggered #2# times instead",
+			}
+				
+			},
         },
         Tarot = {
             c_bfs_fusion_reactor = {
