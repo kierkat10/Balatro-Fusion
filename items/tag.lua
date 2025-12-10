@@ -2,6 +2,7 @@ SMODS.Tag{
 	name = "Synthetic Tag",
 	key = "synthetic",
 	atlas = "tag",
+    min_ante = 2,
 	pos = { x = 0, y = 0 },
 	config = { type = "new_blind_choice" },
 	loc_vars = function(self, info_queue)
