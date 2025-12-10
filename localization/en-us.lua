@@ -449,6 +449,14 @@ return {
                     "Destroy a random Joker and duplicate a random Joker",
                 },
             },
+			j_bfs_molotov_cocktail = {
+                name="Molotov's Cocktail",
+                text={
+                    "Sell this card to upgrade",
+                    "your most played {C:chips}hand",
+                    "once per each card sold this run.",
+                }
+            },
         },
         Tarot = {
             c_bfs_fusion_reactor = {
