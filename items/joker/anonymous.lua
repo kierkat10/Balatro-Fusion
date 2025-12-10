@@ -61,7 +61,7 @@ SMODS.Joker {
            }
            end
         end
-    end
+    end,
     bfs_credits = {
         idea = { "Jesus" },
         art = {},
