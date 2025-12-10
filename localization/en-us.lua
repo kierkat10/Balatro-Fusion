@@ -453,8 +453,7 @@ return {
                 name = "Fusion Pack",
                 text = {
                     "Choose #1# of #2# {C:enhanced}Fused{} Jokers",
-                    "{s:0.8,C:inactive}all Jokers share a base Joker",
-                    "{s:0.8,C:inactive}and another Joker of matching rarity"
+                    "{s:0.8,C:inactive}all Fusions share a base Joker",
                 }
             }
         }
