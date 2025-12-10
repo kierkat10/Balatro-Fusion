@@ -443,8 +443,7 @@ return {
 			j_bfs_egg_of_the_earth = {
                 name="Egg Of The Earth",
                 text={
-                    "When {C:attention}Small Blind{} or {C:attention}Big Blind is{} selected",
-                    "gain {X:mult,C:white}X#1#{} {X:mult,C:white}Mult",
+                    "When {C:attention}Small Blind{} or {C:attention}Big Blind is{} selected,gain {X:mult,C:white}X#1#{} {X:mult,C:white}Mult",
                     "{C:inactive}Currently:[{X:mult,C:white}X#2#{C:inactive} Mult]",
                     "{C:attention}Destroy{} a random Joker and {C:attention}Duplicate{} a random Joker",
                 },
