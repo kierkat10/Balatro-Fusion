@@ -13,15 +13,22 @@ SMODS.Atlas({
 })
 
 SMODS.Atlas({
-    key = "joker", 
-    path = "joker.png", 
+    key = "joker", -- Used for misc category Joker Fusions
+    path = "joker.png",
     px = 71,
     py = 95, 
 })
 
 SMODS.Atlas({
-    key = "riff-raff", 
-    path = "riff-raff.png", 
+    key = "basic-joker", -- Used for basic Joker fusions (Jolly Joker, Crazy Joker, etc.)
+    path = "basic-joker.png",
+    px = 71,
+    py = 95, 
+})
+
+SMODS.Atlas({ 
+    key = "riff-raff", -- Used for Riff-Raff fusions
+    path = "riff-raff.png",
     px = 71,
     py = 95, 
 })
