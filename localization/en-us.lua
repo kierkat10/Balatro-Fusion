@@ -434,19 +434,19 @@ return {
 			j_bfs_anonymous = {
 			name = "Anonymous",
 			text = {
-				"{C:attention}Played 2s 3s 4s and 5s are retriggered #1# times",
-				"and {C:attention}become {C:money}Gold{} cards",
-				"{C:money}Gold {C:attention}2s 3s 4s and 5s are retriggered #2# times instead",
+				"Played {C:attention}2s 3s 4s and{} {C:attention}5s{} are retriggered #1# times",
+				"and become {C:gold}Gold{} cards",
+				"{C:gold}Gold {C:attention}2s 3s 4s and 5s{} are retriggered #2# times instead",
 			}
 				
 			},
 			j_bfs_egg_of_the_earth = {
                 name="Egg Of The Earth",
                 text={
-                    "When {C:attention}Small Blind or Big Blind is selected",
+                    "When {C:attention}Small Blind{} or {C:attention}Big Blind is{} selected",
                     "gain {X:mult,C:white}X#1#{} {X:mult,C:white}Mult",
-                    "{C:inactive}Currently:[{X:mult,C:white}X#2#{C:inactive}]",
-                    "Destroy a random Joker and duplicate a random Joker",
+                    "{C:inactive}Currently:[{X:mult,C:white}X#2#{C:inactive} Mult]",
+                    "{C:attention}Destroy{} a random Joker and {C:attention}duplicate{} a random Joker",
                 },
             },
 			j_bfs_molotov_cocktail = {
