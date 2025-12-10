@@ -440,6 +440,15 @@ return {
 			}
 				
 			},
+			j_bfs_egg_of_the_earth = {
+                name="Egg Of The Earth",
+                text={
+                    "When {C:attention}Small Blind or Big Blind is selected",
+                    "gain {X:mult,C:white}X#1#{} {X:mult,C:white}Mult",
+                    "{C:inactive}Currently:[{X:mult,C:white}X#2#{C:inactive}]",
+                    "Destroy a random Joker and duplicate a random Joker",
+                },
+            },
         },
         Tarot = {
             c_bfs_fusion_reactor = {
