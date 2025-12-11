@@ -42,15 +42,25 @@ SMODS.Joker {
             }
         end
         if context.starting_shop and card.ability.extra.booster_count > 0 then
+            local count = card.ability.extra.booster_count
+            local message = "+"..count.." Booster"
+            if count ~= 1 then
+                message = message.."s"
+            end
             G.E_MANAGER:add_event(Event({
+                trigger = "after",
                 func = function()
                     for _ = 1, card.ability.extra.booster_count do
                         SMODS.add_booster_to_shop()
                     end
                     card.ability.extra.booster_count = 0
                     return true
-                end
+                end,
             }))
+            return {
+                message = message.."!",
+                colour = G.C.Blue
+            }
         end
     end,
 	bfs_credits = {

@@ -29,15 +29,20 @@ SMODS.Joker {
         }
     end,
     calculate = function(self, card, context)
-        if context.joker_main and next(context.poker_hands["Pair"]) and SMODS.pseudorandom_probability(card, "j_bfs_cherry_cola", 1, card.ability.extra.odds) then
+        if context.after and next(context.poker_hands["Pair"]) and SMODS.pseudorandom_probability(card, "j_bfs_cherry_cola", 1, card.ability.extra.odds) then
             G.E_MANAGER:add_event(Event({
+                trigger = "after",
+                delay = 0.5,
                 func = function()            
                     local tag = G.P_TAGS["tag_double"]
                     add_tag(tag)
                     return true
                 end,
-                message = ""
             }))
+            return {
+                message = "Double Tag!",
+                colour = G.C.Blue
+            }
         end
     end,
 	bfs_credits = {
