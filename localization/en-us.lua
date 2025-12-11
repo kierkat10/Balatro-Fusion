@@ -42,6 +42,14 @@ return {
                     "{X:mult,C:white}X#1#{} Mult when scored"
                 }
             },
+            j_bfs_cherry_cola = {
+                name = "Cherryful Cola",
+                text = {
+                    "{C:green}#1# in #2#{} chance to",
+                    "create a {C:attention}Double Tag{} if",
+                    "played hand contains a {C:attention}Pair{}"
+                }
+            },
             j_bfs_chiseled_gems = {
                 name = "Chiseled Gems",
                 text = {
@@ -101,6 +109,14 @@ return {
                     "Played non-{C:attention}face cards",
                     "give {C:chips}+#1#{} Chip#<s>1# and",
                     "{C:mult}+#2#{} Mult when scored"
+                }
+            },
+            j_bfs_explosive_cola = {
+                name = "Explosive Cola",
+                text = {
+                    "{C:green}#1# in #2#{} chance to",
+                    "create a {C:attention}Double Tag{} if",
+                    "played hand contains a {C:attention}Straight{}"
                 }
             },
             j_bfs_four_arm = {
@@ -163,6 +179,14 @@ return {
                     "played hand contains",
                     "a {C:attention}Pair{} of {C:attention}odd",
                     "ranked cards"
+                }
+            },
+            j_bfs_madd_fruit_cola = {
+                name = "Madd Fruit Cola",
+                text = {
+                    "{C:green}#1# in #2#{} chance to",
+                    "create a {C:attention}Double Tag{} if",
+                    "played hand contains a {C:attention}Two Pair{}"
                 }
             },
             j_bfs_mad_steven = {
@@ -347,6 +371,16 @@ return {
                 text = {
                     "{C:enhanced}Stone{} cards give",
                     "{X:blue,C:white}X#1#{} Chips when scored"
+                }
+            },
+            j_bfs_stop_sign= {
+                name = "Stop Sign",
+                text = {
+                    "Each {C:attention}Face card{} held",
+                    "in hand has a {C:green}#1# in #2#",
+                    "chance to spawn #4# random {C:enhanced}Booster Pack#<s>4#",
+                    "when entering the next shop",
+                    "{C:inactive}(currently spawning {C:attention}#3#{C:inactive} Booster#<s>3#)"
                 }
             },
             j_bfs_sunrise = {
