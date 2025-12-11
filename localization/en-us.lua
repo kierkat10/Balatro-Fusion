@@ -525,6 +525,14 @@ return {
                     "{C:inactive}Currently:[{C:money}$#2#{C:inactive}]",
                 },
             },
+			j_bfs_green_grass={
+                name="Green-Grass",
+                text={
+                    "When {C:blue}hand{} is played",
+                    "create {C:attention}1{} Random {C:attention}Joker",
+                    "When a {C:red}discard{} is used destroy leftmost {C:attention}Joker",
+                },
+            },
         },
         Tarot = {
             c_bfs_fusion_reactor = {
