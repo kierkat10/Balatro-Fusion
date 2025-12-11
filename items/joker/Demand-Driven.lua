@@ -34,6 +34,9 @@ SMODS.Joker {
             },
         }
     end,
+    remove_from_deck = function (self,card)
+        G.GAME.interest_amount=G.GAME.interest_amount-card.ability.extra.immutable.current_interest
+    end,
     update = function (self,card)
         if G.jokers and card then
         local last_interest = card.ability.extra.immutable.current_interest
@@ -57,3 +60,4 @@ SMODS.Joker {
         code = { "Lact4"}
     },
 }
+
