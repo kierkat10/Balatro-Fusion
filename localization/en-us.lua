@@ -516,6 +516,15 @@ return {
                     "once per each card sold this run.",
                 }
             },
+			j_bfs_demand_driven = {
+                name="Demand Driven",
+                text={
+                    "Earn an extra {C:money}$#1#{} of {C:attention}interest",
+                    "for every {C:common}Common{} {C:attention}Joker{}",
+                    "you have at end of round",
+                    "{C:inactive}Currently:[{C:money}$#2#{C:inactive}]",
+                },
+            },
         },
         Tarot = {
             c_bfs_fusion_reactor = {
