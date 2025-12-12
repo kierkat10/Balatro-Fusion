@@ -533,6 +533,14 @@ return {
                     "When a {C:red}discard{} is used destroy leftmost {C:attention}Joker",
                 },
             },
+			j_bfs_power_pop={
+                name="Power Pop",
+                text={
+                    "Gives a {C:attention}copy {}of all tags selected",
+                    "{X:mult,C:white}X#1#{} Mult for each {C:attention}Blind{} skipped this run",
+                    "{C:inactive}(Currently X? Mult)",
+                },
+            },
         },
         Tarot = {
             c_bfs_fusion_reactor = {
