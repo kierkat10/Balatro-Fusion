@@ -540,6 +540,85 @@ return {
                     "{C:inactive}(Currently X? Mult)",
                 },
             },
+			j_bfs_print_place = {
+                name="Print Place",
+                text={
+                    "When blind is selected",
+                    "Copy {C:attention}Joker{} to the right",
+                },
+            },
+            j_bfs_lusty_dusty = {
+                name="Lusty-Dusty",
+                text={
+                    "Played cards with {C:hearts}Heart{} suit give",
+                    "{C:mult}+#1#{} Mult when scored per {C:common}Common {C:attention}Joker{} owned",
+                    "{C:inactive}Currently:[{C:mult}#2#{} {C:inactive}Mult]"
+                },
+            },
+            j_bfs_greedy_grammy={
+                name="Greedy-Gammy",
+                text={
+                "Played cards with {C:diamonds}Diamond{} suit give",
+                "{C:mult}+#1#{} Mult when scored per {C:common}Common {C:attention}Joker{} owned",
+                "{C:inactive}Currently:[{C:mult}#2#{} {C:inactive}Mult]"
+                },
+            },
+            j_bfs_wrathful_waldo={
+                name="Wrathful-Waldo",
+                text={
+                "Played cards with {C:spades}Spade{} suit give",
+                "{C:mult}+#1#{} Mult when scored per {C:common}Common {C:attention}Joker{} owned",
+                "{C:inactive}Currently:[{C:mult}#2#{} {C:inactive}Mult]"
+                },
+            },
+            j_bfs_gluttonous_garry={
+                name="Gluttonous-Garry",
+                text={
+                "Played cards with {C:clubs}Club{} suit give",
+                "{C:mult}+#1#{} Mult when scored per {C:common}Common {C:attention}Joker{} owned",
+                "{C:inactive}Currently:[{C:mult}#2#{} {C:inactive}Mult]"
+                }
+            },
+            j_bfs_joyful_jolly={
+                name="Joyful Jolly",
+                text={
+                "If played hand is a {C:attention}Pair",
+                "create {C:attention}#1# {C:common}Common {C:attention}Jokers",
+                "{C:inactive}[Must Have Room]",
+                },
+            },
+            j_bfs_zany_dany={
+                name="Zany Dany",
+                text={
+                "If played hand is a {C:attention}Three of a Kind",
+                "create {C:attention}#1# {C:common}Common {C:attention}Jokers",
+                "{C:inactive}[Must Have Room]",
+                },
+            },
+            j_bfs_mad_daffy={
+                name="Mad Daffy",
+                text={
+                "If played hand is a {C:attention}Two Pair",
+                "create {C:attention}#1# {C:common}Common {C:attention}Jokers",
+                "{C:inactive}[Must Have Room]",
+                },
+            },
+            j_bfs_crazy_chaos={
+                name="Crazy Chaos",
+                text={
+                "If played hand is a {C:attention}Straight",
+                "create {C:attention}#1# {C:common}Common {C:attention}Jokers",
+                "{C:inactive}[Must Have Room]",
+                },
+            },
+            j_bfs_droll_draft={
+                name="Droll Draft",
+                text={
+                "If played hand is a {C:attention}Flush",
+                "create {C:attention}#1# {C:common}Common {C:attention}Jokers",
+                "{C:inactive}[Must Have Room]",
+                },
+            },
         },
         Tarot = {
             c_bfs_fusion_reactor = {
