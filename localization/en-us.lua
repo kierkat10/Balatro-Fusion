@@ -515,6 +515,31 @@ return {
                     "once per each card sold this run.",
                 }
             },
+			j_bfs_demand_driven = {
+                name="Demand Driven",
+                text={
+                    "Earn an extra {C:money}$#1#{} of {C:attention}interest",
+                    "for every {C:common}Common{} {C:attention}Joker{}",
+                    "you have at end of round",
+                    "{C:inactive}Currently:[{C:money}$#2#{C:inactive}]",
+                },
+            },
+			j_bfs_green_grass={
+                name="Green-Grass",
+                text={
+                    "When {C:blue}hand{} is played",
+                    "create {C:attention}1{} Random {C:attention}Joker",
+                    "When a {C:red}discard{} is used destroy leftmost {C:attention}Joker",
+                },
+            },
+			j_bfs_power_pop={
+                name="Power Pop",
+                text={
+                    "Gives a {C:attention}copy {}of all tags selected",
+                    "{X:mult,C:white}X#1#{} Mult for each {C:attention}Blind{} skipped this run",
+                    "{C:inactive}(Currently X? Mult)",
+                },
+            },
         },
         Tarot = {
             c_bfs_fusion_reactor = {
