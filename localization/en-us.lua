@@ -492,13 +492,12 @@ return {
                 }
             },
 			j_bfs_anonymous = {
-			name = "Anonymous",
-			text = {
-				"Played {C:attention}2s 3s 4s and{} {C:attention}5s{} are retriggered #1# times",
-				"and become {C:gold}Gold{} cards",
-				"{C:gold}Gold {C:attention}2s 3s 4s and 5s{} are retriggered #2# times instead",
-			}
-				
+                name = "Anonymous",
+                text = {
+                    "Played {C:attention}2s 3s 4s and{} {C:attention}5s{} are retriggered #1# times",
+                    "and become {C:gold}Gold{} cards",
+                    "{C:gold}Gold {C:attention}2s 3s 4s and 5s{} are retriggered #2# times instead",
+                }
 			},
 			j_bfs_egg_of_the_earth = {
                 name="Egg Of The Earth",
@@ -539,6 +538,15 @@ return {
                 text = {
                     "Gives a free",
                     "{C:enhanced}Fusion Pack"
+                }
+            }
+        },
+        Back = {
+            b_bfs_fusion = {
+                name = "Fusion Deck",
+                text = {
+                    "Adds more ways to",
+                    "collect {C:bfs_fused,E:1}Fused{} Jokers"
                 }
             }
         },

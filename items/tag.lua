@@ -5,7 +5,14 @@ SMODS.Tag{
     min_ante = 2,
 	pos = { x = 0, y = 0 },
 	config = { type = "new_blind_choice" },
-	loc_vars = function(self, info_queue)
+    in_pool = function(self, args)
+        if G.GAME.selected_back.name == "Fusion Deck" then
+            return true
+        else
+            return false
+        end
+    end,	
+    loc_vars = function(self, info_queue)
         info_queue[#info_queue + 1] = { set = "Other", key = "p_bfs_fusion_pack_2", specific_vars = { 1, 3 } }
 		return { vars = {} }
 	end,

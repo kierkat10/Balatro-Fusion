@@ -9,6 +9,13 @@ SMODS.Booster {
     atlas = "booster", -- Uses temporary booster art for now, change later
     pos = { x = 0, y = 0 },
     discovered = true,
+    in_pool = function(self, args)
+        if G.GAME.selected_back.name == "Fusion Deck" then
+            return true
+        else
+            return false
+        end
+    end,
     loc_vars = function(self, info_queue, card)
         local cfg = (card and card.ability) or card.config.extra
         return {
@@ -95,7 +102,13 @@ SMODS.Booster {
     atlas = "booster", -- Uses temporary booster art for now, change later
     pos = { x = 0, y = 0 },
     discovered = true,
-    loc_vars = function(self, info_queue, card)
+    in_pool = function(self, args)
+        if G.GAME.selected_back.name == "Fusion Deck" then
+            return true
+        else
+            return false
+        end
+    end,    loc_vars = function(self, info_queue, card)
         local cfg = (card and card.ability) or card.config.extra
         return {
             vars = { cfg.choose, cfg.extra }
@@ -182,7 +195,13 @@ SMODS.Booster {
     atlas = "booster", -- Uses temporary booster art for now, change later
     pos = { x = 0, y = 0 },
     discovered = true,
-    loc_vars = function(self, info_queue, card)
+    in_pool = function(self, args)
+        if G.GAME.selected_back.name == "Fusion Deck" then
+            return true
+        else
+            return false
+        end
+    end,    loc_vars = function(self, info_queue, card)
         local cfg = (card and card.ability) or card.config.extra
         return {
             vars = { cfg.choose, cfg.extra }
@@ -269,7 +288,13 @@ SMODS.Booster {
     atlas = "booster", -- Uses temporary booster art for now, change later
     pos = { x = 0, y = 0 },
     discovered = true,
-    loc_vars = function(self, info_queue, card)
+    in_pool = function(self, args)
+        if G.GAME.selected_back.name == "Fusion Deck" then
+            return true
+        else
+            return false
+        end
+    end,    loc_vars = function(self, info_queue, card)
         local cfg = (card and card.ability) or card.config.extra
         return {
             vars = { cfg.choose, cfg.extra }

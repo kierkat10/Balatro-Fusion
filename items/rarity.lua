@@ -11,6 +11,10 @@ SMODS.Rarity {
     badge_colour = fused_gradient,
     pools = { ["Joker"] = true },
     get_weight = function(self, weight, object_type)
-		return 0
-	end
+        if G.GAME.selected_back.name == "Fusion Deck" then
+            return 0.2
+        else
+            return 0
+        end
+    end,
 }
