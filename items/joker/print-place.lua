@@ -29,10 +29,10 @@ SMODS.Joker {
                     js_right=G.jokers.cards[i+1]
                 end
             end
-            if js_right ~= nil then
+            if js_right ~= nil and #G.jokers.cards <G.jokers.config.card_limit then
             G.E_MANAGER:add_event(Event{
             func = function ()
-                local copied_joker = copy_card(js_right)
+                local copied_joker = copy_card(js_right, nil, nil, nil, js_right.edition and js_right.edition.negative)
                 G.jokers:emplace(copied_joker)
                 copied_joker:add_to_deck()
                 return true
