@@ -545,6 +545,8 @@ return {
                 text={
                     "When blind is selected",
                     "Copy {C:attention}Joker{} to the right",
+					"{C:inactive}[Must have room]",
+					"{C:inactive}Removes {C:spectral} Negative {C:inactive}from copy",
                 },
             },
             j_bfs_lusty_dusty = {
@@ -552,7 +554,7 @@ return {
                 text={
                     "Played cards with {C:hearts}Heart{} suit give",
                     "{C:mult}+#1#{} Mult when scored per {C:common}Common {C:attention}Joker{} owned",
-                    "{C:inactive}Currently:[{C:mult}#2#{} {C:inactive}Mult]"
+                    "{C:inactive}Currently:[{C:mult}#2#{} {C:inactive}Mult]",
                 },
             },
             j_bfs_greedy_grammy={
