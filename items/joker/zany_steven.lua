@@ -13,11 +13,11 @@ SMODS.Joker {
     key = "zany_steven",
     name = "Zany Steven",
     config = { extra = { mult = 20 } },
-    pos = { x = 7, y = 1 },
+    pos = { x = 1, y = 3 },
     cost = 8,
     rarity = "bfs_fused",
     blueprint_compat = true,
-    atlas = "joker",
+    atlas = "basic-joker",
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.mult } }
     end,
