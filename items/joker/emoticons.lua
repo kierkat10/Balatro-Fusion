@@ -18,11 +18,11 @@ SMODS.Joker {
             mult = 10
         }
     },
-	pos = { x = 6, y = 10 },
+	pos = { x = 0, y = 0 },
     cost = 8,
     rarity = "bfs_fused",
     blueprint_compat = true,
-	atlas = "joker",
+	atlas = "placeholder",
     loc_vars = function(self, info_queue, card)
         return {
 		    vars={
