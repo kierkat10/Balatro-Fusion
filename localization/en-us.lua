@@ -597,20 +597,121 @@ return {
                     "{C:white,X:chips}X#3#{} Chip#<s>2# when scored"
                 }
             },
-            j_bfs_wrathful_waldo = {
-                name = "Wrathful-Waldo",
-                text = {
-                    "Played cards with {C:spades}Spade{} suit give",
+            j_bfs_lusty_dusty = {
+                name="Lusty-Dusty",
+                text={
+                    "Played cards with {C:hearts}Heart{} suit give",
                     "{C:mult}+#1#{} Mult when scored per {C:common}Common {C:attention}Joker{} owned",
                     "{C:inactive}Currently:[{C:mult}#2#{} {C:inactive}Mult]"
                 },
             },
-            j_bfs_zany_dany = {
-                name = "Zany Dany",
-                text = {
-                    "If played hand is a {C:attention}Three of a Kind",
-                    "create {C:attention}#1# {C:common}Common {C:attention}Jokers",
-                    "{C:inactive}[Must Have Room]",
+            j_bfs_greedy_grammy={
+                name="Greedy-Gammy",
+                text={
+                "Played cards with {C:diamonds}Diamond{} suit give",
+                "{C:mult}+#1#{} Mult when scored per {C:common}Common {C:attention}Joker{} owned",
+                "{C:inactive}Currently:[{C:mult}#2#{} {C:inactive}Mult]"
+                },
+            },
+            j_bfs_wrathful_waldo={
+                name="Wrathful-Waldo",
+                text={
+                "Played cards with {C:spades}Spade{} suit give",
+                "{C:mult}+#1#{} Mult when scored per {C:common}Common {C:attention}Joker{} owned",
+                "{C:inactive}Currently:[{C:mult}#2#{} {C:inactive}Mult]"
+                },
+            },
+            j_bfs_gluttonous_garry={
+                name="Gluttonous-Garry",
+                text={
+                "Played cards with {C:clubs}Club{} suit give",
+                "{C:mult}+#1#{} Mult when scored per {C:common}Common {C:attention}Joker{} owned",
+                "{C:inactive}Currently:[{C:mult}#2#{} {C:inactive}Mult]"
+                }
+            },
+            j_bfs_joyful_jolly={
+                name="Joyful Jolly",
+                text={
+                "If played hand is a {C:attention}Pair",
+                "create {C:attention}#1# {C:common}Common {C:attention}Jokers",
+                "{C:inactive}[Must Have Room]",
+                },
+            },
+            j_bfs_zany_dany={
+                name="Zany Dany",
+                text={
+                "If played hand is a {C:attention}Three of a Kind",
+                "create {C:attention}#1# {C:common}Common {C:attention}Jokers",
+                "{C:inactive}[Must Have Room]",
+                },
+            },
+            j_bfs_mad_daffy={
+                name="Mad Daffy",
+                text={
+                "If played hand is a {C:attention}Two Pair",
+                "create {C:attention}#1# {C:common}Common {C:attention}Jokers",
+                "{C:inactive}[Must Have Room]",
+                },
+            },
+            j_bfs_crazy_chaos={
+                name="Crazy Chaos",
+                text={
+                "If played hand is a {C:attention}Straight",
+                "create {C:attention}#1# {C:common}Common {C:attention}Jokers",
+                "{C:inactive}[Must Have Room]",
+                },
+            },
+            j_bfs_droll_draft={
+                name="Droll Draft",
+                text={
+                "If played hand is a {C:attention}Flush",
+                "create {C:attention}#1# {C:common}Common {C:attention}Jokers",
+                "{C:inactive}[Must Have Room]",
+                },
+            },
+            j_bfs_jimbo = {
+                name="Jimbo",
+                text={
+                    "When {C:attention}Blind{} is selected",
+                    "create {C:attention}2 {C:common}Common {C:attention}Jokers",
+                    "{C:mult}+#1#{} Mult for every {C:common}Common{} {C:attention}Joker{} you own",
+                    "{C:inactive}Currently:[{C:mult}#2#{C:inactive} Mult]",
+                },
+            },
+            j_bfs_joker_pack = {
+                name="Joker Pack",
+                text={
+                    "{C:green}#1# in #2#{} chance to gain {C:red}+#3#{} Mult",
+                    "and create a {C:tarot}Tarot{} card",
+                    "when any {C:attention}Booster Pack{} is opened",
+                    "{C:inactive}Currently:[{C:mult}#4#{C:inactive} Mult]",
+                },
+            },
+            j_bfs_joker_cola = {
+                name="Joker Cola",
+                text={
+                    "When {C:attention}Boss Blind{} is defeated",
+                    "Create a {C:attention}Double Tag",
+                    "and gain {C:mult}+#1#{} Mult",
+                    "{C:inactive}Currently:[{C:mult}#2#{C:inactive} Mult]",
+                },
+            },
+            j_bfs_ouroboros = {
+                name="Ouroboros",
+                text={
+                    "{C:red}+#1#{} Mult when a card is scored",
+                    "{C:red}gains +#2#{} Mult when a",
+                    "{C:attention}Ace{},{C:attention}2{},{C:attention}3{},{C:attention}5{}, or {C:attention}8{}",
+                    "are scored",
+                    "{C:inactive}Currently:[{C:mult}#3#{C:inactive} Mult]",
+                },
+            },
+            j_bfs_joker_print = {
+                name="Jokerprint",
+                text={
+                    "Copies ability of {C:attention}Joker{} to the right",
+                    "gains {C:red}#1#{} Mult when {C:attention}Joker{} to the right is {C:attention}triggered",
+                    "{C:inactive}Currently:[{C:mult}#2#{C:inactive} Mult]"
                 },
             },
             j_bfs_zany_steven = {
