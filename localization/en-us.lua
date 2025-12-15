@@ -676,6 +676,13 @@ return {
                     "of {C:attention}odd{} ranked cards"
                 }
             },
+			j_bfs_emoticons = {
+                name="Emoticons",
+                text = {
+                    "Played {C:attention}numbered{} cards give",
+                    "{C:chips}+#1#{} Chip#<s>1# and {C:mult}+#2#{} Mult"
+				}
+			},
         },
         Tarot = {
             c_bfs_fusion_reactor = {
