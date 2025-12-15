@@ -42,6 +42,9 @@ SMODS.Joker {
                 }
             end
         end
+        if context.joker_main then
+            return {mult=card.ability.extra.mult}
+        end
     end,
     bfs_credits = {
         idea = { "George The Rat" },
