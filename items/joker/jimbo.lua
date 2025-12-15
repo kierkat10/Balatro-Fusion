@@ -39,7 +39,7 @@ SMODS.Joker {
                     end
                         return true
                 end}))   
-                card_eval_status_text(context_blueprint_card or self, 'extra', nil, nil, nil, {message = localize('k_plus_joker'), colour = G.C.BLUE}) 
+                card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = localize('k_plus_joker'), colour = G.C.BLUE}) 
             return nil, true
         end
         if context.joker_main then
