@@ -53,3 +53,9 @@ SMODS.Atlas({
     px = 34,
     py = 34, 
 })
+
+SMODS.current_mod.optional_features = {
+    post_trigger = true,
+    retrigger_joker = true,
+	cardareas = {}
+}
