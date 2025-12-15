@@ -683,6 +683,14 @@ return {
                     "{C:chips}+#1#{} Chip#<s>1# and {C:mult}+#2#{} Mult"
 				}
 			},
+			j_bfs_partnership = {
+                name="Partnership",
+                text={
+                    "When a {C:attention}Boss Blind{} is selected",
+                    "create a {C:rare}Rare{} {C:attention}Joker{}",
+                    "with a {C:rental}Rental Sticker"
+                }
+            },
         },
         Tarot = {
             c_bfs_fusion_reactor = {
