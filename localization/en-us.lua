@@ -706,7 +706,14 @@ return {
                     "{C:bfs_fused,E:1}Unfuse{} {C:attention}#1#{} selected Joker",
                     "{C:inactive}(Must have room)"
                 }
-            }
+            },
+			c_bfs_elements = {
+                name="Elements",
+                text={
+                    "{C:green}#1# in #2#{} chance to create a {C:bfs_fused,E:1}fusion{}",
+                    "of a randomly owned {C:attention}Joker",
+                }
+            },
         },
         Tag = {
             tag_bfs_synthetic = {
