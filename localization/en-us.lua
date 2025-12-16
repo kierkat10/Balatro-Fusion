@@ -715,6 +715,15 @@ return {
                 }
             },
         },
+		Spectral = {
+            c_bfs_meld = {
+                name="Meld",
+                text={
+                    "{C:bfs_fused}Fuse{} two {C:attention}Jokers{} of your choice",
+                    "randomly gives back one of the {C:attention}Jokers",
+                },
+            },
+        },
         Tag = {
             tag_bfs_synthetic = {
                 name = "Synthetic Tag",
