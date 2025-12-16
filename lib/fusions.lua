@@ -38,6 +38,12 @@ local function table_keys(t)
     return table.concat(keys, ", ")
 end
 
+local function table_find(t,target)
+    for i,v in pairs(t) do
+        if v == target then return i,v end
+    end
+end
+
 function FusionClass:rebuild_index()
     fusion_index = {}
     for _, fusion in ipairs(available_fusions) do
@@ -287,6 +293,17 @@ function FusionClass:get(input)
     end
 
     return best_fusion
+end
+
+function FusionClass:get_fusions_that_contains_input(input)
+local fusions = {}
+for i,v in pairs(input) do
+    if fusion_index[v] then
+        table.insert(fusions, fusion_index[v])
+    end
+end
+if #fusions <=0 then return nil end
+return fusions
 end
 
 function FusionClass:unfuse_joker(fused_joker)
