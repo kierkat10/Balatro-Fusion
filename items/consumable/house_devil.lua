@@ -3,7 +3,7 @@ SMODS.Consumable {
     name = "House of the Devil",
     config = { extra = { max_highlighted = 1 } },
     set = "Tarot",
-    pos = { x = 1, y = 0 },
+    pos = { x = 0, y = 0 },
     cost = 3,
     atlas = "consumable",
     loc_vars = function(self, info_queue, card)
