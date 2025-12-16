@@ -693,8 +693,8 @@ return {
             },
         },
         Tarot = {
-            c_bfs_fusion_reactor = {
-                name = "Fusion Reactor",
+            c_bfs_the_universe = {
+                name = "The Universe",
                 text = {
                     "{C:bfs_fused,E:1}Fuse{} two or",
                     "more Jokers"
