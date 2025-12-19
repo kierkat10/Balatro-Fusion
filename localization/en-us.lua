@@ -691,6 +691,23 @@ return {
                     "with a {C:rental}Rental Sticker"
                 }
             },
+		    j_bfs_sock_my_buskin = {
+                name = "Sock My Buskin",
+                text={
+                    "Retrigger all played {C:attention}face{} cards once",
+                    "Increases by #1#",
+                    "per {C:common}Common {C:attention}Joker{} owned",
+                    "{C:inactive}Currently:[#2#]",
+                },
+            },
+            j_bfs_juggling_juggler = {
+                name="Juggling-Juggler",
+                text={
+                    "{C:attention}+#1#{} hand size",
+                    "per {C:common}Common {C:attention}Joker{} owned",
+                    "{C:inactive}Currently:[#2#]",
+                },
+            },
         },
         Tarot = {
             c_bfs_the_universe = {
