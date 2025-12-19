@@ -33,9 +33,9 @@ SMODS.Consumable {
             table.insert(jokers, v)
             end
         end
-        local chosen_joker = pseudorandom_element(jokers,"bfs_elements_tarot_joker_choice").config.center.key
+        local chosen_joker = pseudorandom_element(jokers,"bfs_elements_tarot_joker_choice")
         --print("chosen joker for element is:",chosen_joker)
-        local possible_fusion = SMODS.BalatroFusion.Fusion:get_fusions_that_contains_input({chosen_joker})[1]
+        local possible_fusion = SMODS.BalatroFusion.Fusion:get_fusions_that_contains_input({chosen_joker.config.center.key})[1]
         --print("possible fusions:",inspectDepth(possible_fusion))
         local chosen_fusion = pseudorandom_element(possible_fusion,"bfs_elements_tarot_choose_fusion")
         --print("chosen fusion is:",inspectDepth(chosen_fusion))
@@ -54,4 +54,5 @@ SMODS.Consumable {
             }
         }
     end,
+
 }
