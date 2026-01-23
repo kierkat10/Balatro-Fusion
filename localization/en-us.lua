@@ -146,6 +146,13 @@ return {
                     "{C:attention}Destroy{} a random Joker and {C:attention}Duplicate{} a random Joker",
                 },
             },
+			j_bfs_emoticons = {
+                name="Emoticons",
+                text = {
+                    "Played {C:attention}numbered{} cards give",
+                    "{C:chips}+#1#{} Chip#<s>1# and {C:mult}+#2#{} Mult"
+				}
+			},
             j_bfs_equal_evan = {
                 name = "Equal Evan",
                 text = {
@@ -169,6 +176,15 @@ return {
                     "ranked card held in hand to Mult",
                     "All {C:attention}Flushes{} and {C:attention}Straights{}",
                     "can be made with {C:attention}3{} cards"
+                }
+            },
+            j_bfs_fudged = {
+                name = "Fudged Joker",
+                text = {
+                    "{C:attention}#3#s{} and {C:attention}#4#s{} are considered as {C:attention}Aces{}",
+                    "{C:attention}Aces{} score {C:blue}+#1#{} Chips and {C:red}+#2#{} Mult",
+                    "{C:inactive}Ranks change at the end of round{}",
+                    "{C:inactive}Ranks are only number cards{}"
                 }
             },
             j_bfs_gluttonous_garry = {
@@ -240,6 +256,15 @@ return {
                     "{C:inactive}(Currently {C:white,X:blue}X#3#{C:inactive} Chip#<s>1#)"
                 }
             },
+            j_bfs_jimbo = {
+                name="Jimbo",
+                text={
+                    "When {C:attention}Blind{} is selected",
+                    "create {C:attention}2 {C:common}Common {C:attention}Jokers",
+                    "{C:mult}+#1#{} Mult for every {C:common}Common{} {C:attention}Joker{} you own",
+                    "{C:inactive}Currently:[{C:mult}#2#{C:inactive} Mult]",
+                },
+            },
             j_bfs_jolly_steven = {
                 name = "Jolly Steven",
                 text = {
@@ -258,12 +283,46 @@ return {
                     "ranked cards"
                 }
             },
+            j_bfs_joker_cola = {
+                name="Joker Cola",
+                text={
+                    "When {C:attention}Boss Blind{} is defeated",
+                    "Create a {C:attention}Double Tag",
+                    "and gain {C:mult}+#1#{} Mult",
+                    "{C:inactive}Currently:[{C:mult}#2#{C:inactive} Mult]",
+                },
+            },
+            j_bfs_joker_pack = {
+                name="Joker Pack",
+                text={
+                    "{C:green}#1# in #2#{} chance to gain {C:red}+#3#{} Mult",
+                    "and create a {C:tarot}Tarot{} card",
+                    "when any {C:attention}Booster Pack{} is opened",
+                    "{C:inactive}Currently:[{C:mult}#4#{C:inactive} Mult]",
+                },
+            },
+            j_bfs_joker_print = {
+                name="Jokerprint",
+                text={
+                    "Copies ability of {C:attention}Joker{} to the right",
+                    "gains {C:red}#1#{} Mult when {C:attention}Joker{} to the right is {C:attention}triggered",
+                    "{C:inactive}Currently:[{C:mult}#2#{C:inactive} Mult]"
+                },
+            },
             j_bfs_joyful_jolly = {
                 name = "Joyful Jolly",
                 text = {
                     "If played hand is a {C:attention}Pair",
                     "create {C:attention}#1# {C:common}Common {C:attention}Jokers",
                     "{C:inactive}[Must Have Room]",
+                },
+            },
+            j_bfs_juggling_juggler = {
+                name="Juggling-Juggler",
+                text={
+                    "{C:attention}+#1#{} hand size",
+                    "per {C:common}Common {C:attention}Joker{} owned",
+                    "{C:inactive}Currently:[#2#]",
                 },
             },
             j_bfs_lusty_dusty = {
@@ -316,6 +375,15 @@ return {
                     "Retrigger each played {C:attention}Ace{}"
                 }
             },
+            j_bfs_masters_degree = {
+                name = "Master's Degree",
+                text = {
+                    "When round begins, add a random",
+                    "{C:enhanced}Enhanced{} {C:attention}Ace{} to your hand",
+                    "Played {C:attention}Aces{} give {C:blue}+#1#{} Chips",
+                    "and {C:red}+#2#{} Mult when scored",
+                }
+            },
 			j_bfs_molotov_cocktail = {
                 name = "Molotov's Cocktail",
                 text = {
@@ -331,6 +399,24 @@ return {
                     "give {C:red}+10{} Mult if",
                     "{C:attention}0 {C:red}Discards{} remaining",
                 },
+            },
+            j_bfs_ouroboros = {
+                name="Ouroboros",
+                text={
+                    "{C:red}+#1#{} Mult when a card is scored",
+                    "{C:red}gains +#2#{} Mult when a",
+                    "{C:attention}Ace{},{C:attention}2{},{C:attention}3{},{C:attention}5{}, or {C:attention}8{}",
+                    "are scored",
+                    "{C:inactive}Currently:[{C:mult}#3#{C:inactive} Mult]",
+                },
+            },
+			j_bfs_partnership = {
+                name="Partnership",
+                text={
+                    "When a {C:attention}Boss Blind{} is selected",
+                    "create a {C:rare}Rare{} {C:attention}Joker{}",
+                    "with a {C:rental}Rental Sticker"
+                }
             },
             j_bfs_patient = {
                 name = "Patient Joker",
@@ -437,6 +523,15 @@ return {
                     "when {C:attention}Boss Blind{} is defeated",
                     "{C:inactive}(Currently {C:money}$#3#{C:inactive})"
                 }
+            },
+		    j_bfs_sock_my_buskin = {
+                name = "Sock My Buskin",
+                text={
+                    "Retrigger all played {C:attention}face{} cards once",
+                    "Increases by #1#",
+                    "per {C:common}Common {C:attention}Joker{} owned",
+                    "{C:inactive}Currently:[#2#]",
+                },
             },
             j_bfs_sparkling_wine = {
                 name = "Sparkling Wine",
@@ -613,51 +708,6 @@ return {
                 "{C:inactive}[Must Have Room]",
                 },
             },
-            j_bfs_jimbo = {
-                name="Jimbo",
-                text={
-                    "When {C:attention}Blind{} is selected",
-                    "create {C:attention}2 {C:common}Common {C:attention}Jokers",
-                    "{C:mult}+#1#{} Mult for every {C:common}Common{} {C:attention}Joker{} you own",
-                    "{C:inactive}Currently:[{C:mult}#2#{C:inactive} Mult]",
-                },
-            },
-            j_bfs_joker_pack = {
-                name="Joker Pack",
-                text={
-                    "{C:green}#1# in #2#{} chance to gain {C:red}+#3#{} Mult",
-                    "and create a {C:tarot}Tarot{} card",
-                    "when any {C:attention}Booster Pack{} is opened",
-                    "{C:inactive}Currently:[{C:mult}#4#{C:inactive} Mult]",
-                },
-            },
-            j_bfs_joker_cola = {
-                name="Joker Cola",
-                text={
-                    "When {C:attention}Boss Blind{} is defeated",
-                    "Create a {C:attention}Double Tag",
-                    "and gain {C:mult}+#1#{} Mult",
-                    "{C:inactive}Currently:[{C:mult}#2#{C:inactive} Mult]",
-                },
-            },
-            j_bfs_ouroboros = {
-                name="Ouroboros",
-                text={
-                    "{C:red}+#1#{} Mult when a card is scored",
-                    "{C:red}gains +#2#{} Mult when a",
-                    "{C:attention}Ace{},{C:attention}2{},{C:attention}3{},{C:attention}5{}, or {C:attention}8{}",
-                    "are scored",
-                    "{C:inactive}Currently:[{C:mult}#3#{C:inactive} Mult]",
-                },
-            },
-            j_bfs_joker_print = {
-                name="Jokerprint",
-                text={
-                    "Copies ability of {C:attention}Joker{} to the right",
-                    "gains {C:red}#1#{} Mult when {C:attention}Joker{} to the right is {C:attention}triggered",
-                    "{C:inactive}Currently:[{C:mult}#2#{C:inactive} Mult]"
-                },
-            },
             j_bfs_zany_steven = {
                 name = "Zany Steven",
                 text = {
@@ -676,38 +726,7 @@ return {
                     "of {C:attention}odd{} ranked cards"
                 }
             },
-			j_bfs_emoticons = {
-                name="Emoticons",
-                text = {
-                    "Played {C:attention}numbered{} cards give",
-                    "{C:chips}+#1#{} Chip#<s>1# and {C:mult}+#2#{} Mult"
-				}
-			},
-			j_bfs_partnership = {
-                name="Partnership",
-                text={
-                    "When a {C:attention}Boss Blind{} is selected",
-                    "create a {C:rare}Rare{} {C:attention}Joker{}",
-                    "with a {C:rental}Rental Sticker"
-                }
-            },
-		    j_bfs_sock_my_buskin = {
-                name = "Sock My Buskin",
-                text={
-                    "Retrigger all played {C:attention}face{} cards once",
-                    "Increases by #1#",
-                    "per {C:common}Common {C:attention}Joker{} owned",
-                    "{C:inactive}Currently:[#2#]",
-                },
-            },
-            j_bfs_juggling_juggler = {
-                name="Juggling-Juggler",
-                text={
-                    "{C:attention}+#1#{} hand size",
-                    "per {C:common}Common {C:attention}Joker{} owned",
-                    "{C:inactive}Currently:[#2#]",
-                },
-            },
+-- Second reminder to add localizations in alphabetical order
         },
         Tarot = {
             c_bfs_the_universe = {
