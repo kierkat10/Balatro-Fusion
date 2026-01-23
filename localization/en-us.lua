@@ -19,6 +19,14 @@ return {
                     "{C:inactive}(Currently {C:white,X:mult}X#2#{C:inactive} Mult)"
                 }
             },
+            j_bfs_blue_stencil = {
+                name = "Blue Stencil",
+                text = {
+                    "Scores {C:white,X:mult}X#1#{} Mult",
+                    "per missing card from your deck",
+                    "{C:inactive}(Currently {C:white,X:mult}X#2#{C:inactive} Mult)"
+                }
+            },
             j_bfs_bonfire = {
                 name = "Bonfire",
                 text = {
@@ -257,13 +265,22 @@ return {
                 }
             },
             j_bfs_jimbo = {
-                name="Jimbo",
-                text={
+                name = "Jimbo",
+                text = {
                     "When {C:attention}Blind{} is selected",
                     "create {C:attention}2 {C:common}Common {C:attention}Jokers",
                     "{C:mult}+#1#{} Mult for every {C:common}Common{} {C:attention}Joker{} you own",
                     "{C:inactive}Currently:[{C:mult}#2#{C:inactive} Mult]",
                 },
+            },
+            j_bfs_jigsaw = {
+                name = "Jigsaw Joker",
+                text = {
+                    "Scores {C:white,X:mult}X#1#{} Mult for",
+                    "each empty {C:attention}Joker{} slot",
+                    "and {C:enhanced}Consumable{} Slot",
+                    "{C:inactive}(Currently {C:white,X:mult}X#2#{C:inactive} Mult)"
+                }
             },
             j_bfs_jolly_steven = {
                 name = "Jolly Steven",
