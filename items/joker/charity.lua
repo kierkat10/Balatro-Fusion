@@ -1,21 +1,13 @@
 return {
-    fusion = {
-        id = "joker_fusion",
-        key = "charity",
-        name = "Charity Joker",
-        input = {
-            "j_greedy_joker",
-            "j_greedy_joker",
-        },
-        output = "j_bfs_charity"
+    key = "charity",
+    name = "Charity Joker",
+    input = {
+        "j_greedy_joker",
+        "j_greedy_joker",
     },
     joker = {
-        key = "charity",
-        name = "Charity Joker",
         config = { extra = { xmult = 1.5 } },
         pos = { x = 6, y = 2 },
-        cost = 10,
-        rarity = "bfs_fused",
         blueprint_compat = true,
         atlas = "joker",
         loc_vars = function(self, info_queue, card)

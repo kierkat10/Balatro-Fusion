@@ -1,23 +1,15 @@
 return {
-    fusion = {
-        id = "joker_fusion",
-        key = "blue_stencil",
-        name = "Blue Stencil",
-        input = {
-            "j_stencil",
-            "j_blue_joker",
-        },
-        output = "j_bfs_blue_stencil"
+    key = "blue_stencil",
+    name = "Blue Stencil",
+    input = {
+        "j_stencil",
+        "j_blue_joker",
     },
     joker = {
-        key = "blue_stencil",
-        name = "Blue Stencil",
         config = { extra = {
             xmult_gain = 0.04,
         }},
         pos = { x = 4, y = 1 },
-        cost = 14,
-        rarity = "bfs_fused",
         blueprint_compat = true,
         atlas = "joker",
         loc_vars = function(self, info_queue, card)

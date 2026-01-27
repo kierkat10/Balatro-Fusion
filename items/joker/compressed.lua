@@ -1,17 +1,11 @@
 return {
-    fusion = {
-        id = "joker_fusion",
-        key = "compressed",
-        name = "Compressed Joker",
-        input = {
-            "j_joker",
-            "j_joker",
-        },
-        output = "j_bfs_compressed"
+    key = "compressed",
+    name = "Compressed Joker",
+    input = {
+        "j_joker",
+        "j_joker",
     },
     joker = {
-        key = "compressed",
-        name = "Compressed Joker",
         config = {
             extra = {
                 mult_mod = 4,
@@ -19,8 +13,6 @@ return {
             }
         },
         pos = { x = 9, y = 10 },
-        cost = 4,
-        rarity = "bfs_fused",
         blueprint_compat = true,
         atlas = "joker",
         loc_vars = function(self, info_queue, card)

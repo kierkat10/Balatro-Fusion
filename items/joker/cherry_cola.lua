@@ -1,21 +1,13 @@
 return {
-    fusion = {
-        id = "joker_fusion",
-        key = "cherry_cola",
-        name = "Cherryful Cola",
-        input = {
-            "j_diet_cola",
-            "j_jolly",
-        },
-        output = "j_bfs_cherry_cola"
+    key = "cherry_cola",
+    name = "Cherryful Cola",
+    input = {
+        "j_diet_cola",
+        "j_jolly",
     },
     joker = {
-        key = "cherry_cola",
-        name = "Cherryful Cola",
         config = { extra = { odds = 6 } },
         pos = { x = 0, y = 1 },
-        cost = 13,
-        rarity = "bfs_fused",
         blueprint_compat = true,
         atlas = "basic-joker",
         loc_vars = function(self, info_queue, card)

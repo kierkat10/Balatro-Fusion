@@ -1,21 +1,13 @@
 return {
-    fusion = {
-        id = "joker_fusion",
-        key = "approved_technology",
-        name = "Approved Technology",
-        input = {
-            "j_certificate",
-            "j_hologram",
-        },
-        output = "j_bfs_approved_technology"
+    key = "approved_technology",
+    name = "Approved Technology",
+    input = {
+        "j_certificate",
+        "j_hologram",
     },
     joker = {
-        key = "approved_technology",
-        name = "Approved Technology",
         config = { extra = { xmult = 0.5 } },
         pos = { x = 0, y = 0 },
-        cost = 13,
-        rarity = "bfs_fused",
         blueprint_compat = true,
         atlas = "placeholder",
         loc_vars = function(self, info_queue, card)

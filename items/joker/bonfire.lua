@@ -1,17 +1,11 @@
 return {
-    fusion = {
-        id = "joker_fusion",
-        key = "bonfire",
-        name = "Bonfire",
-        input = {
-            "j_campfire",
-            "j_campfire",
-        },
-        output = "j_bfs_bonfire"
+    key = "bonfire",
+    name = "Bonfire",
+    input = {
+        "j_campfire",
+        "j_campfire",
     },
     joker = {
-        key = "bonfire",
-        name = "Bonfire",
         config = {
             extra = {
                 xmult_mod = 0.2,
@@ -19,8 +13,6 @@ return {
             }
         },
         pos = { x = 0, y = 0 },
-        cost = 18,
-        rarity = "bfs_fused",
         blueprint_compat = true,
         atlas = "placeholder",
         loc_vars = function(self, info_queue, card)

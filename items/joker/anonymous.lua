@@ -1,18 +1,12 @@
 
 return {
-    fusion = {
-        id = "joker_fusion",
-        key = "anonymous",
-        name = "Anonymous",
-        input = {
-            "j_hack",
-            "j_midas_mask",
-        },
-        output = "j_bfs_anonymous"
+    key = "anonymous",
+    name = "Anonymous",
+    input = {
+        "j_hack",
+        "j_midas_mask",
     },
     joker = {
-        key = "anonymous",
-        name = "Anonymous",
         config = {
             extra = {
                 retriggers=1,
@@ -20,8 +14,6 @@ return {
             }
         },
         pos = { x = 0, y = 0 },
-        cost = 13,
-        rarity = "bfs_fused",
         blueprint_compat = true,
         atlas = "placeholder",
         loc_vars = function(self, info_queue, card)

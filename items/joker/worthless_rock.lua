@@ -1,48 +1,41 @@
-SMODS.BalatroFusion.Fusion:new_generic({
-    id = "joker_fusion",
+return {
     key = "worthless_rock",
     name = "Worthless Ancient Rock",
     input = {
         "j_ancient",
         "j_marble",
     },
-    output = "j_bfs_worthless_rock"
-})
-
-SMODS.Joker {
-    key = "worthless_rock",
-    name = "Worthless Ancient Rock",
-    config = {
-        extra = {
-            odds = 2,
-            xchips = 1.75
-        }
-    },
-    pos = { x = 8, y = 10 },
-    cost = 14,
-    rarity = "bfs_fused",
-    blueprint_compat = true,
-    atlas = "joker",
-    loc_vars = function(self, info_queue, card)
-        local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, "j_bfs_worthless_rock")
-        return {
-            vars = {
-                numerator,
-                denominator,
-                card.ability.extra.xchips
+    joker = {
+        config = {
+            extra = {
+                odds = 2,
+                xchips = 1.75
             }
-        }
-    end,
-    calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.play and SMODS.pseudorandom_probability(card, "j_bfs_worthless_rock", 1, card.ability.extra.odds) then
+        },
+        pos = { x = 8, y = 10 },
+        blueprint_compat = true,
+        atlas = "joker",
+        loc_vars = function(self, info_queue, card)
+            local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, "j_bfs_worthless_rock")
             return {
-                xchips = card.ability.extra.xchips
+                vars = {
+                    numerator,
+                    denominator,
+                    card.ability.extra.xchips
+                }
             }
-        end
-    end,
-	bfs_credits = {
-        art = { "StellarBlue" },
-        idea = { "RandomGuy" },
-		code = { "Glitchkat10" }
-	}
+        end,
+        calculate = function(self, card, context)
+            if context.individual and context.cardarea == G.play and SMODS.pseudorandom_probability(card, "j_bfs_worthless_rock", 1, card.ability.extra.odds) then
+                return {
+                    xchips = card.ability.extra.xchips
+                }
+            end
+        end,
+        bfs_credits = {
+            art = { "StellarBlue" },
+            idea = { "RandomGuy" },
+            code = { "Glitchkat10" }
+        }
+    }
 }

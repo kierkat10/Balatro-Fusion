@@ -1,17 +1,11 @@
 return {
-    fusion = {
-        id = "joker_fusion",
-        key = "card_pack",
-        name = "Card Pack",
-        input = {
-            "j_baseball",
-            "j_baseball",
-        },
-        output = "j_bfs_card_pack"
+    key = "card_pack",
+    name = "Card Pack",
+    input = {
+        "j_baseball",
+        "j_baseball",
     },
     joker = {
-        key = "card_pack",
-        name = "Card Pack",
         config = {
             extra = {
                 xmult = 2,
@@ -20,8 +14,6 @@ return {
             }
         },
         pos = { x = 0, y = 0 },
-        cost = 16,
-        rarity = "bfs_fused",
         blueprint_compat = true,
         atlas = "placeholder",
         loc_vars = function(self, info_queue, card)

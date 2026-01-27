@@ -1,23 +1,15 @@
 return {
-    fusion = {
-        id = "joker_fusion",
-        key = "jigsaw",
-        name = "Jigsaw Joker",
-        input = {
-            "j_stencil",
-            "j_stencil",
-        },
-        output = "j_bfs_jigsaw"
+    key = "jigsaw",
+    name = "Jigsaw Joker",
+    input = {
+        "j_stencil",
+        "j_stencil",
     },
     joker = {
-        key = "jigsaw",
-        name = "Jigsaw Joker",
         config = { extra = {
             xmult_gain = 1.2,
         }},
         pos = { x = 3, y = 2 },
-        cost = 14,
-        rarity = "bfs_fused",
         blueprint_compat = true,
         atlas = "joker",
         loc_vars = function(self, info_queue, card)

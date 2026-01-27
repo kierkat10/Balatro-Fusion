@@ -1,21 +1,13 @@
 return {
-    fusion = {
-        id = "joker_fusion",
-        key = "chiseled_gems",
-        name = "Chiseled Gems",
-        input = {
-            "j_arrowhead",
-            "j_onyx_agate",
-        },
-        output = "j_bfs_chiseled_gems"
+    key = "chiseled_gems",
+    name = "Chiseled Gems",
+    input = {
+        "j_arrowhead",
+        "j_onyx_agate",
     },
     joker = {
-        key = "chiseled_gems",
-        name = "Chiseled Gems",
         config = { extra = { xmult = 1.5 } },
         pos = { x = 0, y = 0 },
-        cost = 14,
-        rarity = "bfs_fused",
         blueprint_compat = true,
         atlas = "placeholder",
         loc_vars = function(self, info_queue, card)
