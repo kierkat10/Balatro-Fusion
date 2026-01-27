@@ -76,10 +76,6 @@ for _, item in ipairs(fusion_jokers) do
             item.joker.name = item.name
             item.joker.key = item.key
             item.joker.rarity = "bfs_fused"
-            print(item.name)
-            print(input_joker_1.name..": "..input_joker_1.order)
-            print(input_joker_2.name..": "..input_joker_2.order)
-            print(item.order_value)
         end
     end
 end
