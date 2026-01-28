@@ -1,59 +1,51 @@
-
-SMODS.BalatroFusion.Fusion:new_generic({
-    id = "joker_fusion",
+return {
     key = "wrathful_waldo",
     name = "Wrathful Waldo",
     input = {
         "j_wrathful_joker",
         "j_riff_raff",
     },
-    output = "j_bfs_wrathful_waldo"
-})
-
-SMODS.Joker {
-    key = "wrathful_waldo",
-    name = "Wrathful Waldo",
-    config = {
-        extra={
-            mult=0,
-            mult_gain=2,
-            suit="Spades",
+    joker = {
+        config = {
+            extra={
+                mult=0,
+                mult_gain=2,
+                suit="Spades",
+            },
         },
-    },
-    pos = {x=3,y=0,},
-    cost = 11,
-    rarity = "bfs_fused",
-    blueprint_compat = true,
-    atlas = "riff-raff",
-    calculate = function (self,card,context)
-        if context.individual and context.cardarea == G.play and context.other_card:is_suit(card.ability.extra.suit) then
-            return {
-                mult=card.ability.extra.mult,
-            }
-        end
-    end,
-    update = function (self,card)
-        local common_jokers = 0
-        if G.jokers then
-        for i,v in ipairs(G.jokers.cards) do
-            if v:is_rarity("Common") then
-                common_jokers=common_jokers+1
+        pos = {x=3,y=0,},
+        blueprint_compat = true,
+        atlas = "riff-raff",
+        calculate = function (self,card,context)
+            if context.individual and context.cardarea == G.play and context.other_card:is_suit(card.ability.extra.suit) then
+                return {
+                    mult=card.ability.extra.mult,
+                }
             end
-        end
-        end
-        card.ability.extra.mult=card.ability.extra.mult_gain*common_jokers
-    end,
-    loc_vars = function (self,info_queue,card)
-        return {
-            vars={
-                card.ability.extra.mult_gain,
-                card.ability.extra.mult,
+        end,
+        update = function (self,card)
+            local common_jokers = 0
+            if G.jokers then
+            for i,v in ipairs(G.jokers.cards) do
+                if v:is_rarity("Common") then
+                    common_jokers=common_jokers+1
+                end
+            end
+            end
+            card.ability.extra.mult=card.ability.extra.mult_gain*common_jokers
+        end,
+        loc_vars = function (self,info_queue,card)
+            return {
+                vars={
+                    card.ability.extra.mult_gain,
+                    card.ability.extra.mult,
+                }
             }
-        }
-    end,
-    bfs_credits = {
-        idea = { "StellarBlue" },
-        art = {"StellarBlue"},
-        code = { "Lact4???"}
-    },
+        end,
+        bfs_credits = {
+            idea = { "StellarBlue" },
+            art = {"StellarBlue"},
+            code = { "Lact4???"}
+        },
+    }
 }

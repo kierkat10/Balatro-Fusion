@@ -127,7 +127,7 @@ function FusionClass:new_generic(t)
             })
         end
     end
-
+    print(t.name)
     for _, v in ipairs(t.input) do
         table.insert(input, {
             target = v,
