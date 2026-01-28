@@ -1,5 +1,19 @@
 -- Please keep the localizations in alphabetical order
 
+local function basic_todd_steven_joker(hand_type, ranks, scoring)
+    local extra = 
+        (hand_type == "Flush" or hand_type == "Straight") and " with a majority" or
+        (hand_type == "Pair" or hand_type == "Two Pair") and " of" or ""
+    local extra_2 = (hand_type ~= "Pair" and hand_type ~= "Two Pair") and "of " or ""
+    return {
+        "{C:"..scoring.."}+#1#{} "..scoring:gsub("^%l", string.upper).." if",
+        "played hand contains",
+        "a {C:attention}"..hand_type.."{}"..extra,
+        extra_2.."{C:attention}"..ranks.."{} ranked cards"
+    }
+end
+
+
 return {
     descriptions = {
         Joker = {
@@ -76,6 +90,14 @@ return {
                     "{C:white,X:mult}X#1#{} Mult when scored"
                 }
             },
+            j_bfs_clever_steven = {
+                name = "Clever Steven",
+                text =  basic_todd_steven_joker("Two Pair", "even", "chips")
+            },
+            j_bfs_clever_todd = {
+                name = "Clever Todd",
+                text = basic_todd_steven_joker("Two Pair", "odd", "chips")
+            },
             j_bfs_compressed = {
                 name = "Compressed Joker",
                 text = {
@@ -95,6 +117,14 @@ return {
                     "{C:inactive}[Currently {C:red}#2# Mult{C:inactive}]",
                 }
             },
+            j_bfs_crafty_steven = {
+                name = "Crafty Steven",
+                text =  basic_todd_steven_joker("Flush", "even", "chips")
+            },
+            j_bfs_crafty_todd = {
+                name = "Crafty Todd",
+                text = basic_todd_steven_joker("Flush", "odd", "chips")
+            },
             j_bfs_crazy_chaos = {
                 name = "Crazy Chaos",
                 text = {
@@ -105,21 +135,11 @@ return {
             },
             j_bfs_crazy_steven = {
                 name = "Crazy Steven",
-                text = {
-                    "{C:mult}+#1#{} Mult if",
-                    "played hand contains a",
-                    "{C:attention}Straight{} with a majority",
-                    "of {C:attention}even{} ranked cards"
-                }
+                text = basic_todd_steven_joker("Straight", "even", "mult")
             },
             j_bfs_crazy_todd = {
                 name = "Crazy Todd",
-                text = {
-                    "{C:mult}+#1#{} Mult if",
-                    "played hand contains a",
-                    "{C:attention}Straight{} with a majority",
-                    "of {C:attention}odd{} ranked cards"
-                }
+                text = basic_todd_steven_joker("Straight", "odd", "mult")
             },
 			j_bfs_demand_driven = {
                 name = "Demand Driven",
@@ -129,6 +149,14 @@ return {
                     "you have at end of round",
                     "{C:inactive}Currently:[{C:money}$#2#{C:inactive}]",
                 },
+            },
+            j_bfs_devious_steven = {
+                name = "Devious Steven",
+                text = basic_todd_steven_joker("Straight", "even", "chips")
+            },
+            j_bfs_devious_todd = {
+                name = "Devious Todd",
+                text = basic_todd_steven_joker("Straight", "odd", "chips")
             },
             j_bfs_droll_draft = {
                 name = "Droll Draft",
@@ -140,21 +168,11 @@ return {
             },
             j_bfs_droll_steven = {
                 name = "Droll Steven",
-                text = {
-                    "{C:mult}+#1#{} Mult if",
-                    "played hand contains a",
-                    "{C:attention}Flush{} with a majority",
-                    "of {C:attention}even{} ranked cards"
-                }
+                text =  basic_todd_steven_joker("Flush", "even", "mult")
             },
             j_bfs_droll_todd = {
                 name = "Droll Todd",
-                text = {
-                    "{C:mult}+#1#{} Mult if",
-                    "played hand contains a",
-                    "{C:attention}Flush{} with a majority",
-                    "of {C:attention}odd{} ranked cards"
-                }
+                text = basic_todd_steven_joker("Flush", "odd", "mult")
             },
 			j_bfs_egg_of_the_earth = {
                 name = "Egg Of The Earth",
@@ -304,21 +322,11 @@ return {
             },
             j_bfs_jolly_steven = {
                 name = "Jolly Steven",
-                text = {
-                    "{C:mult}+#1#{} Mult if",
-                    "played hand contains",
-                    "a {C:attention}Pair{} of {C:attention}even",
-                    "ranked cards"
-                }
+                text =  basic_todd_steven_joker("Pair", "even", "mult")
             },
             j_bfs_jolly_todd = {
                 name = "Jolly Todd",
-                text = {
-                    "{C:mult}+#1#{} Mult if",
-                    "played hand contains",
-                    "a {C:attention}Pair{} of {C:attention}odd",
-                    "ranked cards"
-                }
+                text =  basic_todd_steven_joker("Pair", "odd", "mult")
             },
             j_bfs_joker_cola = {
                 name="Joker Cola",
@@ -388,21 +396,11 @@ return {
             },
             j_bfs_mad_steven = {
                 name = "Mad Steven",
-                text = {
-                    "{C:mult}+#1#{} Mult if",
-                    "played hand contains",
-                    "a {C:attention}Two Pair{} of",
-                    "{C:attention}even{} ranked cards"
-                }
+                text =  basic_todd_steven_joker("Two Pair", "even", "mult")
             },
             j_bfs_mad_todd = {
                 name = "Mad Todd",
-                text = {
-                    "{C:mult}+#1#{} Mult if",
-                    "played hand contains",
-                    "a {C:attention}Two Pair{} of",
-                    "{C:attention}odd{} ranked cards"
-                }
+                text = basic_todd_steven_joker("Two Pair", "odd", "mult")
             },
             j_bfs_material = {
                 name = "Material Joker",
@@ -581,6 +579,14 @@ return {
                     "{C:inactive}(Currently {C:money}$#3#{C:inactive})"
                 }
             },
+            j_bfs_sly_steven = {
+                name = "Sly Steven",
+                text =  basic_todd_steven_joker("Pair", "even", "chips")
+            },
+            j_bfs_sly_todd = {
+                name = "Sly Todd",
+                text =  basic_todd_steven_joker("Pair", "odd", "chips")
+            },
 		    j_bfs_sock_my_buskin = {
                 name = "Sock My Buskin",
                 text={
@@ -733,6 +739,14 @@ return {
                     "{s:0.8}poker hand changes at end of round"
                 }
             },
+            j_bfs_wily_steven = {
+                name = "Wily Steven",
+                text = basic_todd_steven_joker("Three of a Kind", "even", "chips")
+            },
+            j_bfs_wily_todd = {
+                name = "Wily Todd",
+                text = basic_todd_steven_joker("Three of a Kind", "odd", "chips")
+            },
             j_bfs_worthful_rock = {
                 name = "Worthful Ancient Rock",
                 text = {
@@ -767,21 +781,11 @@ return {
             },
             j_bfs_zany_steven = {
                 name = "Zany Steven",
-                text = {
-                    "{C:mult}+#1#{} Mult if",
-                    "played hand contains a",
-                    "{C:attention}Three of a Kind",
-                    "of {C:attention}even{} ranked cards"
-                }
+                text = basic_todd_steven_joker("Three of a Kind", "even", "mult")
             },
             j_bfs_zany_todd = {
                 name = "Zany Todd",
-                text = {
-                    "{C:mult}+#1#{} Mult if",
-                    "played hand contains a",
-                    "{C:attention}Three of a Kind",
-                    "of {C:attention}odd{} ranked cards"
-                }
+                text = basic_todd_steven_joker("Three of a Kind", "odd", "mult")
             },
 -- Second reminder to add localizations in alphabetical order
         },
