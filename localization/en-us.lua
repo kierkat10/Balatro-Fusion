@@ -743,6 +743,36 @@ return {
                     "of {C:attention}odd{} ranked cards"
                 }
             },
+			j_bfs_phisical_joker = {
+                name="Phisical Joker",
+                text={
+                    "Gains {C:red}+#1# Mult{} when a",
+                    "played card with",
+                    "{C:hearts}Heart suit",
+                    "is scored",
+                    "{C:inactive}[Currently {C:red}#2# Mult{C:inactive}]",
+                }
+            },
+            j_bfs_infuriating_joker = {
+                name="Infuriating Joker",
+                text={
+                    "Gains {C:red}+#1# Mult{} when a",
+                    "played card with",
+                    "{C:spades}Spade suit",
+                    "is scored",
+                    "{C:inactive}[Currently {C:red}#2# Mult{C:inactive}]",
+                }
+            },
+            j_bfs_consuming_joker = {
+                name="Consuming Joker",
+                text={
+                    "Gains {C:red}+#1# Mult{} when a",
+                    "played card with",
+                    "{C:clubs}Club suit",
+                    "is scored",
+                    "{C:inactive}[Currently {C:red}#2# Mult{C:inactive}]",
+                }
+            },
 -- Second reminder to add localizations in alphabetical order
         },
         Tarot = {
