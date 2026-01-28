@@ -85,6 +85,16 @@ return {
                     "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
+            j_bfs_consuming = {
+                name="Consuming Joker",
+                text={
+                    "Gains {C:red}+#1# Mult{} when a",
+                    "played card with",
+                    "{C:clubs}Club suit",
+                    "is scored",
+                    "{C:inactive}[Currently {C:red}#2# Mult{C:inactive}]",
+                }
+            },
             j_bfs_crazy_chaos = {
                 name = "Crazy Chaos",
                 text = {
@@ -256,6 +266,16 @@ return {
                     "When a {C:red}discard{} is used destroy leftmost {C:attention}Joker",
                 },
             },
+            j_bfs_infuriating = {
+                name="Infuriating Joker",
+                text={
+                    "Gains {C:red}+#1# Mult{} when a",
+                    "played card with",
+                    "{C:spades}Spade suit",
+                    "is scored",
+                    "{C:inactive}[Currently {C:red}#2# Mult{C:inactive}]",
+                }
+            },
             j_bfs_impossible_beef = {
                 name = "Impossible Beef",
                 text = {
@@ -384,6 +404,16 @@ return {
                     "{C:attention}odd{} ranked cards"
                 }
             },
+            j_bfs_material = {
+                name = "Material Joker",
+                text = {
+                    "Gains {C:red}+#1# Mult{} when a",
+                    "played card with",
+                    "{C:diamonds}Diamond suit",
+                    "is scored",
+                    "{C:inactive}[Currently {C:red}#2# Mult{C:inactive}]",
+                }
+            },
             j_bfs_mathematician = {
                 name = "Mathematician",
                 text = {
@@ -449,6 +479,16 @@ return {
                     "Creates a {C:dark_edition}Negative{} copy of {C:attention}1{} random {C:attention}consumable{}",
                     "card in your possession at the end of the {C:attention}shop{}",
                     "{C:attention}Consumables{} each give {C:white,X:mult}X#1#{} Mult"
+                }
+            },
+			j_bfs_physical = {
+                name="Physical Joker",
+                text={
+                    "Gains {C:red}+#1# Mult{} when a",
+                    "played card with",
+                    "{C:hearts}Heart suit",
+                    "is scored",
+                    "{C:inactive}[Currently {C:red}#2# Mult{C:inactive}]",
                 }
             },
             j_bfs_politician = {
@@ -741,36 +781,6 @@ return {
                     "played hand contains a",
                     "{C:attention}Three of a Kind",
                     "of {C:attention}odd{} ranked cards"
-                }
-            },
-			j_bfs_phisical_joker = {
-                name="Phisical Joker",
-                text={
-                    "Gains {C:red}+#1# Mult{} when a",
-                    "played card with",
-                    "{C:hearts}Heart suit",
-                    "is scored",
-                    "{C:inactive}[Currently {C:red}#2# Mult{C:inactive}]",
-                }
-            },
-            j_bfs_infuriating_joker = {
-                name="Infuriating Joker",
-                text={
-                    "Gains {C:red}+#1# Mult{} when a",
-                    "played card with",
-                    "{C:spades}Spade suit",
-                    "is scored",
-                    "{C:inactive}[Currently {C:red}#2# Mult{C:inactive}]",
-                }
-            },
-            j_bfs_consuming_joker = {
-                name="Consuming Joker",
-                text={
-                    "Gains {C:red}+#1# Mult{} when a",
-                    "played card with",
-                    "{C:clubs}Club suit",
-                    "is scored",
-                    "{C:inactive}[Currently {C:red}#2# Mult{C:inactive}]",
                 }
             },
 -- Second reminder to add localizations in alphabetical order
