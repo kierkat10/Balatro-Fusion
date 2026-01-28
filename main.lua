@@ -15,9 +15,15 @@ local function load_jokers()
     for _, file in ipairs(files) do
         local file_path = full_path .. "/" .. file.name
         if file.name:sub(-4):lower() == ".lua" then
-            local loaded_joker = dofile(file_path)
-            if loaded_joker then
-                table.insert(fusion_jokers, loaded_joker)
+            local loaded_content = dofile(file_path)
+            if loaded_content and loaded_content[1] then
+                for _, v in ipairs(loaded_content) do
+                    table.insert(fusion_jokers, v)
+                    print(v.input[1])
+                    print(v.input[2])
+                end
+            elseif loaded_content then
+                table.insert(fusion_jokers, loaded_content)
             end
         end
     end
