@@ -296,14 +296,23 @@ function FusionClass:get(input)
 end
 
 function FusionClass:get_fusions_that_contains_input(input)
-local fusions = {}
-for i,v in pairs(input) do
-    if fusion_index[v] then
-        table.insert(fusions, fusion_index[v])
+    local fusions = {}
+    for i,v in pairs(input) do
+        if fusion_index[v] then
+            table.insert(fusions, fusion_index[v])
+        end
     end
+    if #fusions <=0 then return nil end
+    return fusions
 end
-if #fusions <=0 then return nil end
-return fusions
+
+function FusionClass:get_input_jokers(fusion_joker_key)
+    for _, v in pairs(fusion_index) do
+        if v.key == fusion_joker_key then
+            return v.input
+        end
+    end
+    return nil
 end
 
 function FusionClass:unfuse_joker(fused_joker)
