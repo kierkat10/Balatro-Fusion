@@ -115,9 +115,8 @@ return {
         "jigsaw",
         "Jigsaw Joker",
         "j_stencil",
-        { x = 3, y = 2},
+        { x = 3, y = 2 },
         "xmult",
-
         { initial = 0, scaling = 1.2 },
         {
             { location = "jokers", type = "joker" },
