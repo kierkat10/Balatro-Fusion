@@ -19,8 +19,6 @@ local function load_jokers()
             if loaded_content and loaded_content[1] then
                 for _, v in ipairs(loaded_content) do
                     table.insert(fusion_jokers, v)
-                    print(v.input[1])
-                    print(v.input[2])
                 end
             elseif loaded_content then
                 table.insert(fusion_jokers, loaded_content)

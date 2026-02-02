@@ -36,9 +36,9 @@ return {
             j_bfs_blue_stencil = {
                 name = "Blue Stencil",
                 text = {
-                    "Scores {C:white,X:mult}X#1#{} Mult",
+                    "Scores {C:white,X:chips}X#1#{} Chips",
                     "per missing card from your deck",
-                    "{C:inactive}(Currently {C:white,X:mult}X#2#{C:inactive} Mult)"
+                    "{C:inactive}(Currently {C:white,X:chips}X#2#{C:inactive} Chips)"
                 }
             },
             j_bfs_bonfire = {
