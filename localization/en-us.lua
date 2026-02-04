@@ -284,6 +284,14 @@ return {
                     "When a {C:red}discard{} is used destroy leftmost {C:attention}Joker",
                 },
             },
+            j_bfs_ice_cream_cone = {
+                name = "Ice Cream Cone",
+                text = {
+                    "Scores {C:blue}+#1#{} Chips",
+                    "for each empty {C:attention}Joker Slot",
+                    "{C:inactive}[Currently {C:blue}+#2#{C:inactive} Chips]"
+                }
+            },
             j_bfs_infuriating = {
                 name="Infuriating Joker",
                 text={

@@ -7,7 +7,7 @@ local function check_joker(joker)
     local fusion_inputs = SMODS.BalatroFusion.Fusion:get_input_jokers(joker.config.center.key)
     if not fusion_inputs then return true end
     for _, v in ipairs(fusion_inputs) do
-        if v == "j_stencil" then
+        if v.target == "j_stencil" then
             return false
         end
     end
@@ -22,12 +22,12 @@ local function check_consumable(consumable)
     return true
 end
 
-local function check_playing_card(card)
+local function check_playing_card(card, exceptions)
     -- Implement exceptions when stencil fusions that use the exceptions are added
     return true
 end
 
-local function get_gap_count_for_card_area(card_areas) -- {location, type}
+function BalatroFusion.get_gap_count_for_card_area(card_areas) -- {location, type}
     local total_gaps = 0
     local area_functions = {
         joker = function(v) return check_joker(v) end,
@@ -82,12 +82,12 @@ local jigsaw = {
         loc_vars = function(self, info_queue, card)
             return { vars = {
                 card.ability.extra.xmult,
-                card.ability.extra.xmult * get_gap_count_for_card_area(card.ability.extra.card_areas)
+                card.ability.extra.xmult * BalatroFusion.get_gap_count_for_card_area(card.ability.extra.card_areas)
             }}
         end,
         calculate = function(self, card, context)
             if context.joker_main then
-                local xmult = card.ability.extra.xmult * get_gap_count_for_card_area(card.ability.extra.card_areas)
+                local xmult = card.ability.extra.xmult * BalatroFusion.get_gap_count_for_card_area(card.ability.extra.card_areas)
                 if xmult ~= 1 then
                     return {
                         xmult = xmult
@@ -122,12 +122,12 @@ local blue_stencil = {
         loc_vars = function(self, info_queue, card)
             return { vars = {
                 card.ability.extra.xchips,
-                1 + card.ability.extra.xchips * get_gap_count_for_card_area(card.ability.extra.card_areas)
+                1 + card.ability.extra.xchips * BalatroFusion.get_gap_count_for_card_area(card.ability.extra.card_areas)
             }}
         end,
         calculate = function(self, card, context)
             if context.joker_main then
-                local xchips = 1 + card.ability.extra.xchips * get_gap_count_for_card_area(card.ability.extra.card_areas)
+                local xchips = 1 + card.ability.extra.xchips * BalatroFusion.get_gap_count_for_card_area(card.ability.extra.card_areas)
                 if xchips ~= 1 then
                     return {
                         xchips = xchips
@@ -143,7 +143,43 @@ local blue_stencil = {
     }
 }
 
+local ice_cream_cone = {
+    key = "ice_cream_cone",
+    name = "Ice Cream Cone",
+    input = { "j_stencil", "j_ice_cream" },
+    joker = {
+        config = {
+            extra = {
+                chips = 50,
+                card_areas = {
+                    { location = "jokers", type = "joker" },
+                }
+            }
+        },
+        pos = { x = 5, y = 3 },
+        atlas = "joker",
+        blueprint_compat = true,
+        loc_vars = function(self, info_queue, card)
+            return { vars = {
+                card.ability.extra.chips,
+                card.ability.extra.chips * BalatroFusion.get_gap_count_for_card_area(card.ability.extra.card_areas)
+            }}
+        end,
+        calculate = function(self, card, context)
+            if context.joker_main then
+                local chips = card.ability.extra.chips * BalatroFusion.get_gap_count_for_card_area(card.ability.extra.card_areas)
+                if chips ~= 0 then
+                    return {
+                        chips = chips
+                    }
+                end
+            end
+        end,
+    }
+}
+
 return {
     jigsaw,
     blue_stencil,
+    ice_cream_cone
 }

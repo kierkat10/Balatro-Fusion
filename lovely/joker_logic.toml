@@ -1,0 +1,30 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = '''
+for i = 1, #G.jokers.cards do
+    if G.jokers.cards[i].ability.name == 'Joker Stencil' then self.ability.x_mult = self.ability.x_mult + 1 end
+end
+'''
+position = "at"
+payload = '''
+self.ability.x_mult = BalatroFusion.get_gap_count_for_card_area({{ location = "jokers", type = "joker" }})
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = '''
+if (G.jokers.config.card_limit - #G.jokers.cards) > 0 then
+'''
+position = "at"
+payload = '''
+if BalatroFusion.get_gap_count_for_card_area({{ location = "jokers", type = "joker" }}) > 1 then
+'''
+match_indent = true

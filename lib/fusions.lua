@@ -307,8 +307,8 @@ function FusionClass:get_fusions_that_contains_input(input)
 end
 
 function FusionClass:get_input_jokers(fusion_joker_key)
-    for _, v in pairs(fusion_index) do
-        if v.key == fusion_joker_key then
+    for _, v in ipairs(available_fusions) do
+        if v.output and v.output[1] and v.output[1].args and v.output[1].args.key == fusion_joker_key then
             return v.input
         end
     end
@@ -320,22 +320,14 @@ function FusionClass:unfuse_joker(fused_joker)
         return false
     end
 
-    local key = fused_joker.config.center.key
-    local fusion_def
+    local input_jokers = SMODS.BalatroFusion.Fusion:get_input_jokers(fused_joker.config.center.key)
 
-    for _, fusion in ipairs(available_fusions) do
-        if fusion.output and #fusion.output > 0 and fusion.output[1].args and fusion.output[1].args.key == key then
-            fusion_def = fusion
-            break
-        end
-    end
-
-    if not fusion_def or not fusion_def.input then
+    if not input_jokers then
         return false
     end
 
     local joker_keys = {}
-    for _, input in ipairs(fusion_def.input) do
+    for _, input in ipairs(input_jokers) do
         if input.target then
             table.insert(joker_keys, input.target)
         end
