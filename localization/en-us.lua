@@ -182,6 +182,16 @@ return {
                     "{C:attention}Destroy{} a random Joker and {C:attention}Duplicate{} a random Joker",
                 },
             },
+			j_bfs_eggshell = {
+                name = "Eggshell",
+                text = {
+                    "Gains {C:money}$#1#{} of",
+                    "{C:attention}sell value{} per",
+                    "empty {C:enhanced}Joker Slot{} at",
+                    "end of round",
+                    "{C:inactive}[Currently {C:money}$#2#{C:inactive}]",
+                },
+            },
 			j_bfs_emoticons = {
                 name="Emoticons",
                 text = {

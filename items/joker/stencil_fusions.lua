@@ -175,11 +175,56 @@ local ice_cream_cone = {
                 end
             end
         end,
+        credits = {
+            idea = { "ButterStutter" },
+            art = { "ButterStutter" },
+            code = { "ButterStutter" }
+        }
+    }
+}
+
+local eggshells = {
+    key = "eggshell",
+    name = "Eggshell",
+    input = { "j_stencil", "j_egg" },
+    joker = {
+        config = {
+            extra = {
+                value_gain = 2,
+                card_areas = {
+                    { location = "jokers", type = "joker" },
+                }
+            }
+        },
+        pos = { x = 0, y = 0 },
+        atlas = "placeholder",
+        blueprint_compat = false,
+        loc_vars = function(self, info_queue, card)
+            return { vars = {
+                card.ability.extra.value_gain,
+                card.ability.extra.value_gain * BalatroFusion.get_gap_count_for_card_area(card.ability.extra.card_areas)
+            }}
+        end,
+        calculate = function(self, card, context)
+            if context.end_of_round and context.game_over == false and not context.blueprint and context.main_eval then
+                local sell_value_gain = card.ability.extra.value_gain * BalatroFusion.get_gap_count_for_card_area(card.ability.extra.card_areas)
+                card.ability.extra_value = (card.ability.extra_value or 0) + sell_value_gain
+                card:set_cost()
+                return {
+                    message = "+"..tostring(sell_value_gain).." Sell Value"
+                }
+            end
+        end,
+        credits = {
+            idea = { "ButterStutter" },
+            code = { "ButterStutter" }
+        }
     }
 }
 
 return {
     jigsaw,
     blue_stencil,
-    ice_cream_cone
+    ice_cream_cone,
+    eggshells
 }
