@@ -33,6 +33,26 @@ return {
                     "{C:inactive}(Currently {C:white,X:mult}X#2#{C:inactive} Mult)"
                 }
             },
+            j_bfs_baseball_field = {
+                name = "Baseball Field",
+                text = {
+                    "Scores {C:white,X:mult}X#1#{} Mult",
+                    "per empty {C:attention}Joker Slot{}.",
+                    "{C:uncommon}Uncommon{} Jokers are considered",
+                    "as empty Joker Slots",
+                    "{C:inactive}[currently {C:white,X:mult}X#2#{C:inactive} Mult]"
+                }
+            },
+            j_bfs_blank_face = {
+                name = "Blank Face",
+                text = {
+                    "Scores {C:white,X:mult}X#1#{} Mult",
+                    "per empty {C:attention}Joker Slot{}.",
+                    "Jokers with 'joker' in their name",
+                    "are considered as empty Joker Slots",
+                    "{C:inactive}[currently {C:white,X:mult}X#2#{C:inactive} Mult]"
+                }
+            },
             j_bfs_blue_stencil = {
                 name = "Blue Stencil",
                 text = {

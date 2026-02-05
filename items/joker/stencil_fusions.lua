@@ -1,18 +1,26 @@
 local function check_joker(joker)
     if joker.config.center.key == "j_stencil" then
         return false
-    elseif joker.config.center.rarity ~= "bfs_fused" then
-        return true
     end
-    local fusion_inputs = SMODS.BalatroFusion.Fusion:get_input_jokers(joker.config.center.key)
-    if not fusion_inputs then return true end
-    for _, v in ipairs(fusion_inputs) do
-        if v.target == "j_stencil" then
-            return false
+    if joker.config.center.rarity == "bfs_fused" then
+        local fusion_inputs = SMODS.BalatroFusion.Fusion:get_input_jokers(joker.config.center.key)
+        if not fusion_inputs then return true end
+        for _, v in ipairs(fusion_inputs) do
+            if v.target == "j_stencil" then
+                return false
+            end
         end
     end
-    -- Implement "joker" in name exception + pareidolia fusion
-    -- Implement cost less than $5 exception + vagabond
+    if next(SMODS.find_card("j_bfs_blank_face")) and string.find(string.lower(joker.config.center.name), "joker") then
+        return false
+    end
+    if next(SMODS.find_card("j_bfs_baseball_field")) and joker.config.center.rarity == "uncommon" then
+        return false
+    end
+    -- Implement cost less than $5 exception --> vagabond
+    -- Implement jokers with foil exception --> hiker
+    -- Implement jokers with holographic exception --> hologram
+    -- Implement jokers with polychrome exception --> drivers license
     -- Implement exceptions when stencil fusions that use the exceptions are added
     return true
 end
@@ -98,6 +106,84 @@ local jigsaw = {
         credits = {
             idea = { "ButterStutter" },
             art = { "King" },
+            code = { "ButterStutter" }
+        }
+    }
+}
+
+local blank_face = {
+    key = "blank_face",
+    name = "Blank Face",
+    input = { "j_stencil", "j_pareidolia" },
+    joker = {
+        config = {
+            extra = {
+                xmult = 1.1,
+                card_areas = {
+                    { location = "jokers", type = "joker" },
+                }
+            }
+        },
+        pos = { x = 0, y = 0 },
+        blueprint_compat = true,
+        atlas = "placeholder",
+        loc_vars = function(self, info_queue, card)
+            return { vars = {
+                card.ability.extra.xmult,
+                card.ability.extra.xmult * BalatroFusion.get_gap_count_for_card_area(card.ability.extra.card_areas)
+            }}
+        end,
+        calculate = function(self, card, context)
+            if context.joker_main then
+                local xmult = card.ability.extra.xmult * BalatroFusion.get_gap_count_for_card_area(card.ability.extra.card_areas)
+                if xmult ~= 1 then
+                    return {
+                        xmult = xmult
+                    }
+                end
+            end
+        end,
+        credits = {
+            idea = { "ButterStutter" },
+            code = { "ButterStutter" }
+        }
+    }
+}
+
+local baseball_field = {
+    key = "baseball_field",
+    name = "Baseball Field",
+    input = { "j_stencil", "j_baseball" },
+    joker = {
+        config = {
+            extra = {
+                xmult = 1.5,
+                card_areas = {
+                    { location = "jokers", type = "joker" },
+                }
+            }
+        },
+        pos = { x = 0, y = 0 },
+        blueprint_compat = true,
+        atlas = "placeholder",
+        loc_vars = function(self, info_queue, card)
+            return { vars = {
+                card.ability.extra.xmult,
+                card.ability.extra.xmult * BalatroFusion.get_gap_count_for_card_area(card.ability.extra.card_areas)
+            }}
+        end,
+        calculate = function(self, card, context)
+            if context.joker_main then
+                local xmult = card.ability.extra.xmult * BalatroFusion.get_gap_count_for_card_area(card.ability.extra.card_areas)
+                if xmult ~= 1 then
+                    return {
+                        xmult = xmult
+                    }
+                end
+            end
+        end,
+        credits = {
+            idea = { "ButterStutter" },
             code = { "ButterStutter" }
         }
     }
@@ -224,6 +310,8 @@ local eggshells = {
 
 return {
     jigsaw,
+    blank_face,
+    baseball_field,
     blue_stencil,
     ice_cream_cone,
     eggshells
