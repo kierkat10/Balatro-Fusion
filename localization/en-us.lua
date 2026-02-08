@@ -219,6 +219,15 @@ return {
                     "{C:chips}+#1#{} Chip#<s>1# and {C:mult}+#2#{} Mult"
 				}
 			},
+            j_bfs_empty_bottle = {
+                name = "Empty Bottle",
+                text = {
+                    "Scores {C:white,X:mult}X#1#{} Mult",
+                    "Increases by {C:white,X:mult}X#2#{} Mult",
+                    "for each stored {C:enhanced}Tag",
+                    "whenever a hand is played"
+                }
+            },
             j_bfs_equal_evan = {
                 name = "Equal Evan",
                 text = {
