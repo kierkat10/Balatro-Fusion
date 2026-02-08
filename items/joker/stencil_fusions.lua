@@ -14,23 +14,23 @@ local function check_joker(joker)
     if next(SMODS.find_card("j_bfs_blank_face")) and string.find(string.lower(joker.config.center.name), "joker") then
         return false
     end
-    if next(SMODS.find_card("j_bfs_baseball_field")) and joker.config.center.rarity == "uncommon" then
+    if next(SMODS.find_card("j_bfs_baseball_field")) and joker.config.center.rarity == 2 then
         return false
     end
     -- Implement cost less than $5 exception --> vagabond
     -- Implement jokers with foil exception --> hiker
     -- Implement jokers with holographic exception --> hologram
-    -- Implement jokers with polychrome exception --> drivers license
-    -- Implement exceptions when stencil fusions that use the exceptions are added
-    return true
-end
-
-local function check_consumable(consumable)
+    -- Implement jokers with polychrome exception --> campfire
     -- Implement exceptions when stencil fusions that use the exceptions are added
     return true
 end
 
 local function check_playing_card(card, exceptions)
+    -- Implement suit exceptions --> uncommon suit based jokers
+    -- Implement stone card exception --> stone joker
+    -- Implement wild card exception --> flower pot
+    -- Implement seal exception --> certificate
+    -- Implement edition exception --> drivers license
     -- Implement exceptions when stencil fusions that use the exceptions are added
     return true
 end
@@ -39,7 +39,7 @@ function BalatroFusion.get_gap_count_for_card_area(card_areas) -- {location, typ
     local total_gaps = 0
     local area_functions = {
         joker = function(v) return check_joker(v) end,
-        consumable = function(v) return check_consumable(v) end,
+        consumable = function(v) return true end,
         playing_card = function(v) return check_playing_card(v) end
         -- possibly add other types if they get used
     }
