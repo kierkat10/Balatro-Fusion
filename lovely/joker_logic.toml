@@ -28,3 +28,20 @@ payload = '''
 if BalatroFusion.get_gap_count_for_card_area({{ location = "jokers", type = "joker" }}) > 1 then
 '''
 match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = '''
+if self.ability.name == 'Fibonacci' and (
+context.other_card:get_id() == 2 or 
+context.other_card:get_id() == 3 or 
+context.other_card:get_id() == 5 or 
+context.other_card:get_id() == 8 or 
+context.other_card:get_id() == 14) then
+'''
+position = "at"
+payload = '''
+if self.ability.name == 'Fibonacci' and BalatroFusion.check_fibonacci_rank(context.other_card) then
+'''
+match_indent = true

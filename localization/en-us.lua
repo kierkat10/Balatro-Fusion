@@ -244,6 +244,16 @@ return {
                     "played hand contains a {C:attention}Straight{}"
                 }
             },
+            j_bfs_fibonabstracti = {
+                name = "Fibonabstracti",
+                text = {
+                    "Scoring {C:attention}Fibonacci{} ranked",
+                    "cards give {C:red}+#1#{} Mult",
+                    "{s:0.8}Mult scales based on",
+                    "{s:0.8}the number of Jokers,",
+                    "{s:0.8}following the fibonacci pattern"
+                }
+            },
             j_bfs_four_arm = {
                 name = "Four Arm",
                 text = {
@@ -322,6 +332,16 @@ return {
                     "create {C:attention}1{} Random {C:attention}Joker",
                     "When a {C:red}discard{} is used destroy leftmost {C:attention}Joker",
                 },
+            },
+            j_bfs_helix = {
+                name = "Helix",
+                text = {
+                    "When a card with a",
+                    "{C:attention}Fibonacci{} rank is played",
+                    "add a permanent copy to deck",
+                    "and draw it to hand",
+                    "{s:0.8}triggers once per round"
+                }
             },
             j_bfs_ice_cream_cone = {
                 name = "Ice Cream Cone",
@@ -492,13 +512,20 @@ return {
                     "{C:attention}0 {C:red}Discards{} remaining",
                 },
             },
+            j_bfs_nature_spiral = {
+                name = "Nature Spiral",
+                text = {
+                    "All cards are considered",
+                    "as {C:attention}Fibonacci{} ranks.",
+                    "Fibonacci ranks score {C:red}+#1#{} Mult"
+                }
+            },
             j_bfs_ouroboros = {
                 name="Ouroboros",
                 text={
                     "{C:red}+#1#{} Mult when a card is scored",
                     "{C:red}gains +#2#{} Mult when a",
-                    "{C:attention}Ace{},{C:attention}2{},{C:attention}3{},{C:attention}5{}, or {C:attention}8{}",
-                    "are scored",
+                    "{C:attention}Fibonacci{} rank is scored ",
                     "{C:inactive}Currently:[{C:mult}#3#{C:inactive} Mult]",
                 },
             },
