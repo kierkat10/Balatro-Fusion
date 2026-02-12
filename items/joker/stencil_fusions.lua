@@ -46,13 +46,15 @@ function BalatroFusion.get_gap_count_for_card_area(card_areas) -- {location, typ
     local areas = {
         jokers = (G.jokers and G.jokers.cards or {}),
         consumables = (G.consumeables and G.consumeables.cards or {}),
-        deck = (G.deck and G.deck.cards or {})
+        deck = (G.deck and G.deck.cards or {}),
+        hand = (G.hand and G.hand.cards or {})
         -- add playing card areas
     }
     local sizes = {
         jokers = (G.jokers and G.jokers.config and G.jokers.config.card_limit or 5),
         consumables = (G.consumeables and G.consumeables.config and G.consumeables.config.card_limit or 2),
-        deck = (G.deck and G.deck.config and G.deck.config.card_limit or 52)
+        deck = (G.deck and G.deck.config and G.deck.config.card_limit or 52),
+        hand = (G.hand and G.hand.config and G.hand.config.card_limit or 8)
         -- add playing card areas
     }
 
@@ -308,11 +310,133 @@ local eggshells = {
     }
 }
 
+local popcorn_bucket = {
+    key = "popcorn_bucket",
+    name = "Popcorn Bucket",
+    input = {
+        "j_popcorn",
+        "j_stencil",
+    },
+    joker = {
+        config = {
+            extra = {
+                mult = 40,
+                mult_decrease = 10,
+                reduction = 2,
+                card_areas = {
+                    { location = "jokers", type = "joker" },
+                }
+            }
+        },
+        pos = { x = 0, y = 0 },
+        blueprint_compat = true,
+        atlas = "placeholder",
+        loc_vars = function(self, info_queue, card)
+            local reduction = BalatroFusion.get_gap_count_for_card_area(card.ability.extra.card_areas)
+            if not G.jokers or not G.jokers.cards then
+                reduction = 0
+            end
+            local mult_decrease = card.ability.extra.mult_decrease - (reduction * card.ability.extra.reduction)
+            return {
+                vars = {
+                    card.ability.extra.mult,
+                    math.abs(mult_decrease),
+                    card.ability.extra.reduction,
+                    mult_decrease > 0 and "decreases" or "increases",
+                    mult_decrease > 0 and "-" or "+"
+                }
+            }
+        end,
+        calculate = function(self, card, context)
+            if context.joker_main then
+                return {
+                    mult = card.ability.extra.mult
+                }
+            end
+            if context.end_of_round and context.game_over == false and not context.blueprint then
+                local reduction = card.ability.extra.reduction * BalatroFusion.get_gap_count_for_card_area(card.ability.extra.card_areas)
+                local decrease = card.ability.extra.mult_decrease - reduction
+                card.ability.extra.mult = card.ability.extra.mult - decrease
+                return {
+                    message = (decrease >= 0 and "-" or "+")..math.abs(decrease).." Mult!",
+                    colour = G.C.RED
+                }
+            end
+        end,
+        bfs_credits = {
+            art = { "StellarBlue" },
+            idea = { "ButterStutter" },
+            code = { "ButterStutter" }
+        }
+    }
+}
+
+local empty_bowl = {
+    key = "empty_bowl",
+    name = "Empty Bowl",
+    input = {
+        "j_ramen",
+        "j_stencil",
+    },
+    joker = {
+        config = {
+            extra = {
+                xmult = 4,
+                xmult_decrease = 0.1,
+            }
+        },
+        pos = { x = 0, y = 0 },
+        blueprint_compat = true,
+        atlas = "placeholder",
+        loc_vars = function(self, info_queue, card)
+            return {
+                vars = {
+                    card.ability.extra.xmult,
+                    card.ability.extra.xmult_decrease,
+                }
+            }
+        end,
+        calculate = function(self, card, context)
+            if context.joker_main then
+                return {
+                    xmult = card.ability.extra.xmult
+                }
+            end
+            if context.pre_discard and not context.blueprint then
+                local count = 0
+                for _, v in ipairs(G.hand and G.hand.cards) do
+                    if not v.highlighted and check_playing_card(v) then
+                        count = count + 1
+                        card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_decrease
+                        G.E_MANAGER:add_event(Event({
+                            trigger = "after",
+                            func = function()
+                                v:juice_up()
+                                return true
+                            end
+                        }))
+                    end
+                end
+                return {
+                    message = "-"..count.." Mult",
+                    colour = G.C.RED
+                }
+            end
+        end,
+        bfs_credits = {
+            idea = { "ButterStutter" },
+            code = { "ButterStutter" }
+        }
+    }
+}
+
 return {
     jigsaw,
     blank_face,
     baseball_field,
     blue_stencil,
     ice_cream_cone,
-    eggshells
+    eggshells,
+    popcorn_bucket,
+    empty_bowl
 }

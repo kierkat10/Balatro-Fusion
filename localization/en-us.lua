@@ -69,6 +69,15 @@ return {
                     "{C:inactive}(Currently {C:white,X:mult}X#2#{C:inactive} Mult)"
                 }
             },
+            j_bfs_calculated_gambling = {
+                name = "Calculated Gambling",
+                text = {
+                    "Each {C:attention}Fibonacci{} ranked card",
+                    "held in hand scores {C:red}+#1#{} Mult.",
+                    "{C:attention}Queens{} are considered as",
+                    "a {C:attention}Fibonacci{} rank"
+                }
+            },
             j_bfs_card_pack = {
                 name = "Card Pack",
                 text = {
@@ -228,6 +237,15 @@ return {
                     "whenever a hand is played"
                 }
             },
+            j_bfs_empty_bowl = {
+                name = "Empty Bowl",
+                text = {
+                    "Scores {C:white,X:mult}X#1#{} Mult,",
+                    "reduces by {C:white,X:mult}X#2#{} for",
+                    "each {C:attention}filled slot{} in held",
+                    "hand when {C:red}discarding"
+                }
+            },
             j_bfs_equal_evan = {
                 name = "Equal Evan",
                 text = {
@@ -349,6 +367,16 @@ return {
                     "Scores {C:blue}+#1#{} Chips",
                     "for each empty {C:attention}Joker Slot",
                     "{C:inactive}[Currently {C:blue}+#2#{C:inactive} Chips]"
+                }
+            },
+            j_bfs_incorrect_math = {
+                name = "Incorrect Math",
+                text = {
+                    "Scores {C:red}+#1#{} Mult.",
+                    "Mult increases through the",
+                    "{C:attention}Fibonacci{} sequence each",
+                    "time a {C:enhanced}Booster Pack{} is {C:attention}skipped{}",
+                    "{C:inactive,s:0.8}[Next Mult Value: #2#]"
                 }
             },
             j_bfs_infuriating = {
@@ -570,11 +598,20 @@ return {
                     "{C:attention}non-face{} cards {C:attention}#1#{} time"
                 }
             },
+            j_bfs_popcorn_bucket = {
+                name = "Popcorn Bucket",
+                text = {
+                    "{C:red}+#1#{} Mult, #4# by",
+                    "{C:red}#5##2#{} Mult at the end of round",
+                    "Mult loss is reduced by {C:attention}-#3#{} per",
+                    "empty {C:attention}Joker{} Slot"
+                }
+            },
             j_bfs_pop_pop = {
                 name = "Pop-Pop-Pop-Pop",
                 text = {
                     "{C:red}+#1#{} Mult, #4# by",
-                    "{C:red}#5##2#{} Mult when a hand is played",
+                    "{C:red}#5##2#{} Mult at the end of round",
                     "Mult loss is reduced by {C:attention}-#3#{} per",
                     "{C:common}Common{} Joker owned"
                 }
@@ -868,7 +905,7 @@ return {
                 name = "The Universe",
                 text = {
                     "{C:bfs_fused,E:1}Fuse{} two or",
-                    "more Jokers"
+                    "more selected Jokers"
                 }
             },
             c_bfs_house_devil = {

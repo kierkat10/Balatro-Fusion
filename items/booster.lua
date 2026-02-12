@@ -108,7 +108,8 @@ SMODS.Booster {
         else
             return false
         end
-    end,    loc_vars = function(self, info_queue, card)
+    end,    
+    loc_vars = function(self, info_queue, card)
         local cfg = (card and card.ability) or card.config.extra
         return {
             vars = { cfg.choose, cfg.extra }
@@ -201,7 +202,8 @@ SMODS.Booster {
         else
             return false
         end
-    end,    loc_vars = function(self, info_queue, card)
+    end,    
+    loc_vars = function(self, info_queue, card)
         local cfg = (card and card.ability) or card.config.extra
         return {
             vars = { cfg.choose, cfg.extra }
@@ -294,7 +296,8 @@ SMODS.Booster {
         else
             return false
         end
-    end,    loc_vars = function(self, info_queue, card)
+    end,    
+    loc_vars = function(self, info_queue, card)
         local cfg = (card and card.ability) or card.config.extra
         return {
             vars = { cfg.choose, cfg.extra }

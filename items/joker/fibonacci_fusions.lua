@@ -5,6 +5,9 @@ function BalatroFusion.check_fibonacci_rank(card)
     if next(SMODS.find_card("j_bfs_nature_spiral")) then
         return true
     end
+    if next(SMODS.find_card("j_bfs_calculated_gambling")) and card:get_id() == 12 then
+        return true
+    end
     -- Possibly add exceptions if card abilities end up using them
     return false
 end
@@ -257,10 +260,80 @@ local helix = {
     }
 }
 
+local calculated_gambling = {
+    key = "calculated_gambling",
+    name = "Caclulate Gambling",
+    input = {
+        "j_shoot_the_moon",
+        "j_fibonacci",
+    },
+    joker = {
+        config = { extra = { mult = 13 } },
+        pos = { x = 0, y = 0 },
+        blueprint_compat = true,
+        atlas = "placeholder",
+        loc_vars = function(self, info_queue, card)
+            return { vars = {
+                card.ability.extra.mult
+            } }
+        end,
+        calculate = function(self, card, context)
+            if context.individual and context.cardarea == G.play and BalatroFusion.check_fibonacci_rank(context.other_card) then
+                return {
+                    mult = card.ability.extra.mult
+                }
+            end
+        end,
+        bfs_credits = {
+            idea = { "ButterStutter" },
+            code = { "ButterStutter" }
+        }
+    }
+}
+
+local incorrect_math = {
+    key = "incorrect_math",
+    name = "Incorrect Math",
+    input = {
+        "j_red_card",
+        "j_fibonacci",
+    },
+    joker = {
+        config = { extra = { skipped = 1 } },
+        pos = { x = 0, y = 0 },
+        blueprint_compat = true,
+        atlas = "placeholder",
+        loc_vars = function(self, info_queue, card)
+            return { vars = {
+                count_fibonacci(card.ability.extra.skipped),
+                count_fibonacci(card.ability.extra.skipped + 1)
+            } }
+        end,
+        calculate = function(self, card, context)
+            if context.skipping_booster then
+                card.ability.extra.skipped = card.ability.extra.skipped + 1
+                return {
+                    message = count_fibonacci(card.ability.extra.skipped).." Mult!"
+                }
+            elseif context.joker_main then
+                return {
+                    mult = count_fibonacci(card.ability.extra.skipped)
+                }
+            end
+        end,
+        bfs_credits = {
+            idea = { "ButterStutter" },
+            code = { "ButterStutter" }
+        }
+    }
+}
+
 return {
     ouroboros,
     mathematician,
     nature_spiral,
     fibonabstracti,
-    helix
+    helix,
+    calculated_gambling,
+    incorrect_math
 }

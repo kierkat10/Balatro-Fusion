@@ -29,20 +29,8 @@ return {
                     card.ability.extra.mult,
                     math.abs(mult_decrease),
                     card.ability.extra.reduction,
-                    (function()
-                        if mult_decrease > 0 then
-                            return "decreases"
-                        else
-                            return "increases"
-                        end
-                    end)(),
-                    (function()
-                        if mult_decrease > 0 then
-                            return "-"
-                        else
-                            return "+"
-                        end
-                    end)(),
+                    mult_decrease > 0 and "decreases" or "increases",
+                    mult_decrease > 0 and "-" or "+"
                 }
             }
         end,
@@ -61,13 +49,7 @@ return {
                 end
                 card.ability.extra.mult = card.ability.extra.mult - decrease
                 return {
-                    message = (function()
-                        if decrease >= 0 then
-                            return "-"
-                        else
-                            return "+"
-                        end
-                    end)()..math.abs(decrease).." Mult!",
+                    message = (decrease >= 0 and "-" or "+")..math.abs(decrease).." Mult!",
                     colour = G.C.RED
                 }
             end
