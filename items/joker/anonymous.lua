@@ -1,4 +1,3 @@
-
 return {
     key = "anonymous",
     name = "Anonymous",

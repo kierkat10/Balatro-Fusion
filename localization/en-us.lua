@@ -298,6 +298,16 @@ return {
                     "{C:inactive}Currently:[{C:mult}#2#{} {C:inactive}Mult]"
                 }
             },
+            j_bfs_green_card = {
+                name = "Green Card",
+                text = {
+                    "This Joker gains {C:red}+#2#{} Mult",
+                    "whenever a {C:attention}Booster Pack{} is",
+                    "skipped, but loses {C:red}-#1#{} Mult when",
+                    "a card is selected from a {C:attention} Booster Pack",
+                    "{C:inactive}[Currently {C:red}+#3#{C:inactive} Mult]"
+                }
+            },
             j_bfs_golden_card = {
                 name = "Golden Card",
                 text = {
@@ -510,7 +520,7 @@ return {
             j_bfs_mathematician = {
                 name = "Mathematician",
                 text = {
-                    "Each played {C:attention}Ace{}, {C:attention}2{}, {C:attention}3{}, {C:attention}5{}, or {C:attention}8{} gives",
+                    "Each played {C:attention}Fibonacci{} rank gives",
                     "{C:blue}+#1#{} Chip#<s>1# and {C:mult}+#2#{} Mult when scored",
                     "Retrigger each played {C:attention}Ace{}"
                 }
