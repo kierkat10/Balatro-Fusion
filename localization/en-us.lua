@@ -290,12 +290,22 @@ return {
                     "{C:inactive}Ranks are only number cards{}"
                 }
             },
+            j_bfs_ghoul = {
+                name = "Ghoul",
+                text = {
+                    "This Joker gains {C:white,X:mult}X#1#{} Mult",
+                    "whenever a {C:attention}Standard Pack{} is opened.",
+                    "Removes all {C:enhanced}enhancements{} from",
+                    "cards in {C:attention}Standard Packs{}",
+                    "{C:inactive}Currently {C:white,X:mult}X#2#{C:inactive} Mult]"
+                }
+            },
             j_bfs_gluttonous_garry = {
                 name = "Gluttonous-Garry",
                 text = {
                     "Played cards with {C:clubs}Club{} suit give",
                     "{C:mult}+#1#{} Mult when scored per {C:common}Common {C:attention}Joker{} owned",
-                    "{C:inactive}Currently:[{C:mult}#2#{} {C:inactive}Mult]"
+                    "{C:inactive}Currently:[{C:mult}#2#{C:inactive} Mult]"
                 }
             },
             j_bfs_green_card = {
