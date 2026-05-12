@@ -7,9 +7,9 @@ return {
     },
     joker = {
         config = {},
-        pos = {x=0,y=0,},
+        pos = {x=6,y=6},
         blueprint_compat = true,
-        atlas = "placeholder",
+        atlas = "riff-raff",
         calculate = function (self,card,context)
             if context.setting_blind and G.GAME.blind.boss then
                 if #G.jokers.cards <G.jokers.config.card_limit then
@@ -24,7 +24,7 @@ return {
             end
         end,
         loc_vars = function (self,info_queue,card)
-            info_queue[#info_queue+1] = G.P_CENTERS["rental"]
+            info_queue[#info_queue+1] = {key = 'rental', set = 'Other', vars = {G.GAME.rental_rate or 1}}
         end,
         bfs_credits = {
             idea = { "Maple" },
