@@ -25,6 +25,14 @@ return {
                     "{C:gold}Gold {C:attention}2s 3s 4s and 5s{} are retriggered #2# times instead",
                 }
 			},
+            j_bfs_apophenia = {
+                name = "Apophenia",
+                text = {
+                    "{C:green}#1#{} in {C:green}#2#{} chance for",
+                    "each card in a {C:attention}Standard Packs{} ",
+                    "to become a {C:enhanced}Lucky Card"
+                }
+            },
             j_bfs_approved_technology = {
                 name = "Approved Technology",
                 text = {
@@ -387,6 +395,13 @@ return {
                     "Scores {C:blue}+#1#{} Chips",
                     "for each empty {C:attention}Joker Slot",
                     "{C:inactive}[Currently {C:blue}+#2#{C:inactive} Chips]"
+                }
+            },
+            j_bfs_illusionist = {
+                name = "Illusionist",
+                text = {
+                    "Grants +1 {C:enhanced}Booster Pack",
+                    "slot in the {C:attention}Shop"
                 }
             },
             j_bfs_incorrect_math = {

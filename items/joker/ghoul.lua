@@ -19,12 +19,36 @@ return {
             }
         end,
         calculate = function(self, card, context)
-            if context.open_booster and SMODS.OPENED_BOOSTER.ability.name:find('Standard') and not context.blueprint then
-                card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain
-                return {
-                    message = "X"..card.ability.extra.xmult.." Mult!",
-                    colour = G.C.RED
-                }
+            if context.open_booster and context.card and context.card.config and context.card.config.center and context.card.config.center.kind and context.card.config.center.kind == "Standard" and not context.blueprint then
+                G.E_MANAGER:add_event(Event({
+                    func = function()
+                        local wiped_cards = 0
+                        for _, other_card in pairs(G.pack_cards.cards) do
+                            if other_card.config.center ~= G.P_CENTERS.c_base then
+                                wiped_cards = wiped_cards + 1
+                                other_card:set_ability(G.P_CENTERS.c_base, nil, true)
+                                G.E_MANAGER:add_event(Event({
+                                    func = function()
+                                        other_card:juice_up()
+                                        return true
+                                    end
+                                }))
+                            end
+                        end
+
+                        if wiped_cards > 0 then
+                            card_eval_status_text(card, "extra", nil, nil, nil, {message = "Wiped!", colour = G.C.ORANGE})
+                        end
+
+                        card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain
+                        card_eval_status_text(card, "extra", nil, nil, nil, {message = "X"..card.ability.extra.xmult.." Mult!", colour = G.C.RED})
+
+                        return true
+                    end
+
+                }))
+
+                return
             elseif context.joker_main then
                 return {
                     xmult = card.ability.extra.xmult
