@@ -37,6 +37,7 @@ return {
                     if commons_owned >= card.ability.extra.requirement then
                         dollars = dollars * 2
                     end
+                    return dollars > 0 and dollars or nil
                 end
             end
         end,

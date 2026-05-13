@@ -51,6 +51,16 @@ return {
                     "{C:inactive}[currently {C:white,X:mult}X#2#{C:inactive} Mult]"
                 }
             },
+            j_bfs_beanstalk = {
+                name = "Magic Beanstalk",
+                text = {
+                    "Earn {C:money}$#1#{} for every",
+                    "card {C:attention}Held in Hand{} at",
+                    "the end of the round.",
+                    "{C:attention}+#2#{} Hand Size, increases",
+                    "by +#3# when the boss blind is defeated"
+                }
+            },
             j_bfs_blank_face = {
                 name = "Blank Face",
                 text = {
