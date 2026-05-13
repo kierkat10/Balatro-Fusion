@@ -21,13 +21,13 @@ return {
             }
         end,
         calculate = function(self, card, context)
-            if context.open_booster and context.card and context.card.config and context.card.config.center and context.card.config.center.kind and context.card.config.center.kind == "Standard" then
+            if context.open_booster and not context.blueprint then
                 G.E_MANAGER:add_event(Event({
                     func = function()
                         local lucky_cards = 0
                         
                         for _, other_card in pairs(G.pack_cards.cards) do
-                            if other_card.config.center ~= G.P_CENTERS.m_lucky and SMODS.pseudorandom_probability(card, "j_bfs_apophenia", 1, card.ability.extra.odds) then
+                            if (other_card.config.center.set == "Enhanced" or other_card.config.center.set == "Default") and G.P_CENTERS.m_lucky and SMODS.pseudorandom_probability(card, "j_bfs_apophenia", 1, card.ability.extra.odds) then
                                 lucky_cards = lucky_cards + 1
                                 other_card:set_ability(G.P_CENTERS.m_lucky, nil, true)
                                 G.E_MANAGER:add_event(Event({

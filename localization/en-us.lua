@@ -211,6 +211,13 @@ return {
                 name = "Droll Todd",
                 text = basic_todd_steven_joker("Flush", "odd", "mult")
             },
+            j_bfs_dyslexia = {
+                name = "Dyslexia",
+                text = {
+                    "{C:attention}Booster Packs{} can spawn",
+                    "any card types"
+                }
+            },
 			j_bfs_egg_of_the_earth = {
                 name = "Egg Of The Earth",
                 text = {

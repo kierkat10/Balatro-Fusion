@@ -45,3 +45,27 @@ payload = '''
 if self.ability.name == 'Fibonacci' and BalatroFusion.check_fibonacci_rank(context.other_card) then
 '''
 match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = '''
+if flags.booster_create_flags then
+    card = SMODS.create_card(flags.booster_create_flags)
+end
+'''
+position = "at"
+payload = '''
+if flags and flags.booster_create_flags then
+    local f = flags.booster_create_flags
+    card = create_card(f.card_type, G.pack_cards, nil, nil, true, f.soulable, f.forced_key, f.key_append)
+    
+    if f.card_type and f.card_type == "Enhanced" or f.card_type == "Base" then
+        local edition_rate = 2
+        local edition = poll_edition('standard_edition'..G.GAME.round_resets.ante, edition_rate, true)
+        card:set_edition(edition)
+        card:set_seal(SMODS.poll_seal({mod = 10}), true, true)
+    end
+end
+'''
+match_indent = true
