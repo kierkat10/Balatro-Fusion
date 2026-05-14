@@ -517,6 +517,15 @@ return {
                     "{C:inactive}Currently:[#2#]",
                 },
             },
+            j_bfs_kaleidoscope = {
+                name = "Kaleidoscope",
+                text = {
+                    "{C:green}#1#{} in {C:green}#2#{} chance",
+                    "to destroy each card in a {C:attention}Booster Pack{}.",
+                    "Gain {C:white,X:mult}X#3#{} Mult per destroyed card",
+                    "{C:inactive}[Currently {C:white,X:mult}X#4#{C:inactive} Mult]"
+                }
+            },
             j_bfs_lusty_dusty = {
                 name="Lusty-Dusty",
                 text={
