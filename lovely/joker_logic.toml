@@ -69,3 +69,68 @@ if flags and flags.booster_create_flags then
 end
 '''
 match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = '''
+if self.highlighted ~= true then 
+    self.area:add_to_highlighted(self)
+else
+    self.area:remove_from_highlighted(self)
+    play_sound('cardSlide2', nil, 0.3)
+end
+'''
+position = "at"
+payload = '''
+if self.highlighted ~= true then 
+    if self.area == G.hand then
+        BalatroFusion.adjust_play_limits(self, 1)
+    end
+    self.area:add_to_highlighted(self)
+else
+    if self.area == G.hand then
+        BalatroFusion.adjust_play_limits(self, -1)
+    end
+    self.area:remove_from_highlighted(self)
+    play_sound('cardSlide2', nil, 0.3)
+end
+'''
+match_indent = true
+
+
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = '''
+SMODS.calculate_context({discard = true, other_card =  G.hand.highlighted[i], full_hand = G.hand.highlighted, ignore_other_debuff = true}, effects)
+'''
+position = "before"
+payload = '''
+BalatroFusion.adjust_play_limits(G.hand.highlighted[i], -1)
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = '''
+if G.hand.highlighted[i]:is_face() then inc_career_stat('c_face_cards_played', 1) end
+'''
+position = "before"
+payload = '''
+BalatroFusion.adjust_play_limits(G.hand.highlighted[i], -1)
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = '''
+local splashed = SMODS.always_scores(G.play.cards[i]) or next(find_joker('Splash'))
+'''
+position = "at"
+payload = '''
+local splashed = SMODS.always_scores(G.play.cards[i]) or next(find_joker('Splash')) or BalatroFusion.check_splash_scoring
+'''
+match_indent = true

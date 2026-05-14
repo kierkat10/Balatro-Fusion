@@ -137,6 +137,15 @@ return {
                     "{C:white,X:mult}X#1#{} Mult when scored"
                 }
             },
+            j_bfs_clam = {
+                name = "Clam",
+                text = {
+                    "All {C:diamonds}Diamonds{} don't count towards",
+                    "play and discard limits,",
+                    "are triggered in scoring, and",
+                    "give {C:money}$#1#{} and {X:chips,C:white}X#2#{} Chips when scored"
+                }
+            },
             j_bfs_clever_steven = {
                 name = "Clever Steven",
                 text =  basic_todd_steven_joker("Two Pair", "even", "chips")
@@ -152,6 +161,15 @@ return {
                     "when a {C:mult}+Mult{} effect from",
                     "another {C:attention}Joker{} scores",
                     "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+                }
+            },
+            j_bfs_conch_shell = {
+                name = "Conch Shell",
+                text = {
+                    "All {C:spades}Spades{} don't count towards",
+                    "play and discard limits,",
+                    "are triggered in scoring,",
+                    "and give {C:blue}+#1#{} Chips when scored"
                 }
             },
             j_bfs_consuming = {
@@ -618,6 +636,15 @@ return {
                     "{C:inactive}Currently:[{C:mult}#3#{C:inactive} Mult]",
                 },
             },
+            j_bfs_oyster = {
+                name = "Oyster",
+                text = {
+                    "All {C:clubs}Clubs{} don't count towards",
+                    "play and discard limits,",
+                    "are triggered in scoring,",
+                    "and give {C:red}+#1#{} Mult when scored"
+                }
+            },
 			j_bfs_partnership = {
                 name="Partnership",
                 text={
@@ -731,6 +758,15 @@ return {
                     "{C:white,X:mult}X#1#{} Mult on every {C:attention}game action",
                     "Destroyed if {C:white,X:mult}XMult{} is ever greater than {C:white,X:mult}X#2#",
                     "{C:inactive}(Currently {C:white,X:mult}X#3#{C:inactive} Mult)"
+                }
+            },
+            j_bfs_seashell = {
+                name = "Seashell",
+                text = {
+                    "All {C:hearts}Hearts{} don't count towards",
+                    "play and discard limits,",
+                    "are triggered in scoring,",
+                    "and give {X:mult,C:white}X#1#{} Mult when scored"
                 }
             },
             j_bfs_shoot_the_king = {
