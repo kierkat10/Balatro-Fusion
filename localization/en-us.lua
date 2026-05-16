@@ -25,6 +25,14 @@ return {
                     "{C:gold}Gold {C:attention}2s 3s 4s and 5s{} are retriggered #2# times instead",
                 }
 			},
+            j_bfs_algae = {
+                name = "Algae",
+                text = {
+                    "{C:enhanced}Wild Cards{} always score,",
+                    "ignore {C:attention}play size{} limit,",
+                    "and cannot be {C:red}debuffed"
+                }
+            },
             j_bfs_apophenia = {
                 name = "Apophenia",
                 text = {
@@ -601,6 +609,14 @@ return {
                     "{C:enhanced}Enhanced{} {C:attention}Ace{} to your hand",
                     "Played {C:attention}Aces{} give {C:blue}+#1#{} Chips",
                     "and {C:red}+#2#{} Mult when scored",
+                }
+            },
+            j_bfs_message_bottle = {
+                name = "Message in a Bottle",
+                text = {
+                    "{C:enhanced}Glass Cards{} always score,",
+                    "ignore {C:attention}play size{} limit,",
+                    "and cannot be {C:red}debuffed"
                 }
             },
 			j_bfs_molotov_cocktail = {

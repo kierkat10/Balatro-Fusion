@@ -1,55 +1,45 @@
-function BalatroFusion.adjust_play_limits(card, method)
-    if card:is_suit("Diamonds") then
-        if next(SMODS.find_card("j_bfs_clam")) then
-            SMODS.change_play_limit(method * 1)
-            SMODS.change_discard_limit(method * 1)
-            return
-        end
+local function adjust_play_limit(card)
+    if card:is_suit("Diamonds") and next(SMODS.find_card("j_bfs_clam")) then
+        return true
     end
-    if card:is_suit("Hearts") then
-        if next(SMODS.find_card("j_bfs_seashell")) then
-            SMODS.change_play_limit(method * 1)
-            SMODS.change_discard_limit(method * 1)
-            return
-        end
+    if card:is_suit("Hearts") and next(SMODS.find_card("j_bfs_seashell")) then
+        return true
     end
-    if card:is_suit("Clubs") then
-        if next(SMODS.find_card("j_bfs_oyster")) then
-            SMODS.change_play_limit(method * 1)
-            SMODS.change_discard_limit(method * 1)
-            return
-        end
+    if card:is_suit("Clubs") and next(SMODS.find_card("j_bfs_oyster")) then
+        return true
     end
-    if card:is_suit("Spades") then
-        if next(SMODS.find_card("j_bfs_conch_shell")) then
-            SMODS.change_play_limit(method * 1)
-            SMODS.change_discard_limit(method * 1)
-            return
-        end
+    if card:is_suit("Spades") and next(SMODS.find_card("j_bfs_conch_shell")) then
+        return true
+    end
+    if SMODS.has_enhancement(card, "m_glass") and next(SMODS.find_card("j_bfs_message_bottle")) then
+        return true
+    end
+    if SMODS.has_enhancement(card, "m_wild") and next(SMODS.find_card("j_bfs_algae")) then
+        return true
     end
 end
 
-function BalatroFusion.check_splash_scoring(card)
-    if card:is_suit("Diamonds") then
-        if next(SMODS.find_card("j_bfs_clam")) then
-            return true
-        end
+local function adjust_discard_limit(card)
+    if card:is_suit("Diamonds") and next(SMODS.find_card("j_bfs_clam")) then
+        return true
     end
-    if card:is_suit("Hearts") then
-        if next(SMODS.find_card("j_bfs_seashell")) then
-            return true
-        end
+    if card:is_suit("Hearts") and next(SMODS.find_card("j_bfs_seashell")) then
+        return true
     end
-    if card:is_suit("Clubs") then
-        if next(SMODS.find_card("j_bfs_oyster")) then
-            return true
-        end
+    if card:is_suit("Clubs") and next(SMODS.find_card("j_bfs_oyster")) then
+        return true
     end
-    if card:is_suit("Spades") then
-        if next(SMODS.find_card("j_bfs_conch_shell")) then
-            return true
-        end
+    if card:is_suit("Spades") and next(SMODS.find_card("j_bfs_conch_shell")) then
+        return true
     end
+end
+
+function BalatroFusion.adjust_play_limits(card, method)
+    local play_size_change = adjust_play_limit(card)
+    local discard_size_change = adjust_discard_limit(card)
+
+    if play_size_change then SMODS.change_play_limit(method) end
+    if discard_size_change then SMODS.change_discard_limit(method) end
 end
 
 local function generate_shell_fusion(input, key, name, suit)
@@ -90,6 +80,8 @@ local function generate_shell_fusion(input, key, name, suit)
                     if h then return { xmult = card.ability.extra.xmult } end
                     if c then return { mult = card.ability.extra.mult } end
                     if d then return { dollars = card.ability.extra.dollars, xchips = card.ability.extra.xchips } end
+                elseif context.modify_scoring_hand and context.other_card:is_suit(suit) then
+                    return { add_to_hand = true }
                 end
             end,
             bfs_credits = {
@@ -101,9 +93,71 @@ local function generate_shell_fusion(input, key, name, suit)
     }
 end
 
+local message_bottle = {
+    key = "message_bottle",
+    name = "Message in a Bottle",
+    input = {
+        "j_splash",
+        "j_glass",
+    },
+    joker = {
+        pos = { x = 0, y = 0 },
+        blueprint_compat = false,
+        atlas = "placeholder",
+        loc_vars = function(self, info_queue, card)
+            info_queue[#info_queue+1] = G.P_CENTERS.m_glass
+        end,
+        calculate = function(self, card, context)
+            if context.ignore_debuff and SMODS.has_enhancement(context.debuff_card, "m_glass") then
+                return { prevent_debuff = true }
+            end
+            if context.modify_scoring_hand and SMODS.has_enhancement(context.other_card, "m_glass") then
+                return { add_to_hand = true }
+            end
+        end,
+        bfs_credits = {
+            art = { "" },
+            idea = { "ButterStutter" },
+            code = { "ButterStutter" }
+        }
+    }
+}
+
+local algae = {
+    key = "algae",
+    name = "Algae",
+    input = {
+        "j_splash",
+        "j_flower_pot",
+    },
+    joker = {
+        pos = { x = 0, y = 0 },
+        blueprint_compat = false,
+        atlas = "placeholder",
+        loc_vars = function(self, info_queue, card)
+            info_queue[#info_queue+1] = G.P_CENTERS.m_wild
+        end,
+        calculate = function(self, card, context)
+            if context.ignore_debuff and SMODS.has_enhancement(context.debuff_card, "m_wild") then
+                return { prevent_debuff = true }
+            end
+            if context.modify_scoring_hand and SMODS.has_enhancement(context.other_card, "m_wild") then
+                return { add_to_hand = true }
+            end
+        end,
+        bfs_credits = {
+            art = { "" },
+            idea = { "ButterStutter" },
+            code = { "ButterStutter" }
+        }
+    }
+}
+
 return {
     generate_shell_fusion("j_rough_gem", "clam", "Clam", "Diamonds"),
     generate_shell_fusion("j_bloodstone", "seashell", "Seashell", "Hearts"),
     generate_shell_fusion("j_arrowhead", "conch_shell", "Conch Shell", "Spades"),
-    generate_shell_fusion("j_onyx_agate", "oyster", "Oyster", "Clubs")
+    generate_shell_fusion("j_onyx_agate", "oyster", "Oyster", "Clubs"),
+    message_bottle,
+    algae
 }

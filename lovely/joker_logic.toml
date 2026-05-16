@@ -125,12 +125,15 @@ match_indent = true
 
 [[patches]]
 [patches.pattern]
-target = "functions/state_events.lua"
+target = "functions/button_callbacks.lua"
 pattern = '''
-local splashed = SMODS.always_scores(G.play.cards[i]) or next(find_joker('Splash'))
+e.config.ref_table:use_consumeable(area)
 '''
 position = "at"
 payload = '''
-local splashed = SMODS.always_scores(G.play.cards[i]) or next(find_joker('Splash')) or BalatroFusion.check_splash_scoring
+for _, v in ipairs(G.hand.highlighted) do
+    BalatroFusion.adjust_play_limits(v, -1)
+end
+e.config.ref_table:use_consumeable(area)
 '''
 match_indent = true
