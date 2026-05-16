@@ -247,6 +247,16 @@ return {
                 name = "Droll Todd",
                 text = basic_todd_steven_joker("Flush", "odd", "mult")
             },
+            j_bfs_droplet = {
+                name = "Droplet",
+                text = {
+                    "This Joker gains {C:blue}+#1#{} Chips",
+                    "whenever a {C:attention}2{} is scored.",
+                    "{C:attention}2{}s always trigger in scoring,",
+                    "and ignore {C:attention}play limit{} size.",
+                    "{C:inactive}[Currently {C:blue}+#2#{C:inactive} Chips]",
+                },
+            },
             j_bfs_dyslexia = {
                 name = "Dyslexia",
                 text = {
@@ -550,6 +560,16 @@ return {
                     "to destroy each card in a {C:attention}Booster Pack{}.",
                     "Gain {C:white,X:mult}X#3#{} Mult per destroyed card",
                     "{C:inactive}[Currently {C:white,X:mult}X#4#{C:inactive} Mult]"
+                }
+            },
+            j_bfs_leviathan = {
+                name = "Leviathan",
+                text = {
+                    "This Joker gains {X:mult,C:white}X#1#{} Mult",
+                    "whenever a {C:attention}Non-Enhanced{} card is {C:red}discarded",
+                    "Non-Enhanced Cards cannot be debuffed,",
+                    "and ignore the {C:attention}discard size{} limit",
+                    "{C:inactive}[Currently {C:white,X:mult}X#2#{C:inactive} Mult]"
                 }
             },
             j_bfs_lusty_dusty = {

@@ -17,6 +17,9 @@ local function adjust_play_limit(card)
     if SMODS.has_enhancement(card, "m_wild") and next(SMODS.find_card("j_bfs_algae")) then
         return true
     end
+    if card:get_id() == "2" and next(SMODS.find_card("j_bfs_droplet")) then
+        return true
+    end
 end
 
 local function adjust_discard_limit(card)
@@ -30,6 +33,9 @@ local function adjust_discard_limit(card)
         return true
     end
     if card:is_suit("Spades") and next(SMODS.find_card("j_bfs_conch_shell")) then
+        return true
+    end
+    if card.config.center.key == "c_base" and next(SMODS.find_card("j_bfs_leviathan")) then
         return true
     end
 end
@@ -153,11 +159,106 @@ local algae = {
     }
 }
 
+local leviathan = {
+    key = "leviathan",
+    name = "Leviathan",
+    input = {
+        "j_splash",
+        "j_vampire",
+    },
+    joker = {
+        config = {
+            extra = {
+                xmult = 1,
+                xmult_gain = 0.1,
+            }
+        },
+        pos = { x = 0, y = 0 },
+        blueprint_compat = true,
+        atlas = "placeholder",
+        loc_vars = function(self, info_queue, card)
+            return { vars = {
+                card.ability.extra.xmult_gain,
+                card.ability.extra.xmult
+            }}
+        end,
+        calculate = function(self, card, context)
+            if context.ignore_debuff and context.debuff_card.config.center.key == "c_base" then
+                return { prevent_debuff = true }
+            end
+            if context.discard and context.other_card.config.center.key == "c_base" and not context.blueprint then
+                card.ability.extra.xmult = card.ability.extra.xmult_gain + card.ability.extra.xmult
+                return {
+                    message = "X"..card.ability.extra.xmult.." Mult!",
+                    colour = G.C.RED
+                }
+            end
+            if context.individual and context.cardarea == G.play and context.other_card.config.center.key == "c_base" then
+                return { xmult = card.ability.extra.xmult }
+            end
+        end,
+        bfs_credits = {
+            art = { "" },
+            idea = { "ButterStutter" },
+            code = { "ButterStutter" }
+        }
+    }
+}
+
+local droplet = {
+    key = "droplet",
+    name = "Droplet",
+    input = {
+        "j_splash",
+        "j_wee",
+    },
+    joker = {
+        config = {
+            extra = {
+                chips = 0,
+                chips_gain = 10,
+            }
+        },
+        pos = { x = 0, y = 0 },
+        blueprint_compat = true,
+        atlas = "placeholder",
+        loc_vars = function(self, info_queue, card)
+            return { vars = {
+                card.ability.extra.chips_gain,
+                card.ability.extra.chips
+            }}
+        end,
+        calculate = function(self, card, context)
+            if context.joker_main then
+                if card.ability.extra.chips > 0 then
+                    return {
+                        chips = card.ability.extra.chips
+                    }
+                end
+            end
+            if context.modify_scoring_hand and context.other_card:get_id() == 2 then
+                return { add_to_hand = true }
+            end
+            if context.individual and context.cardarea == G.play and context.other_card:get_id() == 2 and not context.blueprint then
+                card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chips_gain
+                card_eval_status_text(card, 'extra', nil, nil, nil, {message = "+"..card.ability.extra.chips.." Chips!", colour = G.C.BLUE})
+            end
+        end,
+        bfs_credits = {
+            art = { "" },
+            idea = { "ButterStutter" },
+            code = { "ButterStutter" }
+        }
+    } 
+}
+
 return {
     generate_shell_fusion("j_rough_gem", "clam", "Clam", "Diamonds"),
     generate_shell_fusion("j_bloodstone", "seashell", "Seashell", "Hearts"),
     generate_shell_fusion("j_arrowhead", "conch_shell", "Conch Shell", "Spades"),
     generate_shell_fusion("j_onyx_agate", "oyster", "Oyster", "Clubs"),
     message_bottle,
-    algae
+    algae,
+    leviathan,
+    droplet
 }
