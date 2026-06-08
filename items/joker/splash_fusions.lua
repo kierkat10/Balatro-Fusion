@@ -249,7 +249,7 @@ local droplet = {
             idea = { "ButterStutter" },
             code = { "ButterStutter" }
         }
-    } 
+    }
 }
 
 return {

@@ -11,7 +11,7 @@ return {
         blueprint_compat = true,
         atlas = "placeholder",
         loc_vars = function(self, info_queue, card)
-            local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, "j_bfs_apophenia")
+            local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, "j_bfs_kaleidoscope")
             return {
                 vars = {
                     numerator,

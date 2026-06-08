@@ -591,6 +591,18 @@ return {
                     "{C:inactive}[Currently {C:white,X:mult}X#2#{C:inactive} Mult]"
                 }
             },
+            j_bfs_lucky_guess = {
+                name = "Lucky Guess",
+                text = {
+                    "{C:attention}6s{} are considered as",
+                    "{C:enhanced}Lucky Cards{} and can",
+                    "trigger {C:enhanced}Lucky Card{} effects.",
+                    "{C:enhanced}Lucky Cards{} have a",
+                    "{C:green}#1#{} in {C:green}#2#{} chance",
+                    "to create a {C:spectral}Spectral Card{}",
+                    "{C:inactive}[Must Have Room]",
+                }
+            },
             j_bfs_lusty_dusty = {
                 name="Lusty-Dusty",
                 text={

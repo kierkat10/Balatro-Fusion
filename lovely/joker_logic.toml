@@ -190,18 +190,6 @@ match_indent = true
 
 [[patches]]
 [patches.pattern]
-target = "function/common_events.lua"
-pattern = '''
-if card.ability.set == 'Enhanced' then
-'''
-position = "at"
-payload = '''
-if BalatroFusion.check_has_enhancement(card)
-'''
-match_indent = true
-
-[[patches]]
-[patches.pattern]
 target = "card.lua"
 pattern = '''
 self.lucky_trigger = true
