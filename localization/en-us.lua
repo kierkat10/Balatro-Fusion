@@ -36,9 +36,9 @@ return {
             j_bfs_apophenia = {
                 name = "Apophenia",
                 text = {
-                    "{C:green}#1#{} in {C:green}#2#{} chance for",
-                    "each card in a {C:attention}Standard Packs{} ",
-                    "to become a {C:enhanced}Lucky Card"
+                    "All cards are considered as",
+                    "{C:enhanced}Lucky Cards{} and can",
+                    "trigger {C:enhanced}Lucky Card{} effects",
                 }
             },
             j_bfs_approved_technology = {
@@ -152,6 +152,17 @@ return {
                     "play and discard limits,",
                     "are triggered in scoring, and",
                     "give {C:money}$#1#{} and {X:chips,C:white}X#2#{} Chips when scored"
+                }
+            },
+            j_bfs_clover = {
+                name = "Four Leaf Clover",
+                text = {
+                    "{C:enhanced}Wild Cards{} are considered as",
+                    "{C:enhanced}Lucky Cards{} and can",
+                    "trigger {C:enhanced}Lucky Card{} effects.",
+                    "{C:enhanced}Lucky Cards{} give",
+                    "{X:mult,C:white}X#1#{} Mult when scored",
+                    "if hand contains all 4 {C:attention}Suits"
                 }
             },
             j_bfs_clever_steven = {
@@ -431,6 +442,14 @@ return {
                     "create {C:attention}1{} Random {C:attention}Joker",
                     "When a {C:red}discard{} is used destroy leftmost {C:attention}Joker",
                 },
+            },
+            j_bfs_hallucinating_luck = {
+                name = "Hallucinating Luck",
+                text = {
+                    "{C:green}#1#{} in {C:green}#2#{} chance for",
+                    "each card in a {C:attention}Standard Packs{} ",
+                    "to become a {C:enhanced}Lucky Card"
+                }
             },
             j_bfs_helix = {
                 name = "Helix",

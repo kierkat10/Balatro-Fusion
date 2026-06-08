@@ -137,3 +137,93 @@ end
 e.config.ref_table:use_consumeable(area)
 '''
 match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = '''
+if self.ability.effect == "Lucky Card" then
+'''
+position = "at"
+payload = '''
+if BalatroFusion.check_lucky_card(self) then
+'''
+match_indent = true
+
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = '''
+local suits = {
+    ['Hearts'] = 0,
+    ['Diamonds'] = 0,
+    ['Spades'] = 0,
+    ['Clubs'] = 0
+}
+for i = 1, #context.scoring_hand do
+    if not SMODS.has_any_suit(context.scoring_hand[i]) then
+        if context.scoring_hand[i]:is_suit('Hearts', true) and suits["Hearts"] == 0 then suits["Hearts"] = suits["Hearts"] + 1
+        elseif context.scoring_hand[i]:is_suit('Diamonds', true) and suits["Diamonds"] == 0  then suits["Diamonds"] = suits["Diamonds"] + 1
+        elseif context.scoring_hand[i]:is_suit('Spades', true) and suits["Spades"] == 0  then suits["Spades"] = suits["Spades"] + 1
+        elseif context.scoring_hand[i]:is_suit('Clubs', true) and suits["Clubs"] == 0  then suits["Clubs"] = suits["Clubs"] + 1 end
+    end
+end
+for i = 1, #context.scoring_hand do
+    if SMODS.has_any_suit(context.scoring_hand[i]) then
+        if context.scoring_hand[i]:is_suit('Hearts') and suits["Hearts"] == 0 then suits["Hearts"] = suits["Hearts"] + 1
+        elseif context.scoring_hand[i]:is_suit('Diamonds') and suits["Diamonds"] == 0  then suits["Diamonds"] = suits["Diamonds"] + 1
+        elseif context.scoring_hand[i]:is_suit('Spades') and suits["Spades"] == 0  then suits["Spades"] = suits["Spades"] + 1
+        elseif context.scoring_hand[i]:is_suit('Clubs') and suits["Clubs"] == 0  then suits["Clubs"] = suits["Clubs"] + 1 end
+    end
+end
+if suits["Hearts"] > 0 and
+suits["Diamonds"] > 0 and
+suits["Spades"] > 0 and
+suits["Clubs"] > 0 then
+'''
+position = "at"
+payload = '''
+if BalatroFusion.check_flower_pot_suits(context.scoring_hand) then
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "function/common_events.lua"
+pattern = '''
+if card.ability.set == 'Enhanced' then
+'''
+position = "at"
+payload = '''
+if BalatroFusion.check_has_enhancement(card)
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = '''
+self.lucky_trigger = true
+ret = ret + self.ability.mult
+'''
+position = "at"
+payload = '''
+self.lucky_trigger = true
+ret = ret + BalatroFusion.get_lucky_reward(self, "mult") 
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = '''
+self.lucky_trigger = true
+ret = ret +  self.ability.p_dollars
+'''
+position = "at"
+payload = '''
+self.lucky_trigger = true
+ret = ret + BalatroFusion.get_lucky_reward(self, "dollars")
+'''
+match_indent = true

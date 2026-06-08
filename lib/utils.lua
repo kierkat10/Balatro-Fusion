@@ -13,3 +13,13 @@ if not G.GAME.bfs_cards_sold_len then G.GAME.bfs_cards_sold_len = 0 end
 G.GAME.bfs_cards_sold_len=G.GAME.bfs_cards_sold_len+1
 return ret
 end
+
+function BalatroFusion.check_has_enhancement(card)
+    if BalatroFusion.check_lucky_card(card) then
+        return true
+    elseif card.ability.set == 'Enhanced' then
+        return true
+    else
+        return false
+    end
+end

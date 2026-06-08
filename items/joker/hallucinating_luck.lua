@@ -1,6 +1,6 @@
 return {
-    key = "apophenia",
-    name = "Apophenia",
+    key = "hallucinating_luck",
+    name = "Hallucinating Luck",
     input = {
         "j_lucky_cat",
         "j_hallucination",
@@ -12,7 +12,7 @@ return {
         atlas = "placeholder",
         loc_vars = function(self, info_queue, card)
             info_queue[#info_queue + 1] = G.P_CENTERS.m_lucky
-            local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, "j_bfs_apophenia")
+            local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, "j_bfs_hallucinating_luck")
             return {
                 vars = {
                     numerator,
@@ -25,7 +25,6 @@ return {
                 G.E_MANAGER:add_event(Event({
                     func = function()
                         local lucky_cards = 0
-                        
                         for _, other_card in pairs(G.pack_cards.cards) do
                             if (other_card.config.center.set == "Enhanced" or other_card.config.center.set == "Default") and G.P_CENTERS.m_lucky and SMODS.pseudorandom_probability(card, "j_bfs_apophenia", 1, card.ability.extra.odds) then
                                 lucky_cards = lucky_cards + 1
