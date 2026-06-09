@@ -201,6 +201,14 @@ return {
                     "{C:inactive}[Currently {C:red}#2# Mult{C:inactive}]",
                 }
             },
+            j_bfs_corn = {
+                name = "Corn",
+                text = {
+                    "Scores {C:red}+#1#{} Mult.",
+                    "Loses {C:red}-#2#{} Mult per missing",
+                    "{C:attention}Suit{} in played hand"
+                }
+            },
             j_bfs_crafty_steven = {
                 name = "Crafty Steven",
                 text =  basic_todd_steven_joker("Flush", "even", "chips")
