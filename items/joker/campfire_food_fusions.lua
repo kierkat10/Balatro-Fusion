@@ -158,18 +158,22 @@ local ho_cho = {
                 }
             elseif context.discard then
                 local decrease = card.ability.extra.xmult_loss
-                if card.ability.extra.xmult - decrease <= 0 then
+                if card.ability.extra.xmult - decrease <= 1 then
                     SMODS.destroy_cards(card, nil, nil, true)
                     return {
                         message = "Drained!",
                         colour = G.C.RED
                     }
                 else
-                    card.ability.extra.xmult = card.ability.extra.xmult - decrease
-                    return {
-                        message = "X"..card.ability.extra.xmult.." Mult!",
-                        colour = G.C.RED
-                    }
+                    SMODS.scale_card(card, {
+                        ref_table = card.ability.extra,
+                        ref_value = "xmult",
+                        scalar_value = "xmult_loss",
+                        operation = "-",
+                        message_key = 'a_xmult_minus',
+                        colour = G.C.RED,
+                        message_delay = 0.2,
+                    })
                 end
             elseif context.selling_card then
                 card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain
