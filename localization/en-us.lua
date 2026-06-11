@@ -104,6 +104,15 @@ return {
                     "a {C:attention}Fibonacci{} rank"
                 }
             },
+            j_bfs_campfire_popcorn = {
+                name = "Campfire Popcorn",
+                text = {
+                    "Scores {C:red}+#1#{} Mult, decreases",
+                    "by {C:red}-#2#{} Mult at the end of",
+                    "the round, increases by {C:red}+#3#{} Mult",
+                    "whenever a card is {C:attention}sold"
+                }
+            },
             j_bfs_card_pack = {
                 name = "Card Pack",
                 text = {
@@ -467,6 +476,15 @@ return {
                     "add a permanent copy to deck",
                     "and draw it to hand",
                     "{s:0.8}triggers once per round"
+                }
+            },
+            j_bfs_ho_cho = {
+                name = "Hot Chocolate",
+                text = {
+                    "Scores {X:mult,C:white}X#1#{} Mult, loses",
+                    "{X:mult,C:white}X#2#{} Mult when a card is",
+                    "{C:red}discarded{}, gains {X:mult,C:white}X#3#{} Mult",
+                    "whenever a card is {C:attention}sold"
                 }
             },
             j_bfs_ice_cream_cone = {
@@ -878,6 +896,15 @@ return {
                     "per {C:common}Common {C:attention}Joker{} owned",
                     "{C:inactive}Currently:[#2#]",
                 },
+            },
+            j_bfs_smore = {
+                name = "Smore",
+                text = {
+                    "Scores {C:blue}+#1#{} Chips, decreases",
+                    "by {C:blue}-#2#{} Chips when a hand is",
+                    "played, increases by {C:blue}+#3#{} Chips",
+                    "whenever a card is {C:attention}sold"
+                }
             },
             j_bfs_sparkling_wine = {
                 name = "Sparkling Wine",

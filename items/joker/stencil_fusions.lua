@@ -321,7 +321,7 @@ local popcorn_bucket = {
         config = {
             extra = {
                 mult = 40,
-                mult_decrease = 10,
+                mult_loss = 8,
                 reduction = 2,
                 card_areas = {
                     { location = "jokers", type = "joker" },
@@ -336,14 +336,14 @@ local popcorn_bucket = {
             if not G.jokers or not G.jokers.cards then
                 reduction = 0
             end
-            local mult_decrease = card.ability.extra.mult_decrease - (reduction * card.ability.extra.reduction)
+            local mult_loss = card.ability.extra.mult_loss - (reduction * card.ability.extra.reduction)
             return {
                 vars = {
                     card.ability.extra.mult,
-                    math.abs(mult_decrease),
+                    math.abs(mult_loss),
                     card.ability.extra.reduction,
-                    mult_decrease > 0 and "decreases" or "increases",
-                    mult_decrease > 0 and "-" or "+"
+                    mult_loss > 0 and "decreases" or "increases",
+                    mult_loss > 0 and "-" or "+"
                 }
             }
         end,
@@ -355,16 +355,24 @@ local popcorn_bucket = {
             end
             if context.end_of_round and context.game_over == false and not context.blueprint then
                 local reduction = card.ability.extra.reduction * BalatroFusion.get_gap_count_for_card_area(card.ability.extra.card_areas)
-                local decrease = card.ability.extra.mult_decrease - reduction
-                card.ability.extra.mult = card.ability.extra.mult - decrease
-                return {
-                    message = (decrease >= 0 and "-" or "+")..math.abs(decrease).." Mult!",
-                    colour = G.C.RED
-                }
+                local decrease = card.ability.extra.mult_loss - reduction
+                if card.ability.extra.mult - decrease <= 0 then
+                    SMODS.destroy_cards(card, nil, nil, true)
+                    return {
+                        message = "Empty!",
+                        colour = G.C.RED
+                    }
+                else
+                    card.ability.extra.mult = card.ability.extra.mult - decrease
+                    return {
+                        message = (decrease >= 0 and "-" or "+")..math.abs(decrease).." Mult!",
+                        colour = G.C.RED
+                    }
+                end
             end
         end,
         bfs_credits = {
-            art = { "StellarBlue" },
+            art = { },
             idea = { "ButterStutter" },
             code = { "ButterStutter" }
         }
@@ -382,7 +390,7 @@ local empty_bowl = {
         config = {
             extra = {
                 xmult = 4,
-                xmult_decrease = 0.1,
+                xmult_loss = 0.1,
             }
         },
         pos = { x = 0, y = 0 },
@@ -392,7 +400,7 @@ local empty_bowl = {
             return {
                 vars = {
                     card.ability.extra.xmult,
-                    card.ability.extra.xmult_decrease,
+                    card.ability.extra.xmult_loss,
                 }
             }
         end,
@@ -407,14 +415,23 @@ local empty_bowl = {
                 for _, v in ipairs(G.hand and G.hand.cards) do
                     if not v.highlighted and check_playing_card(v) then
                         count = count + 1
-                        card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_decrease
-                        G.E_MANAGER:add_event(Event({
-                            trigger = "after",
-                            func = function()
-                                v:juice_up()
-                                return true
-                            end
-                        }))
+                        local decrease = card.ability.extra.xmult_loss
+                        if card.ability.extra.xmult - decrease <= 0 then
+                            SMODS.destroy_cards(card, nil, nil, true)
+                            return {
+                                message = "Empty!",
+                                colour = G.C.RED
+                            }
+                        else
+                            card.ability.extra.xmult = card.ability.extra.xmult - decrease
+                            G.E_MANAGER:add_event(Event({
+                                trigger = "after",
+                                func = function()
+                                    v:juice_up()
+                                    return true
+                                end
+                            }))
+                        end
                     end
                 end
                 return {
