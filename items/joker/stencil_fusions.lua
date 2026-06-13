@@ -328,9 +328,9 @@ local popcorn_bucket = {
                 }
             }
         },
-        pos = { x = 0, y = 0 },
+        pos = { x = 2, y = 4 },
         blueprint_compat = true,
-        atlas = "placeholder",
+        atlas = "joker",
         loc_vars = function(self, info_queue, card)
             local reduction = BalatroFusion.get_gap_count_for_card_area(card.ability.extra.card_areas)
             if not G.jokers or not G.jokers.cards then
@@ -393,9 +393,9 @@ local empty_bowl = {
                 xmult_loss = 0.1,
             }
         },
-        pos = { x = 0, y = 0 },
+        pos = { x = 3, y = 4 },
         blueprint_compat = true,
-        atlas = "placeholder",
+        atlas = "joker",
         loc_vars = function(self, info_queue, card)
             return {
                 vars = {
