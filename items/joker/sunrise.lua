@@ -6,8 +6,6 @@ return {
         "j_dusk",
     },
     joker = {
-        key = "sunrise",
-        name = "Sunrise",
         config = {
             extra = {
                 cards_to_sell = 2,
@@ -17,8 +15,6 @@ return {
             }
         },
         pos = { x = 5, y = 2 },
-        cost = 14,
-        rarity = "bfs_fused",
         blueprint_compat = true,
         atlas = "joker",
         loc_vars = function(self, info_queue, card)

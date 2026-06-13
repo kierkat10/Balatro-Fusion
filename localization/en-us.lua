@@ -1002,6 +1002,15 @@ return {
                     "{C:inactive}(Currently {C:attention}#2#{C:inactive}/{C:attention}#3#{C:inactive} cards sold and {C:attention}#4#{C:inactive} retrigger#<s>4#)"
                 }
             },
+            j_bfs_tavern = {
+                name = "Tavern",
+                text = {
+                    "Gain {C:red}+#1#{} discard#<s>1# if",
+                    "discarded hand contains at least",
+                    "{C:attention}#2#{} cards of the {V:1}#3#{} suit",
+                    "{s:0.8}Suit changes every round",
+                }
+            },
             j_bfs_tax_collector = {
                 name = "Tax Collector",
                 text = {
