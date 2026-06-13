@@ -617,6 +617,14 @@ return {
                     "{C:inactive}[Currently {C:white,X:mult}X#2#{C:inactive} Mult]"
                 }
             },
+            j_bfs_loose_cannon = {
+                name = "Loose Cannon",
+                text = {
+                    "Every {C:attention}#1#{s:0.8}#2#{} {C:green}reroll",
+                    "in the shop is {C:attention}free",
+                    "{C:inactive}[{C:attention}#3#{C:inactive} rerolls remaining]"
+                }
+            },
             j_bfs_lucky_guess = {
                 name = "Lucky Guess",
                 text = {
